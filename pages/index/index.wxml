@@ -1,0 +1,2 @@
+<!--index.wxml-->
+<iw-swiper swipers='{{swipers}}' isLink></iw-swiper>
