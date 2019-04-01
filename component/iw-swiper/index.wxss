@@ -1,4 +1,3 @@
-/* component/carousel/index.wxss */
 .swiper-container{
   position: relative;
 }

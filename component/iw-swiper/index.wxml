@@ -1,4 +1,3 @@
-<!--component/carousel/index.wxml-->
 <view class="swiper-container">
   <swiper autoplay="auto" interval="5000" duration="1000" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" style='height: {{height}}'>
     <block wx:for="{{swipers}}" wx:key="unique">

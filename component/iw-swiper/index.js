@@ -1,4 +1,3 @@
-// 轮播图
 const util = require('../libs/util.js')
 const default_data = {
   swiperCurrent: 0,
