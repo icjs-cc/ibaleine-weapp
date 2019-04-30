@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "iw-navbar": "/component/iw-navbar/index"
+  },
+  "navigationStyle": "custom"
+}
