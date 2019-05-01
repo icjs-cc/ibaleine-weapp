@@ -12,5 +12,5 @@
 
 #### 效果
 
-![avatar](screenshot/index.png)
-![avatar](screenshot/navbar.png)
+![avatar](./screenshot/index.png)
+![avatar](./screenshot/navbar.png)
