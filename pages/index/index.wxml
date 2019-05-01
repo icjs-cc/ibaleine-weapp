@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="weapp-add-tip">
-    <view class="weapp-add-tip-text">
-        <text>添加到「我的小程序」使用更方便</text>
-    </view>
+  <view class="weapp-add-tip-text">
+    <text>添加到「我的小程序」使用更方便</text>
+  </view>
 </view>
-<iw-swiper swipers='{{swipers}}' isLink></iw-swiper>
+<iw-swiper swipers='{{swipers}}' activeColor='#7FB553' isLink></iw-swiper>
 <iw-menu-tabs menus='{{menus}}' isLink></iw-menu-tabs>

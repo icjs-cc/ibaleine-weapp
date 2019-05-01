@@ -31,10 +31,12 @@
 
 .back-icon {
   left: 10px;
+  z-index: 99;
 }
 
 .home-icon {
   left: 50px;
+  z-index: 99;
 }
 
 .back-icon image {
@@ -58,6 +60,7 @@
   top: 50%;
   font-size: 0;
   font-weight: bold;
+  z-index: 1;
 }
 .nav-title-text{
   width: 70%;

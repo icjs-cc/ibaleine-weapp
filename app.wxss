@@ -1,4 +1,11 @@
 /**app.wxss**/
+page {
+  background: #eee;
+  font-family: "微软雅黑", "华文细黑", Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
 .container {
   height: 100%;
   display: flex;

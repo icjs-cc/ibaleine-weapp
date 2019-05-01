@@ -1,3 +1,4 @@
+const config = require('../libs/config.js')
 const util = require('../libs/util.js')
 const default_data = {
   swiperCurrent: 0,
@@ -14,7 +15,7 @@ const default_properties = {
   },
   activeColor: {
     type: String,
-    value: '#7FB553'
+    value: config.color.primary
   },
   //点的形状 可选值为 圆形：circle，椭圆形：oval
   shape: {
