@@ -1,0 +1,9 @@
+<!--component/iw-menu-tabs/index.wxml-->
+<view class="menu-tabs">
+  <scroll-view class="scroll-x" scroll-x>
+    <view class="cell" catch:tap='handleClickItem' data-path='{{item.path}}' data-linktype='{{item.linkType}}' data-item='{{item}}' wx:for="{{menus}}" wx:key='unique'>
+      <image src="{{item.url}}" class="img {{shape}}" mode="aspectFill"></image>
+      <view class='title' style='color:{{color}}'>{{item.title}}</view>
+    </view>
+  </scroll-view>
+</view>
