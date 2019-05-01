@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "iw-swiper": "/component/iw-swiper/index"
+    "iw-swiper": "/component/iw-swiper/index",
+    "iw-menu-tabs": "/component/iw-menu-tabs/index"
   }
 }

@@ -5,3 +5,4 @@
     </view>
 </view>
 <iw-swiper swipers='{{swipers}}' isLink></iw-swiper>
+<iw-menu-tabs menus='{{menus}}' isLink></iw-menu-tabs>

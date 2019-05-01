@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
+	"libVersion": "2.6.6",
 	"appid": "wx1992c4d31b668db2",
 	"projectname": "iwhale-ui-weapp",
 	"debugOptions": {
