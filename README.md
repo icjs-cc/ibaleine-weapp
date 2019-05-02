@@ -1,4 +1,4 @@
-# iwhale-ui-weapp
+# ![iwhale-logo](./images/iwhale-logo.png) iwhale-ui-weapp
 
 #### 介绍
 
