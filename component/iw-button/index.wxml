@@ -1,0 +1,15 @@
+<button
+    class="iw-class iw-btn {{ long ? 'iw-btn-long' : '' }} {{ 'iw-btn-' + size }} {{ 'iw-btn-' + type }} {{ 'iw-btn-' + shape }} {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}"
+    bindtap="handleTap"
+    open-type="{{ openType }}"
+    app-parameter="{{ appParameter }}"
+    hover-stop-propagation="{{ hoverStopPropagation }}"
+    hover-start-time="{{ hoverStartTime }}"
+    hover-stay-time="{{ hoverStayTime }}"
+    session-from="{{ sessionFrom }}"
+    send-message-title="{{ sendMessageTitle }}"
+    send-message-path="{{ sendMessagePath }}"
+    send-message-img="{{ sendMessageImg }}"
+    show-message-card="{{ showMessageCard }}"
+    plain="true"
+><view class="iw-btn-loading-inner" wx:if="{{loading}}"></view><slot></slot></button>

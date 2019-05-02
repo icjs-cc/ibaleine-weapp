@@ -15,7 +15,7 @@ const default_properties = {
   },
   activeColor: {
     type: String,
-    value: config.color.primary
+    value: config.colors.primary
   },
   //点的形状 可选值为 圆形：circle，椭圆形：oval
   shape: {
