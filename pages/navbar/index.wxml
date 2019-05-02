@@ -15,3 +15,7 @@
     suffix='/images/input/refresh.png' />
 </form>
 <iw-button type="primary" size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
+
+<view class='center'>
+  <iw-input-number customColor='#7FB553' value="{{ inputNumber }}" min="0" max="100" disabled visible bindchange="handleInputNumber"></iw-input-number>
+</view>

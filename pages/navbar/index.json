@@ -2,7 +2,8 @@
   "usingComponents": {
     "iw-navbar": "/component/iw-navbar/index",
     "iw-input": "/component/iw-input/index",
-    "iw-button": "/component/iw-button/index"
+    "iw-button": "/component/iw-button/index",
+    "iw-input-number": "/component/iw-input-number/index"
   },
   "navigationStyle": "custom"
 }

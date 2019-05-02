@@ -9,7 +9,8 @@ Page({
       username:'',
       password:'',
       captcha:''
-    }
+    },
+    inputNumber: 0
   },
   handleInputChange(e) {
     let formData = this.data.formData
@@ -18,6 +19,12 @@ Page({
     formData[param] = value
     this.setData({
       formData: formData
+    })
+  },
+  handleInputNumber(e) {
+    const value = e.detail.value
+    this.setData({
+      inputNumber: value
     })
   },
   handle2Home(){

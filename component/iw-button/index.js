@@ -6,7 +6,7 @@ Component({
     // default, primary, ghost, info, success, warning, error
     type: {
       type: String,
-      value: config.colors.primary,
+      value: 'primary'
     },
     customBackground: {
       type: String,
