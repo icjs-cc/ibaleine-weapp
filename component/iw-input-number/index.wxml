@@ -1,9 +1,9 @@
 <view class="iw-class iw-input-number iw-input-number-size-{{ size }}">
   <view class="iw-input-number-minus {{ value <= min ? 'iw-input-number-disabled' : '' }}" data-disabled="{{ value <= min }}" style='color:{{customColor?customColor:colors[type]}};border:1px solid {{customColor?customColor:colors[type]}}' bindtap="handleMinus" wx:if='{{visible}}'>
-    <view class='iw-icon'>-</view>
+    <view class='iconfont icon-minus'></view>
   </view>
   <input class="iw-input-number-text {{ min >= max ? 'iw-input-number-disabled' : '' }}" type="number" value="{{ value }}" disabled="{{ min >= max||disabled }}" bindblur="handleBlur" wx:if='{{visible}}' />
   <view class="iw-input-number-plus {{ value >= max ? 'iw-input-number-disabled' : '' }}" style='background:{{customColor?customColor:colors[type]}};border:1px solid {{customColor?customColor:colors[type]}}' data-disabled="{{ value >= max }}" bindtap="handlePlus">
-    <view class='iw-icon'>+</view>
+    <view class='iconfont icon-plus'></view>
   </view>
 </view>

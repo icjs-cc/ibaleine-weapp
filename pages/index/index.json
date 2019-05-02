@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "iw-swiper": "/component/iw-swiper/index",
-    "iw-menu-tabs": "/component/iw-menu-tabs/index"
+    "iw-menu-tabs": "/component/iw-menu-tabs/index",
+    "iw-goods-item": "/business-component/iw-goods-item/index"
   }
 }

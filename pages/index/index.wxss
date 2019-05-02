@@ -29,3 +29,7 @@
   top: -5px;
   right: 132rpx;
 }
+
+.goods-list{
+  padding-bottom: 30rpx;
+}
