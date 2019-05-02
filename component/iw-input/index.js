@@ -76,8 +76,8 @@ Component({
     handleInputBlur(event) {
       this.triggerEvent('blur', event)
     },
-    handleClickIcon(event) {
-      this.triggerEvent('icon', event)
+    handleClickSuffix(event) {
+      this.triggerEvent('suffix', event)
     }
   }
 })

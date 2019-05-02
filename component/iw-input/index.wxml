@@ -9,7 +9,7 @@
     bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur" />
   <image src='{{captchaIcon}}' wx:if='{{captchaIcon}}' class='captcha-code'></image>
   <view>
-    <image wx:if="{{ suffix }}" class='iw-icon' src='{{suffix}}' bindtap='handleClickIcon'></image>
+    <image wx:if="{{ suffix }}" class='iw-icon' src='{{suffix}}' bindtap='handleClickSuffix'></image>
     <slot name='icon'></slot>
   </view>
 </view>
