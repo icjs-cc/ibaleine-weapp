@@ -7,7 +7,7 @@
     placeholder-class="iw-input-placeholder" bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur"></textarea>
   <input wx:else type="{{ type }}" disabled="{{ disabled }}" focus="{{ autofocus }}" value="{{ value }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}" class="iw-input-input iw-cell-bd {{ right ? 'iw-input-input-right' : '' }}" placeholder-class="iw-input-placeholder"
     bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur" />
-  <image src='{{captchaIcon}}' wx:if='{{captchaIcon}}' class='captcha-code'></image>
+  <image src='{{captcha}}' wx:if='{{captcha}}' class='captcha-code'></image>
   <view>
     <image wx:if="{{ suffix }}" class='iw-icon' src='{{suffix}}' bindtap='handleClickSuffix'></image>
     <slot name='icon'></slot>

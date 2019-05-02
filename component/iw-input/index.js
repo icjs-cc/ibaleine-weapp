@@ -48,7 +48,7 @@ Component({
       type: String,
       value: ''
     },
-    captchaIcon: {
+    captcha: {
       type: String,
       value: ''
     },

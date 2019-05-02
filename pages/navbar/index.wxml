@@ -3,7 +3,7 @@
 <form>
   <iw-input i-class='input' prefix='/images/input/tel.png' value="{{formData.username}}" name="username" bind:change='handleInputChange' data-param='username' placeholder="手机号/邮箱"/>
   <iw-input prefix='/images/input/pwd.png' i-class='input' value="{{formData.password}}" name="password" type='password' bind:change='handleInputChange' data-param='password' placeholder="密码" />
-  <iw-input i-class='input' prefix='/images/input/captcha.png' value="{{formData.captcha}}" name="validateCode" bind:change='handleInputChange' data-param='captcha' placeholder="验证码" captchaIcon='/images/input/captcha.jpg'
+  <iw-input i-class='input' prefix='/images/input/captcha.png' value="{{formData.captcha}}" name="validateCode" bind:change='handleInputChange' data-param='captcha' placeholder="验证码" captcha='/images/input/captcha.jpg'
     suffix='/images/input/refresh.png' />
 </form>
 <iw-button customBackground='#7FB553' customColor='#fff' size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
@@ -11,7 +11,7 @@
 <form>
   <iw-input title='账号' value="{{formData.username}}" name="username" bind:change='handleInputChange' data-param='username' placeholder="手机号/邮箱"/>
   <iw-input title='密码' value="{{formData.password}}" name="password" type='password' bind:change='handleInputChange' data-param='password' placeholder="密码" />
-  <iw-input title='验证码' value="{{formData.captcha}}" name="validateCode" bind:change='handleInputChange' data-param='captcha' placeholder="验证码" captchaIcon='/images/input/captcha.jpg'
+  <iw-input title='验证码' value="{{formData.captcha}}" name="validateCode" bind:change='handleInputChange' data-param='captcha' placeholder="验证码" captcha='/images/input/captcha.jpg'
     suffix='/images/input/refresh.png' />
 </form>
 <iw-button type="primary" size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
