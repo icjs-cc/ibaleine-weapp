@@ -1,0 +1,22 @@
+<!--component/goods-card/index.wxml-->
+<view class="goods">
+  <image class="thumb" src="{{thumb}}" lazy-load='true'></image>
+  <view class="title">{{title}}</view>
+  <view class="price-content">
+    <view class="price" style='width: {{primeCostvisible?"74%":"100%"}};margin-right: 10rpx;text-align:{{primeCostVisible?"left":"right"}};color:{{priceColor?priceColor:"#fff"}}'>¥ {{price}}</view>
+    <view class="prime-cost" style='margin-right:18rpx;' wx:if='{{primeCostVisible}}'>¥ {{primeCost||0}}</view>
+  </view>
+  <view class="footer-content" wx:if='{{footerVisible}}'>
+    <view class="footer">
+      <text wx:if='{{tag}}'>{{tag}}</text>
+      <slot name='tag' wx:else></slot>
+    </view>
+    <view class="sales" style="width:60%">
+      <view wx:if='{{sales}}'>{{sales}}</view>
+      <slot name='sales' wx:else></slot>
+    </view>
+  </view>
+  <view class="footer-content" wx:else>
+    <slot name='footer'></slot>
+  </view>
+</view>

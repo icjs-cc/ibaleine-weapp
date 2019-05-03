@@ -1,4 +1,5 @@
 // 商品卡片
+const config = require('../libs/config.js')
 const default_data = {
   swiperCurrent: 0
 }
@@ -23,10 +24,15 @@ const default_properties = {
     type: String,
     value: ''
   },
+  // 商品售价价格 default, primary, ghost, info, success, warning, error
+  priceColor:{
+    type: String,
+    value: 'error'
+  },
   //商品标签
   tag: {
     type: String,
-    value: '推荐'
+    value: ''
   },
   //商品销量
   sales: {
@@ -45,7 +51,15 @@ const default_properties = {
   }
 }
 Component({
+  options: {
+    multipleSlots: true
+  },
   properties: {
     ...default_properties
+  },
+  data: {
+    colors: {
+      ...config.colors
+    }
   }
 })

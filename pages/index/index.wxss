@@ -33,3 +33,13 @@
 .goods-list{
   padding-bottom: 30rpx;
 }
+
+.tag{
+  background: #ff9900;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rpx;
+  width: 80rpx;
+}
