@@ -1,2 +1,4 @@
 <!--pages/discover/index.wxml-->
-<text>pages/discover/index.wxml</text>
+<iw-tabs current="{{ current }}" fixed bindchange="handleChangeTab">
+    <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
+</iw-tabs>
