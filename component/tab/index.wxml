@@ -1,0 +1,16 @@
+<view wx:if="{{direction === 'horizontal'}}">
+  <view class="iw-class iw-tabs-tab {{ scroll ? 'iw-tabs-tab-scroll' : '' }} {{ current ? 'iw-tabs-tab-current' : '' }}">
+    <view bindtap="handleClickItem">
+      <view class="iw-tabs-tab-title {{ current ? 'iw-tabs-tab-title-current' : '' }}" wx:if="{{ current && currentColor }}" style="color: {{ currentColor }}">{{ title }}</view>
+      <view class="iw-tabs-tab-title {{ current ? 'iw-tabs-tab-title-current' : '' }}" wx:else>{{ title }}</view>
+    </view>
+    <view class="iw-tabs-tab-bar" wx:if="{{ current }}" style="background: {{ currentColor }}"></view>
+  </view>
+</view>
+<view wx:if="{{direction === 'vertical'}}">
+  <view class="iw-class iw-tabs-tab-vertical {{ scroll ? 'iw-tabs-tab-scroll' : '' }} {{ current ? 'iw-tabs-tab-vertical-current' : '' }}" bindtap="handleClickItem">
+    <view style='display:flex;align-items:center;color: {{ current?currentColor:"" }}'>
+      <view class='{{current?"iw-tabs-tab-bar-vertical-active":"iw-tabs-tab-bar-vertical"}}' style="background: {{ current?currentColor:'' }}"></view>{{title}}
+    </view>
+  </view>
+</view>

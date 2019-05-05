@@ -21,5 +21,4 @@
 
 #### 效果
 
-![index](./screenshot/index.png)
-![navbar](./screenshot/navbar.png)
+![iwhale-ui](./screenshot/iwhale-ui.gif)

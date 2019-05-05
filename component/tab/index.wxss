@@ -1,4 +1,4 @@
-.i-tabs-tab {
+.iw-tabs-tab {
   flex: 1;
   display: flex;
   width: 100%;
@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.i-tabs-tab-bar {
+.iw-tabs-tab-bar {
   display: block;
   width: 60%;
   height: 8rpx;
@@ -25,40 +25,40 @@
   background: #81c784;
 }
 
-.i-tabs-tab-title {
+.iw-tabs-tab-title {
   font-size: 32rpx;
   text-align: center;
   box-sizing: border-box;
   color: #80848f;
 }
 
-.i-tabs-tab-title-current {
+.iw-tabs-tab-title-current {
   color: #000;
 }
 
-.i-tabs-tab-scroll {
+.iw-tabs-tab-scroll {
   display: inline-block;
   width: 100rpx;
 }
 
-.i-tabs-tab-vertical {
+.iw-tabs-tab-vertical {
   display: flex;
   align-items: center;
   height: 100rpx;
   line-height: 100rpx;
 }
 
-.i-tabs-tab-vertical-current {
+.iw-tabs-tab-vertical-current {
   background: #fff;
 }
 
-.i-tabs-tab-title-vertical-current {
+.iw-tabs-tab-title-vertical-current {
   position: relative;
   font-weight: 600;
   z-index: 2;
 }
 
-.i-tabs-tab-bar-vertical {
+.iw-tabs-tab-bar-vertical {
   display: inline-block;
   justify-content: flex-start;
   width: 8rpx;
@@ -67,7 +67,7 @@
   margin-right: 10rpx;
 }
 
-.i-tabs-tab-bar-vertical-active {
+.iw-tabs-tab-bar-vertical-active {
   display: inline-block;
   justify-content: flex-start;
   width: 8rpx;

@@ -2,7 +2,7 @@ Component({
   externalClasses: ['iw-class'],
 
   relations: {
-    '../iw-tabs/index': {
+    '../tabs/index': {
       type: 'parent'
     }
   },
@@ -34,7 +34,7 @@ Component({
   },
   ready() {
     this.setData({
-      direction: this.getRelationNodes('../iw-tabs/index')[0].data.direction
+      direction: this.getRelationNodes('../tabs/index')[0].data.direction
     })
   },
   methods: {
@@ -54,7 +54,7 @@ Component({
       });
     },
     handleClickItem() {
-      const parent = this.getRelationNodes('../iw-tabs/index')[0];
+      const parent = this.getRelationNodes('../tabs/index')[0];
       parent.emitEvent(this.data.key);
     }
   }

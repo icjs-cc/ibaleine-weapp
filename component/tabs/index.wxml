@@ -1,0 +1,22 @@
+<view wx:if="{{direction === 'horizontal'}}">
+  <scroll-view wx:if="{{ scroll }}" scroll-x="true" class="iw-class iw-tabs iw-tabs-scroll {{ fixed ? 'iw-tabs-fixed' : '' }}">
+    <slot></slot>
+  </scroll-view>
+  <view wx:else class="iw-class iw-tabs {{ fixed ? 'iw-tabs-fixed' : '' }}">
+    <slot></slot>
+  </view>
+  <view class="{{ fixed ? 'iw-tabs-fixed-height' : '' }}"></view>
+</view>
+<view class='' wx:if="{{direction === 'vertical'}}">
+  <scroll-view wx:if="{{ scroll }}" scroll-y="true" class="iw-class iw-tabs-scroll-vertical">
+    <slot></slot>
+  </scroll-view>
+  <view wx:else class="iw-class iw-tabs-scroll-vertical">
+    <slot></slot>
+  </view>
+  <scroll-view scroll-y="true" class="iw-tabs-scroll-vertical-content">
+    <view>
+      <slot name='content'></slot>
+    </view>
+  </scroll-view>
+</view>

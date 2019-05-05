@@ -5,7 +5,7 @@ Component({
     multipleSlots: true
   },
   relations: {
-    '../iw-tab/index': {
+    '../tab/index': {
       type: 'child',
       linked() {
         this.changeCurrent();
@@ -45,7 +45,7 @@ Component({
 
   methods: {
     changeCurrent(val = this.data.current) {
-      let items = this.getRelationNodes('../iw-tab/index');
+      let items = this.getRelationNodes('../tab/index');
       const len = items.length;
 
       if (len > 0) {
