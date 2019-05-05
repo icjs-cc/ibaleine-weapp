@@ -29,18 +29,29 @@ Component({
   data: {
     current: false,
     currentColor: '',
-    scroll: false
+    scroll: false,
+    direction: 'horizontal'
   },
-
+  ready() {
+    this.setData({
+      direction: this.getRelationNodes('../iw-tabs/index')[0].data.direction
+    })
+  },
   methods: {
     changeCurrent(current) {
-      this.setData({ current });
+      this.setData({
+        current
+      });
     },
     changeCurrentColor(currentColor) {
-      this.setData({ currentColor });
+      this.setData({
+        currentColor
+      });
     },
     changeScroll(scroll) {
-      this.setData({ scroll });
+      this.setData({
+        scroll
+      });
     },
     handleClickItem() {
       const parent = this.getRelationNodes('../iw-tabs/index')[0];

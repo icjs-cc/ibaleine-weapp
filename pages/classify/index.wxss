@@ -1,1 +1,5 @@
 /* pages/classify/index.wxss */
+.wrap{
+  background: #fff;
+  height: 100%;
+}

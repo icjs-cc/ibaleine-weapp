@@ -1,2 +1,9 @@
 <!--pages/classify/index.wxml-->
-<text>pages/classify/index.wxml</text>
+<view class='wrap'>
+  <iw-tabs current="{{ current }}" direction='vertical' color='#7FB553' fixed bindchange="handleChangeTab">
+    <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
+    <view slot='content'>
+      {{current}}
+    </view>
+  </iw-tabs>
+</view>

@@ -34,10 +34,45 @@
 
 .i-tabs-tab-title-current {
   color: #000;
-  font-weight: 600;
 }
 
 .i-tabs-tab-scroll {
   display: inline-block;
   width: 100rpx;
+}
+
+.i-tabs-tab-vertical {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.i-tabs-tab-vertical-current {
+  background: #fff;
+}
+
+.i-tabs-tab-title-vertical-current {
+  position: relative;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.i-tabs-tab-bar-vertical {
+  display: inline-block;
+  justify-content: flex-start;
+  width: 8rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.i-tabs-tab-bar-vertical-active {
+  display: inline-block;
+  justify-content: flex-start;
+  width: 8rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  background: #81c784;
 }

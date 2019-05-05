@@ -1,6 +1,9 @@
+const config = require('../libs/config.js')
 Component({
   externalClasses: ['iw-class'],
-
+  options: {
+    multipleSlots: true
+  },
   relations: {
     '../iw-tab/index': {
       type: 'child',
@@ -24,7 +27,7 @@ Component({
     },
     color: {
       type: String,
-      value: ''
+      value: config.colors['primary']
     },
     scroll: {
       type: Boolean,
@@ -33,6 +36,10 @@ Component({
     fixed: {
       type: Boolean,
       value: false
+    },
+    direction: {
+      type: String,
+      value: 'horizontal',
     }
   },
 

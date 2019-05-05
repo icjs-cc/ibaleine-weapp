@@ -37,7 +37,43 @@
   top: 0;
   z-index: 2;
 }
-.i-tabs-fixed-height{
+
+.i-tabs-fixed-height {
   height: 70rpx;
   line-height: 70rpx;
+}
+
+.iw-tabs-vertical {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.iw-tabs-scroll-vertical {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 200rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #eee;
+}
+
+.iw-tabs-scroll-vertical::before {
+  content: "";
+  position: absolute;
+  background: #eee;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.iw-tabs-scroll-vertical-content {
+  margin-left: 210rpx;
+  height: 100%;
+  overflow: hidden;
+  width: auto;
+  background: #fff;
 }

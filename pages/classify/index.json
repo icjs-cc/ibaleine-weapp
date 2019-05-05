@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "iw-tabs": "/component/iw-tabs/index",
+    "iw-tab": "/component/iw-tab/index"
+  }
 }

@@ -46,9 +46,6 @@ Component({
         that.setNavSize();
         that.setStyle();
     },
-    data: {
-
-    },
     methods: {
         // 通过获取系统信息计算导航栏高度
         setNavSize: function() {
