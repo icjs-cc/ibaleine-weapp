@@ -19,6 +19,9 @@
 ##### 业务组件
 * 商品列表
 
+##### 插件
+* wx-validate（表单校验）
+
 #### 效果
 
 ![iwhale-ui](./screenshot/iwhale-ui.gif)
