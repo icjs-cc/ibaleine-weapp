@@ -8,8 +8,8 @@
 <iw-menu-tabs menus='{{menus}}' isLink></iw-menu-tabs>
 <view class='goods-list'>
   <block wx:for='{{goods}}' wx:key="unique">
-    <iw-goods-item thumb='{{item.thumb}}' title='{{item.title}}' price='{{item.price}}' primeCost='{{item.primeCost}}' sales='销量 {{item.sales}}' primeCostVisible footerVisible>
+    <iw-goods-cell thumb='{{item.thumb}}' title='{{item.title}}' price='{{item.price}}' primeCost='{{item.primeCost}}' sales='销量 {{item.sales}}' primeCostVisible footerVisible>
     <view slot='tag' class='tag'>{{item.tag}}</view>
-    </iw-goods-item>
+    </iw-goods-cell>
   </block>
 </view>

@@ -1,0 +1,4 @@
+<view class="iw-class iw-avatar iw-avatar-{{ shape }} iw-avatar-{{ size }} {{ src ? 'iw-avatar-image' : '' }}">
+    <image src="{{ src }}" wx:if="{{ src !== '' }}"></image>
+    <view class="iw-avatar-string" wx:else><slot></slot></view>
+</view>
