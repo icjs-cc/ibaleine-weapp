@@ -1,1 +1,35 @@
 /* pages/discover/index.wxss */
+.media-cell{
+  display: flex;
+  justify-content: space-between;
+}
+.media-cell-image image{
+  display: block;
+  height: 150rpx;
+  width:250rpx;
+  border-radius: 10rpx;
+}
+.media-cell-inner{
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 10rpx 0 0;
+  box-sizing: border-box;
+}
+.media-cell-text{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-cell-title{
+  font-size: 32rpx;
+  max-width: 100%;
+  color: #212121;
+}
+
+.media-cell-extra{
+  color: #757575;
+  font-size: 28rpx;
+}

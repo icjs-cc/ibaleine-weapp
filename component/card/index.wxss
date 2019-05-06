@@ -1,0 +1,107 @@
+/* component/media-card/index.wxss */
+
+.iw-card {
+  margin: 0 20rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.iw-card-full {
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.iw-card-header {
+  display: flex;
+  padding: 10rpx 20rpx;
+  align-items: center;
+}
+
+.iw-card-header-thumb {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  margin-left: auto;
+  margin-right: 10rpx;
+  overflow: hidden;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.iw-card-header-thumb-circle {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: 10rpx;
+  overflow: hidden;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+.iw-card-header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  width: 70%;
+}
+
+.iw-card-header-title {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 32rpx;
+  color: #1c2438;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iw-card-header-extra {
+  flex: 1;
+  text-align: right;
+  font-size: 28rpx;
+  color: #80848f;
+}
+
+.iw-card-body {
+  position: relative;
+  padding: 0 20rpx;
+  color: #495060;
+  font-size: 28rpx;
+}
+
+.iw-card-body-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e9eaec;
+  border-top-width: 1rpx;
+}
+
+.iw-card-footer {
+  position: relative;
+  padding: 10rpx 20rpx;
+  color: #80848f;
+  font-size: 28rpx;
+}
+
+.iw-padded-t-0 {
+  padding-top: 0 !important;
+}

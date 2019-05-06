@@ -2,3 +2,39 @@
 <iw-tabs current="{{ current }}" color='#7FB553' fixed bindchange="handleChangeTab">
     <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
 </iw-tabs>
+<iw-card iw-class='iw-mb-10' title='标题' thumb='/images/common/iwhale-logo.png' extra='100 浏览' circle full footer>
+  <view slot='content'>
+    <view class='media-cell'>
+      <view class='media-cell-inner'>
+        <view class='media-cell-text'>
+          <view class='media-cell-title'>武夷山采茶实录</view>
+          <view class='media-cell-extra'>01:00</view>
+        </view>
+        <view class='media-cell-text iw-ellipsis-l3'>
+          历史上的大红袍，本来就少，而被公认的大红袍，仅是九龙窠岩壁上的那几棵。
+        </view>
+      </view>
+      <view class='media-cell-image'>
+        <image src='http://aliyun121.icjs.ink/resource/iwhale-ui/discover-1.png'></image>
+      </view>
+    </view>
+  </view>
+</iw-card>
+<iw-card iw-class='iw-mb-10' title='标题' thumb='/images/common/iwhale-logo.png' extra='100 浏览' circle full footer>
+  <view slot='content'>
+    <view class='media-cell'>
+      <view class='media-cell-inner'>
+        <view class='media-cell-text'>
+          <view class='media-cell-title'>武夷山采茶实录</view>
+          <view class='media-cell-extra'>01:00</view>
+        </view>
+        <view class='media-cell-text iw-ellipsis-l3'>
+          历史上的大红袍，本来就少，而被公认的大红袍，仅是九龙窠岩壁上的那几棵。
+        </view>
+      </view>
+      <view class='media-cell-image'>
+        <image src='http://aliyun121.icjs.ink/resource/iwhale-ui/discover-2.png'></image>
+      </view>
+    </view>
+  </view>
+</iw-card>

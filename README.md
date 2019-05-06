@@ -1,4 +1,4 @@
-# ![iwhale-logo](./images/iwhale-logo.png) iwhale-ui-weapp
+# ![iwhale-logo](./images/common/iwhale-logo.png) iwhale-ui-weapp
 
 #### 介绍
 
@@ -15,7 +15,8 @@
 * 输入框
 * 数字输入框
 * 标签页
-* 头像组件
+* 头像
+* 卡片
 
 ##### 业务组件
 * 商品列表
