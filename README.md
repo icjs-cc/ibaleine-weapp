@@ -2,7 +2,7 @@
 
 #### 介绍
 
-> 原生微信小程序UI组件
+> 微信小程序UI组件及商城模板
 
 #### 实现组件
 
@@ -28,3 +28,9 @@
 #### 效果
 
 ![iwhale-ui](./screenshot/iwhale-ui.gif)
+
+
+#### 代码托管
+
+* GitHub: [https://github.com/n551wv1/iwhale-ui-weapp]('https://github.com/n551wv1/iwhale-ui-weapp')
+* 码云: [https://gitee.com/n551wv1/iwhale-ui-weapp]('https://gitee.com/n551wv1/iwhale-ui-weapp')
