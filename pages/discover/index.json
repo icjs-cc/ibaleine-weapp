@@ -2,6 +2,7 @@
   "usingComponents": {
     "iw-avatar": "/component/avatar/index",
     "iw-card": "/component/card/index",
+    "iw-signal": "/component/signal/index",
     "iw-tabs": "/component/tabs/index",
     "iw-tab": "/component/tab/index"
   }

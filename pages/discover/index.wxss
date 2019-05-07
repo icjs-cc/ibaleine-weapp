@@ -33,3 +33,8 @@
   color: #757575;
   font-size: 28rpx;
 }
+
+.signal{
+  display: flex;
+  justify-content: flex-end;
+}

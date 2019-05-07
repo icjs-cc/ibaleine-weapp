@@ -1,0 +1,8 @@
+<!--component/signal/index.wxml-->
+<view>
+  <view class='iw-signal' style='height:{{size}};width:{{size}}'>
+    <block wx:for='{{count*2-1}}' wx:key='unique'>
+      <view class='iw-signal-cell' style='background:{{index%2==0?(index/2<count-activeIndex?normalColor:activeColor):"white"}};border-radius: 0 100% 0 0;transform: scale({{1-index*(1/(2*count-1))}},{{1-index*(1/(2*count-1))}});'>{{}}</view>
+    </block>
+  </view>
+</view>

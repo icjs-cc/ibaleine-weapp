@@ -1,0 +1,18 @@
+/* component/signal/index.wxss */
+.iw-signal {
+	position: relative;
+	margin: 10rpx auto;
+	padding: 0;
+	list-style: none;
+  overflow: hidden;
+  transform: rotate(-45deg);
+}
+.iw-signal-cell {
+	overflow: hidden;
+	position: absolute;
+	top: 0; 
+  right: 0;
+	width: 50%;
+  height: 50%;
+	transform-origin: 0% 100%; 
+}

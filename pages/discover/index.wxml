@@ -2,7 +2,10 @@
 <iw-tabs current="{{ current }}" color='#7FB553' fixed bindchange="handleChangeTab">
     <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
 </iw-tabs>
-<iw-card iw-class='iw-mb-10' title='标题' thumb='/images/common/iwhale-logo.png' extra='100 浏览' circle full footer>
+<iw-card iw-class='iw-mb-10' title='标题' thumb='/images/common/iwhale-logo.png' circle full footer>
+  <view slot='extra' class='signal'>
+    <iw-signal size='60rpx'></iw-signal>
+  </view>
   <view slot='content'>
     <view class='media-cell'>
       <view class='media-cell-inner'>
