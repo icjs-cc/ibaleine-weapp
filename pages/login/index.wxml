@@ -1,0 +1,31 @@
+<!--pages/login/index.wxml-->
+<view class="login-container">
+  <view class="left-bottom-sign"></view>
+  <view class="right-top-sign"></view>
+  <view class="wrapper">
+    <view class="left-top-sign">LOGIN</view>
+    <view class="welcome">
+      欢迎回来！
+    </view>
+    <view class="input-content">
+      <view class="input-item">
+        <text class="tit">手机号码</text>
+        <input value="{{formData.username}}" name="username" bind:change='handleInputChange' data-param='username' placeholder="请输入手机号/邮箱" />
+      </view>
+      <view class="input-item">
+        <text class="tit">密码</text>
+        <input value="{{formData.password}}" name="password" type='password' bind:change='handleInputChange' data-param='password' placeholder="请输入密码" />
+      </view>
+    </view>
+    <view class='login-button-wrap'>
+      <iw-button iw-class='login-button' shape='circle' customBackground='#A2D181' customColor='#fff' size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
+    </view>
+
+    <view class="forget-section">
+      忘记密码?
+    </view>
+  </view>
+  <view class="register-section">
+    还没有账号? <text>马上注册</text>
+  </view>
+</view>

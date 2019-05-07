@@ -18,9 +18,11 @@
 * 头像（avatar）
 * 卡片（card）
 * 无线信号（signal）
+* 分割线（divider）
 
 ##### 业务组件
 * 商品列表
+* 登录页面
 
 ##### 插件
 * wx-validate（表单校验）
@@ -32,5 +34,5 @@
 
 #### 代码托管
 
-* GitHub: [https://github.com/n551wv1/iwhale-ui-weapp]('https://github.com/n551wv1/iwhale-ui-weapp')
-* 码云: [https://gitee.com/n551wv1/iwhale-ui-weapp]('https://gitee.com/n551wv1/iwhale-ui-weapp')
+* GitHub: https://github.com/n551wv1/iwhale-ui-weapp
+* 码云: https://gitee.com/n551wv1/iwhale-ui-weapp
