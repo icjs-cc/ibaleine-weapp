@@ -5,8 +5,8 @@
 }
 .media-cell-image image{
   display: block;
-  height: 150rpx;
-  width:250rpx;
+  height: 160rpx;
+  width:240rpx;
   border-radius: 10rpx;
 }
 .media-cell-inner{

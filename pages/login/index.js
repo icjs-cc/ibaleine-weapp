@@ -2,18 +2,16 @@
 import WxValidate from '../../utils/wx-validate.js'
 const util = require('../../utils/util.js')
 Page({
-
+  ...util,
   data: {
     loading: false,
     loginText: '登录',
     formData: {
       username: '',
-      password: '',
-      captcha: ''
+      password: ''
     },
   },
   handleInputChange(e) {
-    console.log(e)
     let formData = this.data.formData
     let param = e.target.dataset.param
     let value = e.detail.value
@@ -27,7 +25,7 @@ Page({
     //校验表单
     if (!this.wxValidate.checkForm(formData)) {
       const error = this.wxValidate.errorList[0]
-      util.showToast(error.msg)
+      this.showToast(error.msg)
       return false
     }
     this.setData({
@@ -35,8 +33,8 @@ Page({
       loginText: '登录中...'
     })
     setTimeout(() => {
-      util.showToast('登录成功')
-      util.setStorageSync('userInfo', formData)
+      this.showToast('登录成功')
+      this.setStorageSync('userInfo', formData)
       wx.switchTab({
         url: '/pages/index/index'
       })

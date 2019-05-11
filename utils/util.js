@@ -96,6 +96,12 @@ const randNumber = (n) => {
   return result;
 }
 
+// 输出warn日志
+const logWarn = (msg, getValue) => {
+  console.warn(msg);
+  console.log('接受到的值为：', getValue);
+};
+
 const isFunction = (obj) => {
   return typeof obj === 'function'
 }
@@ -161,6 +167,7 @@ module.exports = {
   randNumber: randNumber,
   isInArray: isInArray,
   isEmpty: isEmpty,
+  logWarn: logWarn,
   // 基于小程序接口封装
   showToast: showToast,
   showModal: showModal,

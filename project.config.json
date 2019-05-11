@@ -44,7 +44,7 @@
 				{
 					"id": 0,
 					"name": "dev",
-					"pathName": "pages/login/index",
+					"pathName": "pages/mine/index",
 					"query": "",
 					"scene": null
 				}
