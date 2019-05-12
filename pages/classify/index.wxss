@@ -1,5 +1,76 @@
 /* pages/classify/index.wxss */
-.wrap{
+
+.wrap {
   background: #fff;
   height: 100%;
+}
+
+.media-cell {
+  display: flex;
+  justify-content: space-between;
+  border: 1rpx solid rgba(0, 0, 0, .1);
+  border-radius: 10rpx;
+  padding-left: 0!important;
+}
+
+.media-cell-image{
+  display: flex;
+  align-items: center;
+  padding: 0 10rpx;
+}
+
+.media-cell-image image {
+  display: block;
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 10rpx;
+}
+
+.media-cell-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.media-cell-text {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-cell-title {
+  font-size: 32rpx;
+  max-width: 100%;
+  color: #212121;
+}
+
+.media-cell-extra {
+  color: #757575;
+  font-size: 28rpx;
+}
+
+.price-content {
+  display: flex;
+  line-height: 50rpx;
+  padding: 0 0 10rpx 0;
+  width: 100%;
+}
+
+.price {
+  font-size: 32rpx;
+  color: #e53935;
+}
+
+/* 原价 */
+
+.prime-cost {
+  width: 50%;
+  font-size: 28rpx;
+  margin-right: 10rpx;
+  text-decoration: line-through;
+  text-align: right;
+  color: #999;
 }

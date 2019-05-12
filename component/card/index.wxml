@@ -1,6 +1,6 @@
 <!--component/media-card/index.wxml-->
 <view class="iw-class iw-card {{ full ? 'iw-card-full' : '' }}">
-  <view class="iw-class iw-card-header">
+  <view class="iw-class iw-card-header" wx:if='{{header}}'>
     <view class="iw-card-header-content">
       <image class="{{circle?'iw-card-header-thumb-circle':'iw-card-header-thumb'}}" src="{{ thumb }}" mode="aspectFit" wx:if="{{ thumb }}" lazy-load='true' />
       <slot name="thumb" wx:else></slot>

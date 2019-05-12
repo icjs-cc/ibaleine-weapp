@@ -5,7 +5,7 @@
   </view>
 </view>
 <iw-swiper swipers='{{swipers}}' shape='oval' activeColor='#7FB553' isLink></iw-swiper>
-<iw-menu-tabs menus='{{menus}}' isLink></iw-menu-tabs>
+<iw-menu-bar menus='{{menus}}' isLink></iw-menu-bar>
 <view class='goods-list'>
   <block wx:for='{{goods}}' wx:key="unique">
     <iw-goods-cell thumb='{{item.thumb}}' title='{{item.title}}' price='{{item.price}}' primeCost='{{item.primeCost}}' sales='销量 {{item.sales}}' primeCostVisible footerVisible>

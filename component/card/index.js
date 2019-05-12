@@ -7,6 +7,10 @@ Component({
   },
 
   properties: {
+    header: {
+      type: null,
+      value: ''
+    },
     full: {
       type: Boolean,
       value: false

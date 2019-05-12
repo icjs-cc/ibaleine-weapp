@@ -2,23 +2,25 @@
 Page({
   data: {
     tabs: [{
-      key: 1,
+      key: 0,
       title: '最新'
     }, {
-      key: 2,
+      key: 1,
       title: '红茶'
     }, {
-      key: 3,
+      key: 2,
       title: '绿茶'
     }, {
-      key: 4,
+      key: 3,
       title: '岩茶'
     }],
-    current: 1
+    current: 0,
+    title:'最新'
   },
   handleChangeTab({ detail } = {}) {
     this.setData({
-      current: detail.key
+      current: detail.key,
+      title: this.data.tabs[detail.key].title
     })
   }
 })

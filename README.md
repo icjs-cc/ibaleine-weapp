@@ -10,7 +10,7 @@
 
 * 轮播图（swiper）
 * 自定义顶部导航栏（navbar）
-* 菜单标签组（menu-tabs）
+* 菜单标签组（menu-bar）
 * 按钮（button）
 * 输入框（input）
 * 数字输入框（input-number）
@@ -20,6 +20,7 @@
 * 无线信号（signal）
 * 分割线（divider）
 * 列表（cell）
+* 标题栏（title-bar）
 
 ##### 业务组件
 * 商品列表
@@ -28,6 +29,7 @@
 * 首页
 * 登录页面
 * 发现页面
+* 分类页面
 * 个人中心
 
 ##### 插件

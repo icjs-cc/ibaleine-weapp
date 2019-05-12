@@ -19,4 +19,4 @@
   </block>
 </iw-cell-group>
 
-<iw-button iw-class='iw-mt-10' bind:click='handleLogout' customBackground='#fff' long customColor='#F24A5D' size="small">退出登录</iw-button>
+<iw-button iw-class='iw-mt-10' bind:click='handleLogout' customBackground='#fff' long customColor='#F24A5D' size="small" wx:if='{{userInfo.username}}'>退出登录</iw-button>

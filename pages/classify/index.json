@@ -1,5 +1,8 @@
 {
   "usingComponents": {
+    "iw-card": "/component/card/index",
+    "iw-signal": "/component/signal/index",
+    "iw-title-bar": "/component/title-bar/index",
     "iw-tabs": "/component/tabs/index",
     "iw-tab": "/component/tab/index"
   }
