@@ -1,0 +1,7 @@
+<!--component/title-bar/index.wxml-->
+<view class='bar' style='background:{{bgColor}}'>
+  <view class='title-bar'>
+    <view class='{{"icon-"+shape}}' style='background:{{color?color:colors[type]}}'></view>
+    {{title}}
+  </view>
+</view>

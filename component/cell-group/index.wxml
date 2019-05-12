@@ -1,0 +1,5 @@
+<!--component/list-group/index.wxml-->
+<view class="iw-class iw-cell-group">
+    <slot></slot>
+</view>
+

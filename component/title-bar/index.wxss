@@ -1,0 +1,44 @@
+/* component/title-bar/index.wxss */
+.bar{
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.title-bar{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+  color: #666;
+}
+
+.title-bar:last-child {
+  margin-right: 10rpx;
+}
+
+.title-bar:first-child {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+}
+
+.icon-circle{
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.icon-line{
+  width: 8rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}

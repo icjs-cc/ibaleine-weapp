@@ -1,0 +1,18 @@
+<!--component/list-group-item/index.wxml-->
+<view bindtap="handleTap" class="iw-class iw-cell {{ isLastCell ? 'iw-cell-last' : '' }} {{ isLink ? 'iw-cell-access' : '' }}">
+    <view class="iw-cell-icon {{positionCls}}">
+        <image src='{{icon}}' wx:if='{{icon}}'></image>
+        <slot name="icon" wx:else></slot>
+    </view>
+    <view class="iw-cell-bd">
+        <view wx:if="{{ title }}" class="iw-cell-text">{{ title }}</view>
+        <view wx:if="{{ label }}" class="iw-cell-desc">{{ label }}</view>
+        <slot name='content'></slot>
+    </view>
+    <view catchtap="navigateTo" class="iw-cell-ft">
+        <block wx:if="{{value}}">{{ value }}</block>
+        <block wx:else>
+            <slot name="footer"></slot>
+        </block>
+    </view>
+</view>
