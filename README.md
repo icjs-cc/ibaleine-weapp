@@ -9,8 +9,8 @@
 ##### 基础组件
 
 * 轮播图（swiper）
-* 自定义顶部导航栏（navbar）
-* 菜单标签组（menu-bar）
+* 自定义顶部导航栏（nav-bar）
+* 菜单栏（menu-bar）
 * 按钮（button）
 * 输入框（input）
 * 数字输入框（input-number）
