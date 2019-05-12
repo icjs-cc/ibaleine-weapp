@@ -1,0 +1,70 @@
+.navbar {
+  position: relative;
+}
+
+.nav-capsule {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  width: 140rpx;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-v-line {
+  position: absolute;
+  width: 1px;
+  height: 32rpx;
+  left: -5px;
+  background-color: #e5e5e5;
+}
+
+.back-icon, .home-icon {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  left: 10px;
+  z-index: 99;
+}
+
+.home-icon {
+  left: 50px;
+  z-index: 99;
+}
+
+.back-icon image {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.home-icon image {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.nav-title, .nav-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 0;
+  font-weight: bold;
+  z-index: 1;
+}
+.nav-title-text{
+  width: 70%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
