@@ -8,7 +8,8 @@ Page({
     loginText: '登录',
     formData: {
       username: '',
-      password: ''
+      password: '',
+      avatar:'http://aliyun121.icjs.ink/resource/icjs.jpg'
     },
   },
   handleInputChange(e) {

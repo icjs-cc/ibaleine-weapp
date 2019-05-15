@@ -1,7 +1,7 @@
 <!--pages/mine/index.wxml-->
 <view class="personal" style='background-image:url("http://aliyun121.icjs.ink/resource/iwhale-ui/pi.png")'>
   <view class="personal-avatar">
-    <image src="http://aliyun121.icjs.ink/resource/iwhale-ui/avatar.png"/>
+    <image src="{{userInfo.username?userInfo.avatar:'http://aliyun121.icjs.ink/resource/iwhale-ui/avatar.png'}}"/>
   </view>
   <view class="personal-text" wx:if='{{userInfo.username}}'>
     <view class='username'>iWhale</view>

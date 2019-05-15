@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "iw-card": "/component/card/index",
+    "iw-input-number": "/component/input-number/index"
+  }
 }

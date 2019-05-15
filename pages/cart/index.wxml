@@ -1,2 +1,29 @@
 <!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class='wrap'>
+  <iw-card iw-class='iw-pl-5' full wx:for='{{goodsList}}' wx:key='unique'>
+    <view slot='content'>
+      <view class='media-cell'>
+        <view class='media-cell-image'>
+          <image src='{{item.thumb}}'></image>
+        </view>
+        <view class='media-cell-inner'>
+          <view class='media-cell-text'>
+            <view class='media-cell-title iw-ellipsis-l2'>{{item.title}}</view>
+          </view>
+          <view class='media-cell-text'>
+            <view class='iw-ellipsis' style='width:510rpx;'>{{item.title}}</view>
+          </view>
+          <view class='media-cell-text'>
+            <view class="price-content">
+              <view class="price">
+                <text class='unit'>¥</text>100</view>
+              <view style='margin-right:18rpx;'>
+                <iw-input-number customColor='#7FB553' value="{{ inputNumber }}" min="0" max="100" disabled visible bindchange="handleInputNumber"></iw-input-number>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </iw-card>
+</view>
