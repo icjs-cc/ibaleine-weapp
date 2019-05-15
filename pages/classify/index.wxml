@@ -4,22 +4,23 @@
     <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
     <view slot='content'>
       <iw-title-bar title='{{title}}' color='#7FB553'></iw-title-bar>
-      <iw-card iw-class='iw-pl-5' full>
+      <iw-card iw-class='iw-pl-5' full wx:for='{{goodsList}}' wx:key='unique'>
         <view slot='content'>
           <view class='media-cell'>
             <view class='media-cell-image'>
-              <image src='http://aliyun121.icjs.ink/resource/iwhale-ui/goods1.png'></image>
+              <image src='{{item.thumb}}'></image>
             </view>
             <view class='media-cell-inner'>
               <view class='media-cell-text'>
-                <view class='media-cell-title'>玫瑰花枸杞菊花茶</view>
+                <view class='media-cell-title iw-ellipsis-l2'>{{item.title}}</view>
               </view>
-              <view class='media-cell-text iw-ellipsis-l2'>历史上的大红袍，本来就少，而被公认的大红袍，仅是九龙窠岩壁上的那几棵。</view>
               <view class='media-cell-text'>
                 <view class="price-content">
-    <view class="price" style='width:74%;margin-right: 10rpx;text-align:left;'>¥ 100</view>
-    <view class="prime-cost" style='margin-right:18rpx;'>¥ 101</view>
-  </view>
+                  <view class="price"><text class='unit'>¥</text>100</view>
+                  <view style='margin-right:18rpx;'>
+                    <iw-input-number customColor='#7FB553' value="{{ inputNumber }}" min="0" max="100" disabled visible bindchange="handleInputNumber"></iw-input-number>
+                  </view>
+                </view>
               </view>
             </view>
           </view>

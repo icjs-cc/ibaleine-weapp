@@ -30,9 +30,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 50rpx;
-  min-width: 50rpx;
-  font-size: 40rpx;
+  line-height: 40rpx;
+  min-width: 40rpx;
+  font-size: 32rpx;
 }
 
 .iw-input-number-minus {
@@ -59,7 +59,7 @@
   text-align: center;
   vertical-align: middle;
   height: 50rpx;
-  width: 80rpx;
+  width: 50rpx;
   min-height: auto;
   font-size: 30rpx;
   line-height: 50rpx;

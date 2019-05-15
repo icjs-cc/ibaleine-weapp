@@ -19,7 +19,6 @@ Component({
   externalClasses: ['iw-class'],
 
   properties: {
-    // small || default || large
     size: String,
     type: {
       type: String,
