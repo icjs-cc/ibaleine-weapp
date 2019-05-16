@@ -23,7 +23,7 @@
 }
 
 .iw-submit-bar-content-checkbox {
-  margin-left: 15px;
+  margin-left: 20rpx;
   overflow: hidden;
   -webkit-user-select: none;
   user-select: none;
@@ -44,7 +44,9 @@
 }
 
 .iw-button {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   padding: 0;
   height: 100rpx;
@@ -97,9 +99,7 @@
   }
 }
 
-
 .iw-submit-bar-height {
   line-height: 100rpx;
   height: 100rpx;
 }
-

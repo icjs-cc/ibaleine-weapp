@@ -4,7 +4,7 @@
     <view slot='content'>
       <view class='content'>
         <view><radio value="{{item.name}}" color='#7FB553'/></view>
-        <iw-media class='media-cell' thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}' border>
+        <iw-media class='media-cell' thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}'>
           <view class="price-content" slot='footer'>
             <view class="price">
               <text class='unit'>¥</text>100 <text class='prime-cost'>￥120</text>
@@ -17,7 +17,7 @@
       </view>
     </view>
   </iw-card>
-  <iw-submit-bar text='结算' bgcolor='#7FB553' loading>
+  <iw-submit-bar text='{{text}}' bgcolor='#7FB553' bindsubmit='handleSubmit' loading='{{loading}}'>
     <view slot='left' class='submit-bar-left'>
       <radio color='#7FB553'/><text class='text-all'>全选</text>
     </view>

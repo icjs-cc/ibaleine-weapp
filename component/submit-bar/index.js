@@ -16,6 +16,10 @@ Component({
     loading: {
       type: Boolean,
       value: false
+    },
+    disabled:{
+      type: Boolean,
+      value: false
     }
   },
 
@@ -24,6 +28,10 @@ Component({
   },
 
   methods: {
-
+    handleClick(e) {
+      console.log(this.data.disabled)
+      if (this.data.loading) return false;
+      this.triggerEvent('submit');
+    }
   }
 })
