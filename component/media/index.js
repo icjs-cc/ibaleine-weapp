@@ -4,6 +4,10 @@ Component({
     multipleSlots: true
   },
   properties: {
+    border:{
+      type: Boolean,
+      value: false
+    },
     thumb:{
       type: String,
       value:''

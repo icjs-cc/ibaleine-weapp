@@ -1,2 +1,17 @@
 <!--component/submit-bar/index.wxml-->
-<text>component/submit-bar/index.wxml</text>
+<view class='iw-submit-bar'>
+  <view class='iw-submit-bar-content'>
+    <view class='iw-submit-bar-content-checkbox'>
+      <view wx:if='{{left}}'>{{left}}</view>
+      <slot name='left'></slot>
+    </view>
+    <view class='iw-submit-bar-content-text'>
+      <view wx:if='{{center}}'>{{center}}</view>
+      <slot name='center'></slot>
+    </view>
+    <button class='iw-button' style='background:{{bgcolor}};border:1px solid {{bgcolor}}'>
+      <view class="iw-btn-loading-inner" wx:if="{{loading}}"></view><slot></slot>{{loading?'':text}}
+    </button>
+  </view>
+</view>
+<view class='iw-submit-bar-height'></view>

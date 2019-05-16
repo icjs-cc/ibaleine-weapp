@@ -35,7 +35,7 @@
 }
 
 .tag{
-  background: #ff9900;
+  background: #7FB553;
   color: #fff;
   display: flex;
   justify-content: center;

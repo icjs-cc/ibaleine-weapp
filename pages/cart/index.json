@@ -3,6 +3,7 @@
     "iw-card": "/component/card/index",
     "iw-input-number": "/component/input-number/index",
     "iw-action-bar": "/component/action-bar/index",
+    "iw-submit-bar": "/component/submit-bar/index",
     "iw-media": "/component/media/index"
   }
 }

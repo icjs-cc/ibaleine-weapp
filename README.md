@@ -11,6 +11,7 @@
 * 标题栏（title-bar）
 * 自定义顶部导航栏（nav-bar）
 * 操作栏（action-bar）
+* 提交栏（submit-bar）
 * 菜单栏（menu-bar）
 * 按钮（button）
 * 输入框（input）

@@ -1,1 +1,105 @@
 /* component/submit-bar/index.wxss */
+
+.iw-submit-bar {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+}
+
+.iw-submit-bar-content {
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.iw-submit-bar-content-checkbox {
+  margin-left: 15px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.iw-submit-bar-content-text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  text-align: right;
+  color: #323233;
+  padding-right: 12px;
+}
+
+.iw-submit-bar .iw-button {
+  width: 110px;
+}
+
+.iw-button {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 16px;
+  border-radius: 0;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  color: #fff;
+  background-color: #f44;
+  border: 1px solid #f44;
+}
+
+.iw-button::after {
+  border: none;
+}
+
+.iw-btn-loading {
+  opacity: 0.6;
+}
+
+.iw-btn-loading-inner {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  background: 0 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-color: #fff #fff #fff transparent;
+  animation: btn-spin 0.6s linear;
+  animation-iteration-count: infinite;
+}
+
+.iw-btn-disabled {
+  color: #bbbec4 !important;
+  background: #f7f7f7 !important;
+}
+
+@keyframes btn-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.iw-submit-bar-height {
+  line-height: 100rpx;
+  height: 100rpx;
+}
+

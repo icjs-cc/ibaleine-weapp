@@ -1,5 +1,5 @@
 <!--component/media/index.wxml-->
-<view class='media-cell'>
+<view class='media-cell {{border?"media-cell-border":""}}'>
   <view class='media-cell-image' wx:if='{{position=="left"}}'>
     <image src='{{thumb}}' wx:if='{{thumb}}' style='{{thumbStyle}}'></image>
   </view>
