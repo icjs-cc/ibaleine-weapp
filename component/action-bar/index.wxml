@@ -1,0 +1,11 @@
+<!--component/action-bar/index.wxml-->
+<view class='iw-class iw-action-bar'>
+  <view class='iw-class iw-action-bar-mini-btn' style='width:{{miniBtnArray.length==1?"200rpx":""}};color:{{item.color}}'  wx:for='{{miniBtnArray}}' wx:key='unique'>
+    <view class='iw-class iw-icon iw-action-bar-mini-btn-icon' style='' data-index='{{index}}' data-item='{{item}}' catchtap="handleTap">
+      <image src='{{item.image}}'></image>
+      <view class='iw-info' wx:if='{{item.num}}'>{{item.num}}</view>
+    </view>{{item.name}}
+  </view>
+  <view class='iw-class iw-button iw-action-bar-big-btn' style='background:{{item.bgcolor?item.bgcolor:colors[item.type]}};color:{{item.color?item.color:"#fff"}}' wx:for='{{bigBtnArray}}' wx:key='unique' data-index='{{index}}' data-item='{{item}}' bindtap="handleClick">{{item.name}}</view>
+</view>
+<view class='iw-action-bar-height'></view>
