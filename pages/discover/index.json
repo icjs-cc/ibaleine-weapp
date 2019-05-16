@@ -5,6 +5,7 @@
     "iw-signal": "/component/signal/index",
     "iw-divider": "/component/divider/index",
     "iw-tabs": "/component/tabs/index",
-    "iw-tab": "/component/tab/index"
+    "iw-tab": "/component/tab/index",
+    "iw-media": "/component/media/index"
   }
 }

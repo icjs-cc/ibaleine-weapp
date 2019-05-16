@@ -1,6 +1,6 @@
 <button
     class="iw-class iw-btn {{ long ? 'iw-btn-long' : '' }} {{ 'iw-btn-' + size }} {{ 'iw-btn-' + shape }} {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}"
-    style='background:{{customBackground?customBackground:colors[type]}};color:{{customColor?customColor:"#fff"}}'
+    style='background:{{bgcolor?bgcolor:colors[type]}};color:{{color?color:"#fff"}}'
     bindtap="handleTap"
     open-type="{{ openType }}"
     app-parameter="{{ appParameter }}"

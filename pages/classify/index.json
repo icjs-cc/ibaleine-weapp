@@ -5,6 +5,8 @@
     "iw-title-bar": "/component/title-bar/index",
     "iw-tabs": "/component/tabs/index",
     "iw-input-number": "/component/input-number/index",
-    "iw-tab": "/component/tab/index"
-  }
+    "iw-tab": "/component/tab/index",
+    "iw-media": "/component/media/index"
+  },
+  "disableScroll": true
 }

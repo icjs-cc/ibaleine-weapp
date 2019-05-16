@@ -8,11 +8,11 @@ Component({
       type: String,
       value: 'primary'
     },
-    customBackground: {
+    bgcolor: {
       type: String,
       value: ''
     },
-    customColor:{
+    color:{
       type: String,
       value: ''
     },

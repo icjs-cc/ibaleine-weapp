@@ -18,7 +18,7 @@
       </view>
     </view>
     <view class='login-button-wrap'>
-      <iw-button iw-class='login-button' shape='circle' customBackground='#A2D181' customColor='#fff' size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
+      <iw-button iw-class='login-button' shape='circle' bgcolor='#A2D181' color='#fff' size="small" bindtap='handleLogin' loading="{{loading}}">{{loginText}}</iw-button>
     </view>
 
     <view class="forget-section">

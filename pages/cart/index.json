@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "iw-card": "/component/card/index",
-    "iw-input-number": "/component/input-number/index"
+    "iw-input-number": "/component/input-number/index",
+    "iw-action-bar": "/component/action-bar/index",
+    "iw-media": "/component/media/index"
   }
 }

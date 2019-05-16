@@ -2,7 +2,17 @@
 <view class='wrap'>
   <iw-card iw-class='iw-pl-5' full wx:for='{{goodsList}}' wx:key='unique'>
     <view slot='content'>
-      <view class='media-cell'>
+      <iw-media thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}'>
+        <view class="price-content" slot='footer'>
+          <view class="price">
+            <text class='unit'>¥</text>100
+          </view>
+          <view style='margin-right:18rpx;'>
+            <iw-input-number customColor='#7FB553' value="{{ inputNumber }}" min="0" max="100" disabled visible bindchange="handleInputNumber"></iw-input-number>
+          </view>
+        </view>
+      </iw-media>
+      <!-- <view class='media-cell'>
         <view class='media-cell-image'>
           <image src='{{item.thumb}}'></image>
         </view>
@@ -23,7 +33,8 @@
             </view>
           </view>
         </view>
-      </view>
+      </view> -->
     </view>
   </iw-card>
+  <iw-action-bar miniBtnArray='{{miniBtnArray}}' bigBtnArray='{{bigBtnArray}}' bindmini='handleTap' bindbig='handleClick'></iw-action-bar>
 </view>

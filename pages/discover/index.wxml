@@ -2,43 +2,13 @@
 <iw-tabs current="{{ current }}" color='#7FB553' fixed bindchange="handleChangeTab">
     <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
 </iw-tabs>
-<iw-card iw-class='iw-mb-10' title='武夷山采茶实录' thumb='/images/common/iwhale-logo.png' circle full header footer>
+<iw-card iw-class='iw-mb-10' title='陈小术' thumb='/images/common/iwhale-logo.png' circle full header footer wx:for='{{discoverList}}' wx:key='unique'>
   <view slot='extra' class='signal'>
     <iw-signal activeColor='#7FB553' activeIndex='2' size='60rpx'></iw-signal>
   </view>
   <view slot='content'>
-    <view class='media-cell'>
-      <view class='media-cell-inner'>
-        <view class='media-cell-text'>
-          <view class='media-cell-title'>武夷山采茶实录</view>
-          <view class='media-cell-extra'>01:00</view>
-        </view>
-        <view class='media-cell-text iw-ellipsis-l3'>
-          历史上的大红袍，本来就少，而被公认的大红袍，仅是九龙窠岩壁上的那几棵。
-        </view>
-      </view>
-      <view class='media-cell-image'>
-        <image src='http://aliyun121.icjs.ink/resource/iwhale-ui/discover-1.png'></image>
-      </view>
-    </view>
-  </view>
-</iw-card>
-<iw-card iw-class='iw-mb-10' title='武夷山采茶实录' thumb='/images/common/iwhale-logo.png' extra='100 浏览' circle full header footer>
-  <view slot='content'>
-    <view class='media-cell'>
-      <view class='media-cell-inner'>
-        <view class='media-cell-text'>
-          <view class='media-cell-title'>武夷山采茶实录</view>
-          <view class='media-cell-extra'>01:00</view>
-        </view>
-        <view class='media-cell-text iw-ellipsis-l3'>
-          历史上的大红袍，本来就少，而被公认的大红袍，仅是九龙窠岩壁上的那几棵。
-        </view>
-      </view>
-      <view class='media-cell-image'>
-        <image src='http://aliyun121.icjs.ink/resource/iwhale-ui/discover-2.png'></image>
-      </view>
-    </view>
+    <iw-media thumb='{{item.thumb}}' title='{{item.title}}' desc='{{item.desc}}' lineClamp4Desc='3' position='right' thumbStyle='width:230rpx;160rpx;'>
+    </iw-media>
   </view>
 </iw-card>
 <iw-divider text='没有更多数据了'></iw-divider>

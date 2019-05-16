@@ -63,4 +63,5 @@
   min-height: auto;
   font-size: 30rpx;
   line-height: 50rpx;
+  z-index: 0;
 }
