@@ -5,8 +5,7 @@
     <view slot='content'>
       <iw-title-bar title='{{title}}' color='#7FB553'></iw-title-bar>
       <iw-card iw-class='iw-pl-5' full wx:for='{{goodsList}}' wx:key='unique'>
-        <view slot='content'>
-          <iw-media thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}' border>
+          <iw-media thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}' border slot='content'> 
             <view class="price-content" slot='footer'>
               <view class="price">
                 <text class='unit'>¥</text>100
@@ -16,7 +15,6 @@
               </view>
             </view>
           </iw-media>
-        </view>
       </iw-card>
     </view>
   </iw-tabs>

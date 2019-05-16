@@ -7,6 +7,5 @@
     "iw-input-number": "/component/input-number/index",
     "iw-tab": "/component/tab/index",
     "iw-media": "/component/media/index"
-  },
-  "disableScroll": true
+  }
 }

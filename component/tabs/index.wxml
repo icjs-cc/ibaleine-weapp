@@ -15,8 +15,6 @@
     <slot></slot>
   </view>
   <scroll-view scroll-y="true" class="iw-tabs-scroll-vertical-content">
-    <view>
-      <slot name='content'></slot>
-    </view>
+    <slot name='content'></slot>
   </scroll-view>
 </view>
