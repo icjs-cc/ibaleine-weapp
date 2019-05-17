@@ -6,6 +6,9 @@
       <view class='iw-info' wx:if='{{item.num}}'>{{item.num}}</view>
     </view>{{item.name}}
   </view>
-  <view class='iw-class iw-button iw-action-bar-big-btn' style='background:{{item.bgcolor?item.bgcolor:colors[item.type]}};color:{{item.color?item.color:"#fff"}}' wx:for='{{bigBtnArray}}' wx:key='unique' data-index='{{index}}' data-item='{{item}}' bindtap="handleClick">{{item.name}}</view>
+  <!-- <view class='iw-class iw-button iw-action-bar-big-btn' style='' >{{item.name}}</view> -->
+  <button class="iw-class iw-button iw-action-bar-big-btn {{ item.loading ? 'iw-btn-loading' : '' }} {{ item.disabled ? 'iw-btn-disabled' : ''}}" style='background:{{item.bgcolor?item.bgcolor:colors[item.type]}};color:{{item.color?item.color:"#fff"}};border:1px solid {{item.bgcolor}}' wx:for='{{bigBtnArray}}' wx:key='unique' data-index='{{index}}' data-item='{{item}}' bindtap="handleClick">
+      <view class="iw-btn-loading-inner" wx:if="{{item.loading}}"></view><slot></slot>{{item.name}}
+    </button>
 </view>
 <view class='iw-action-bar-height'></view>

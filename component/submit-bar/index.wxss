@@ -72,7 +72,7 @@
 
 .iw-btn-loading-inner {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 5px;
   vertical-align: middle;
   width: 14px;
   height: 14px;

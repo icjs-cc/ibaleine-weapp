@@ -13,8 +13,8 @@ Page({
       { image: '../../images/common/cart.png', name: '购物车', type: 'lightPrimary' }
     ],
     bigBtnArray: [
-      { name: '加入购物车', type: 'lightPrimary', color: '#43A047', bgcolor:'#C8E6C9' },
-      { name: '立即购买', type: 'primary', color: '#FFFFFF', bgcolor: '#81C784' },
+      { name: '加入购物车', type: 'lightPrimary', color: '#43A047', bgcolor: '#C8E6C9', loading: false },
+      { name: '立即购买', type: 'primary', color: '#FFFFFF', bgcolor: '#81C784', loading:false },
     ],
     text: '结算',
     loading: false
@@ -23,10 +23,20 @@ Page({
     console.log(e)
   },
   handleClick(e){
-    console.log(e)
+    const index = e.detail.index
+    let bigBtnArray = this.data.bigBtnArray
+    bigBtnArray[index].loading = true
+    this.setData({
+      bigBtnArray: bigBtnArray
+    })
+    setTimeout(() => {
+      bigBtnArray[index].loading = false
+      this.setData({
+        bigBtnArray: bigBtnArray
+      })
+    }, 3000)
   },
   handleSubmit(){
-    console.log('submit')
     this.setData({
       loading: true,
       text: '结算中...'
