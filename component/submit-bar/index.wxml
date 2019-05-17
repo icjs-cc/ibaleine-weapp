@@ -9,7 +9,7 @@
       <view wx:if='{{center}}'>{{center}}</view>
       <slot name='center'></slot>
     </view>
-    <button class="iw-button {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}" style='background:{{bgcolor}};border:1px solid {{bgcolor}}' bindtap='handleClick'>
+    <button class="iw-button {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}" style='background:{{bgcolor}};color:{{color}};border:1px solid {{bgcolor}}' bindtap='handleClick'>
       <view class="iw-btn-loading-inner" wx:if="{{loading}}"></view><slot></slot>{{text}}
     </button>
   </view>

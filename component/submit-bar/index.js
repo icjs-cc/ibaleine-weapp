@@ -13,11 +13,11 @@ Component({
       type: String,
       value: '#f44'
     },
-    loading: {
-      type: Boolean,
-      value: false
+    color:{
+      type: String,
+      value: '#fff'
     },
-    disabled:{
+    loading: {
       type: Boolean,
       value: false
     }
@@ -29,7 +29,6 @@ Component({
 
   methods: {
     handleClick(e) {
-      console.log(this.data.disabled)
       if (this.data.loading) return false;
       this.triggerEvent('submit');
     }
