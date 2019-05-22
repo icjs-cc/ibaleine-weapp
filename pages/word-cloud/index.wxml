@@ -1,0 +1,2 @@
+<!--pages/word-cloud/index.wxml-->
+<iw-word-cloud value='{{wordCloudObjectArray}}' colors='{{colors}}' bindclick='handleClick'></iw-word-cloud>

@@ -23,6 +23,7 @@
 * 分割线（divider）
 * 列表（cell）
 * 媒体列表（media）
+* 词云（word-cloud）
 
 ##### 业务组件
 * 商品列表

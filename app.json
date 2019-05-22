@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/navbar/index",
     "pages/discover/index",
     "pages/classify/index",
     "pages/cart/index",
     "pages/mine/index",
-    "pages/login/index"
+    "pages/login/index",
+
+    "pages/word-cloud/index",
+    "pages/navbar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
