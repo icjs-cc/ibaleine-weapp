@@ -13,8 +13,8 @@ Page({
       { image: '../../images/common/cart.png', name: '购物车', type: 'lightPrimary' }
     ],
     bigBtnArray: [
-      { name: '加入购物车', type: 'lightPrimary', color: '#43A047', bgcolor: '#C8E6C9', loading: false },
-      { name: '立即购买', type: 'primary', color: '#FFFFFF', bgcolor: '#81C784', loading:false },
+      { name: '加入购物车', type: 'lightPrimary', color: '#43A047', bgcolor: '#C8E6C9', loading: false, disabled: true },
+      { name: '立即购买', type: 'primary', color: '#FFFFFF', bgcolor: '#81C784', loading: false, disabled: false },
     ],
     text: '结算',
     loading: false

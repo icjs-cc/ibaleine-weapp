@@ -118,8 +118,7 @@
 }
 
 .iw-btn-disabled {
-  color: #bbbec4 !important;
-  background: #f7f7f7 !important;
+  opacity: 0.6;
 }
 
 @keyframes btn-spin {

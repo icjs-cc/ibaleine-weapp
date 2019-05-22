@@ -8,7 +8,7 @@ Component({
       type: Array,
       value: []
     },
-    //大按钮数组 [{name:'',type:'',color:'',bgcolor:'',loading: false}]
+    //大按钮数组 [{name:'',type:'',color:'',bgcolor:'',loading: false, disabled: false}]
     bigBtnArray:{
       type: Array,
       value: []
@@ -28,7 +28,7 @@ Component({
     },
     handleClick(e){
       const dataset = e.currentTarget.dataset
-      if (dataset.item.loading) return false;
+      if (dataset.item.loading || dataset.item.disabled) return false;
       this.triggerEvent('big', { ...dataset } );
     }
   }
