@@ -1,5 +1,12 @@
+.status{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-capsule {
@@ -63,7 +70,8 @@
   z-index: 1;
 }
 .nav-title-text{
-  width: 70%;
+  width: 350rpx;
+  text-align: center;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
