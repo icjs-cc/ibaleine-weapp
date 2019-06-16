@@ -44,7 +44,7 @@
 				{
 					"id": 0,
 					"name": "dev",
-					"pathName": "pages/word-cloud/index",
+					"pathName": "pages/cart/index",
 					"query": "",
 					"scene": null
 				}

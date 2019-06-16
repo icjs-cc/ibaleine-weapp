@@ -24,6 +24,10 @@ Component({
     disabled: {
       type: Boolean,
       value: false
+    },
+    full: {
+      type: Boolean,
+      value: false
     }
   },
 
