@@ -1,4 +1,8 @@
 /* component/submit-bar/index.wxss */
+.iw-submit-bar-height {
+  line-height: 100rpx;
+  height: 100rpx;
+}
 
 .iw-submit-bar {
   left: 0;
@@ -12,7 +16,6 @@
 }
 
 .iw-submit-bar-content {
-  height: 100rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -58,8 +61,6 @@
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
   color: #fff;
-  background-color: #f44;
-  border: 1px solid #f44;
 }
 
 .iw-button::after {
@@ -96,9 +97,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.iw-submit-bar-height {
-  line-height: 100rpx;
-  height: 100rpx;
 }

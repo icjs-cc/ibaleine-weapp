@@ -1,5 +1,5 @@
 Component({
-    externalClasses: ['i-class'],
+    externalClasses: ['iw-class'],
 
     properties: {
         // circle || square

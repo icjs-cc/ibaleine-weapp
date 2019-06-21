@@ -3,12 +3,14 @@
   <view class='media-cell-image' wx:if='{{position=="left"}}'>
     <image src='{{thumb}}' wx:if='{{thumb}}' style='{{thumbStyle}}'></image>
   </view>
-  <view class='media-cell-inner'>
+  <view class='media-cell-inner' style='padding-right:{{position=="right"?"10rpx":""}};padding-left:{{position=="left"?"10rpx":""}}'>
     <view class='media-cell-text'>
       <view class='media-cell-title {{lineClamp4Title==1?"iw-ellipsis":"iw-ellipsis-l"+lineClamp4Title}}' wx:if='{{title}}'>{{title}}</view>
+      <slot name='title'></slot>
     </view>
     <view class='media-cell-text'>
       <view class='{{lineClamp4Desc==1?"iw-ellipsis":"iw-ellipsis-l"+lineClamp4Desc}}' wx:if='{{desc}}'>{{desc}}</view>
+      <slot name='desc'></slot>
     </view>
     <view class='media-cell-text'>
       <view wx:if='{{footer}}'>{{footer}}</view>

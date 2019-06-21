@@ -1,4 +1,5 @@
 // component/action-bar/index.js
+import { safeAreaInset, checkIPhoneX } from '../libs/isIPhoneX'
 const config = require('../libs/config.js')
 Component({
   externalClasses: ['iw-class'],
@@ -12,6 +13,10 @@ Component({
     bigBtnArray:{
       type: Array,
       value: []
+    },
+    safeArea:{
+      type: Boolean,
+      value: false
     }
   },
 
@@ -20,7 +25,14 @@ Component({
       ...config.colors
     }
   },
-
+  attached() {
+    if (this.properties.safeArea){
+      this.setData({
+        isIphoneX: checkIPhoneX(),
+        safeAreaInset: checkIPhoneX() ? safeAreaInset : 0
+      })
+    }
+  },
   methods: {
     handleTap(e) {
       const dataset = e.currentTarget.dataset

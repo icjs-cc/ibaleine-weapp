@@ -2,6 +2,7 @@
     class="iw-class iw-btn {{ long ? 'iw-btn-long' : '' }} {{ 'iw-btn-' + size }} {{ 'iw-btn-' + shape }} {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}"
     style='background:{{bgcolor?bgcolor:colors[type]}};color:{{color?color:"#fff"}}'
     bindtap="handleTap"
+    bindgetphonenumber="getphonenumber"
     open-type="{{ openType }}"
     app-parameter="{{ appParameter }}"
     hover-stop-propagation="{{ hoverStopPropagation }}"

@@ -1,17 +1,23 @@
 <!--component/submit-bar/index.wxml-->
-<view class='iw-submit-bar'>
-  <view class='iw-class iw-submit-bar-content'>
-    <view class='iw-submit-bar-content-checkbox' wx:if='{{!full}}'>
-      <view wx:if='{{left}}'>{{left}}</view>
-      <slot name='left'></slot>
+<view class='iw-submit-bar-height iw-class' style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+  <view class='iw-submit-bar' style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+    <view class='iw-class iw-submit-bar-content' wx:if='{{!self}}'>
+      <view class='iw-submit-bar-content-checkbox' wx:if='{{!full}}'>
+        <view wx:if='{{left}}'>{{left}}</view>
+        <slot name='left'></slot>
+      </view>
+      <view class='iw-submit-bar-content-text' wx:if='{{!full}}'>
+        <view wx:if='{{center}}'>{{center}}</view>
+        <slot name='center'></slot>
+      </view>
+      <button class="iw-button {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}" style='width:{{full?"100%":"110px"}};background:{{bgcolor?bgcolor:colors[type]}};color:{{color}};border:1px solid {{bgcolor?bgcolor:colors[type]}}'
+        bindtap='handleClick'>
+        <view class="iw-btn-loading-inner" wx:if="{{loading}}"></view>
+        <slot></slot>{{text}}
+      </button>
     </view>
-    <view class='iw-submit-bar-content-text' wx:if='{{!full}}'>
-      <view wx:if='{{center}}'>{{center}}</view>
-      <slot name='center'></slot>
+    <view class='iw-class' wx:if='{{self}}'>
+      <slot></slot>
     </view>
-    <button class="iw-button {{ loading ? 'iw-btn-loading' : '' }} {{ disabled ? 'iw-btn-disabled' : ''}}" style='width:{{full?"100%":"110px"}};background:{{bgcolor}};color:{{color}};border:1px solid {{bgcolor}}' bindtap='handleClick'>
-      <view class="iw-btn-loading-inner" wx:if="{{loading}}"></view><slot></slot>{{text}}
-    </button>
   </view>
 </view>
-<view class='iw-submit-bar-height'></view>

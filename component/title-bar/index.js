@@ -2,6 +2,7 @@
 const config = require('../libs/config.js')
 const util = require('../libs/util.js')
 Component({
+  externalClasses: ['iw-class'],
   properties: {
     type: {
       type: String,
@@ -17,6 +18,10 @@ Component({
       value: 'circle'
     },
     title: {
+      type: String,
+      value: ''
+    },
+    height: {
       type: String,
       value: ''
     },

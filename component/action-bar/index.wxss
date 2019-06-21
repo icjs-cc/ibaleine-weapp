@@ -1,5 +1,10 @@
 /* component/action-bar/index.wxss */
 
+.iw-action-bar-height {
+  line-height: 100rpx;
+  height: 100rpx;
+}
+
 .iw-action-bar {
   left: 0;
   right: 0;
@@ -10,7 +15,6 @@
   position: fixed;
   background-color: #fff;
 }
-
 
 .iw-action-bar-mini-btn {
   color: #7d7e80;
@@ -67,9 +71,9 @@
   margin: 0 auto 5px;
 }
 
-.iw-icon image{
-  width: 40rpx!important;
-  height: 40rpx!important;
+.iw-icon image {
+  width: 40rpx !important;
+  height: 40rpx !important;
 }
 
 .iw-button {
@@ -129,9 +133,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.iw-action-bar-height {
-  line-height: 100rpx;
-  height: 100rpx;
 }

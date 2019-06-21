@@ -24,6 +24,7 @@
 * 列表（cell）
 * 媒体列表（media）
 * 词云（word-cloud）
+* 多久之前（timeago）
 
 ##### 业务组件
 * 商品列表

@@ -1,19 +1,28 @@
 // component/submit-bar/index.js
+import {
+  safeAreaInset,
+  checkIPhoneX
+} from '../libs/isIPhoneX'
+const config = require('../libs/config.js')
 Component({
   externalClasses: ['iw-class'],
   options: {
     multipleSlots: true
   },
   properties: {
-    text:{
+    type: {
+      type: String,
+      value: 'primary'
+    },
+    text: {
       type: String,
       value: ''
     },
-    bgcolor:{
+    bgcolor: {
       type: String,
-      value: '#f44'
+      value: ''
     },
-    color:{
+    color: {
       type: String,
       value: '#fff'
     },
@@ -28,13 +37,30 @@ Component({
     full: {
       type: Boolean,
       value: false
+    },
+    self: {
+      type: Boolean,
+      value: false
+    },
+    safeArea: {
+      type: Boolean,
+      value: false
     }
   },
 
   data: {
-
+    colors: {
+      ...config.colors
+    }
   },
-
+  attached() {
+    if (this.properties.safeArea) {
+      this.setData({
+        isIphoneX: checkIPhoneX(),
+        safeAreaInset: checkIPhoneX() ? safeAreaInset : 0
+      })
+    }
+  },
   methods: {
     handleClick(e) {
       if (this.data.loading || this.data.disabled) return false;

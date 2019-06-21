@@ -72,6 +72,9 @@ Component({
     handleTap() {
       if (this.data.disabled) return false;
       this.triggerEvent('click');
+    },
+    getphonenumber(e){
+      this.triggerEvent('phone',e.detail);
     }
   }
 });
