@@ -13,7 +13,7 @@ Page({
       { title: '醉品朴茶·醇朴end', thumb: 'http://aliyun121.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 }
     ],
     miniBtnArray: [
-      { image: '../../images/common/cart.png', name: '购物车', type: 'lightPrimary' }
+      { image: '../../images/common/cart.png', name: '购物车',num: 111, type: 'lightPrimary' }
     ],
     bigBtnArray: [
       { name: '加入购物车', type: 'lightPrimary', color: '#43A047', bgcolor: '#C8E6C9', loading: false, disabled: true },

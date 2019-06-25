@@ -4,7 +4,7 @@
     <view class='iw-class iw-action-bar-mini-btn' style='width:{{miniBtnArray.length==1?"200rpx":""}};color:{{item.color}}' wx:for='{{miniBtnArray}}' wx:key='unique'>
       <view class='iw-class iw-icon iw-action-bar-mini-btn-icon' style='' data-index='{{index}}' data-item='{{item}}' catchtap="handleTap">
         <image src='{{item.image}}'></image>
-        <view class='iw-info' wx:if='{{item.num}}'>{{item.num}}</view>
+        <view class='iw-info' wx:if='{{item.num}}'>{{item.num>99?'99+': item.num}}</view>
       </view>{{item.name}}
     </view>
     <!-- <view class='iw-class iw-button iw-action-bar-big-btn' style='' >{{item.name}}</view> -->

@@ -46,8 +46,8 @@
 
 .iw-info {
   position: absolute;
-  right: 0;
-  top: -8px;
+  right: -2px;
+  top: -7px;
   color: #fff;
   font-size: 12px;
   font-weight: 500;
