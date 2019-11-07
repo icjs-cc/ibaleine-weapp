@@ -9,7 +9,7 @@ Page({
     formData: {
       username: '',
       password: '',
-      avatar:'http://aliyun121.icjs.ink/resource/icjs.jpg'
+      avatar:'http://ipratt.icjs.ink/resource/icjs.jpg'
     },
   },
   handleInputChange(e) {

@@ -6,9 +6,9 @@ Page({
   ...common,
   data: {
     modules:[
-      { icon: 'http://aliyun121.icjs.ink/resource/iwhale-ui/address.png', title:'我的地址'},
-      { icon: 'http://aliyun121.icjs.ink/resource/iwhale-ui/order.png', title: '我的订单'},
-      { icon: 'http://aliyun121.icjs.ink/resource/iwhale-ui/about-us.png', title: '关于我们'}
+      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/address.png', title:'我的地址'},
+      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/order.png', title: '我的订单'},
+      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/about-us.png', title: '关于我们'}
     ],
     userInfo: {}
   },
