@@ -13,16 +13,7 @@ Page({
     }, {
       key: 4,
       title: '岩茶'
-      }, {
-        key: 4,
-        title: '岩茶'
-      }, {
-        key: 4,
-        title: '岩茶'
-      }, {
-        key: 4,
-        title: '岩茶'
-      }],
+    }],
     current: 1,
     discoverList:[{
       thumb:'http://ipratt.icjs.ink/resource/iwhale-ui/discover-1.png',

@@ -4,7 +4,7 @@
     <image src="{{userInfo.username?userInfo.avatar:'http://ipratt.icjs.ink/resource/iwhale-ui/avatar.png'}}"/>
   </view>
   <view class="personal-text" wx:if='{{userInfo.username}}'>
-    <view class='username'>iWhale</view>
+    <view class='username'>ibaleine</view>
     <view class='slogan'>微信小程序UI组件</view>
   </view>
   <view class="personal-auth" data-url='/pages/login/index' bindtap='navigateTo' wx:else>登录/注册</view>
