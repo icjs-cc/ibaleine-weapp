@@ -1,7 +1,7 @@
 <!--component/word-cloud/index.wxml-->
-<view class="iw-word-cloud" style='height:{{height}};width:{{width}};'>
-  <view class="iw-word-cloud-cell" wx:for="{{wordCloudEle}}" wx:key="{{index}}" style="left: {{item.x}}rpx;top: {{item.y}}rpx;">
-    <view class='tag' style='opacity:{{item.o}};z-index:999;background:{{item.color}};transform: scale({{item.s}})' data-item='{{item}}' bindtap='handleTap'>
+<view class="word-cloud" style='{{wordCloudStyle}}'>
+  <view class="word-cloud__cell" wx:for="{{wordCloudEle}}" wx:key="{{index}}" style="left: {{item.x}}rpx;top: {{item.y}}rpx;" wx:key="unique">
+    <view class='word-cloud__cell--tag' style='opacity:{{item.o}};z-index:999;background:{{item.color}};transform: scale({{item.s}})' data-item='{{item}}' bindtap='_bindtap'>
     {{item.title}}
     </view>
   </view>

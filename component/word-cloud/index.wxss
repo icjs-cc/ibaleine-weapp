@@ -1,12 +1,12 @@
 /* component/word-cloud/index.wxss */
 
-.iw-word-cloud {
+.word-cloud {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.iw-word-cloud-cell {
+.word-cloud__cell {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -17,7 +17,7 @@
   top: 0rpx;
 }
 
-.tag{
+.word-cloud__cell--tag {
   padding: 5rpx 15rpx;
   border-radius: 5rpx;
   font-size: 32rpx;

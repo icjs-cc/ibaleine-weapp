@@ -1,8 +1,8 @@
-# ![iwhale-logo](./images/common/ibaleine-logo.png) iwhale-ui-weapp
+# ![ibaleine-logo](./images/common/ibaleine-logo.png) ibaleine-weapp
 
 #### 介绍
 
-> 微信小程序UI组件及商城模板
+> 微信小程序组件库及商城模板
 
 #### 实现组件
 
@@ -39,13 +39,3 @@
 
 ##### 插件
 * wx-validate（表单校验）
-
-#### 效果
-
-![iwhale-ui](./screenshot/iwhale-ui.gif)
-
-
-#### 代码托管
-
-* GitHub: https://github.com/n551wv1/iwhale-ui-weapp
-* 码云: https://gitee.com/n551wv1/iwhale-ui-weapp
