@@ -1,5 +1,10 @@
 # 智鲸云商城
 
+[![star](https://gitee.com/ibaleine-open-source/ibaleine-weapp/badge/star.svg?theme=dark)](https://gitee.com/ibaleine-open-source/ibaleine-weapp/stargazers)
+[![fork](https://gitee.com/ibaleine-open-source/ibaleine-weapp/badge/fork.svg?theme=dark)](https://gitee.com/ibaleine-open-source/ibaleine-weapp/members)
+
+[![ibaleine-weapp](https://img.shields.io/static/v1?label=Github&message=ibaleine-weapp&color=orange)](https://github.com/icjs-cc/ibaleine-weapp.git)
+
 ## 介绍
 基于原生小程序框架的商城项目
 

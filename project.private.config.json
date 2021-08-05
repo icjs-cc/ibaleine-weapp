@@ -19,14 +19,8 @@
           "scene": null
         },
         {
-          "name": "pages/classify/index",
-          "pathName": "pages/classify/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/discover/index",
-          "pathName": "pages/discover/index",
+          "name": "pages/shopping-cart/index",
+          "pathName": "pages/shopping-cart/index",
           "query": "",
           "scene": null
         }
