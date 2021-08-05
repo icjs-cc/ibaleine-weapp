@@ -13,5 +13,4 @@
 ![微信](./images/common/qrcode.jpg) 
 
 ## 项目
-![天天干饭无忧](./images/common/ttgfwy_weapp.jpg)   
-天天干饭无忧
+![天天干饭无忧](./images/common/ttgfwy_weapp.jpg)
