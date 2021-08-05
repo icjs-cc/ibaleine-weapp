@@ -1,0 +1,37 @@
+.t-noticebar {
+  display: flex;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 26rpx;
+  color: #f76a24;
+  background-color: #fefcec;
+  overflow: hidden;
+}
+
+.t-noticebar-icon {
+  display: flex;
+  margin-left: 30rpx;
+  align-items: center;
+}
+
+.t-noticebar-operation {
+  display: flex;
+  align-items: center;
+  margin-right: 16rpx;
+  font-size: 32rpx;
+}
+
+.t-noticebar-content-wrap {
+  position: relative;
+  flex: 1;
+  margin: 0 30rpx;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-noticebar-content-wrap .t-noticebar-content {
+  position: absolute;
+  transition-duration: 20s;
+}

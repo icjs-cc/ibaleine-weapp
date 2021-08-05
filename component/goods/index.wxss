@@ -1,0 +1,37 @@
+/* component/goods/index.wxss */
+.goods {
+  width: 345rpx;
+  height: 520rpx;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.goods-image {
+  width: 345rpx;
+  height: 345rpx;
+  border-radius: 16rpx 16rpx 0 0;
+}
+
+.goods-content{
+  padding: 20rpx;
+}
+
+.goods-name {
+  width: 320rpx;
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #333333;
+  opacity: 1;
+}
+
+.goods-price {
+  width: 320rpx;
+  height: 30rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  line-height: 40rpx;
+  color: #EE4D52;
+  margin-top: 20rpx;
+}

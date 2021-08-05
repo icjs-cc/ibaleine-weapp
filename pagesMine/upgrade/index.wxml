@@ -1,0 +1,19 @@
+<!--pages/mine/upgrade/index.wxml-->
+<t-nav-bar title="更新日志" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<view class="upgrade-wrap">
+  <view class="timeline">
+    <view class="upgrade-card" wx:for="{{versionList}}" wx:key="unique">
+      <view class="upgrade-header">
+        <view class="version-badge" style="{{versionBadge}}">{{item.versionNo}}</view>
+        <view class="version-time">{{item.versionTime}}</view>
+      </view>
+      <view class="upgrade-body">
+        <view class="flex {{item.versionContent.length==(idx+1)?'':'mb-5'}}" wx:for="{{item.versionContent}}" wx:for-index="idx" wx:for-item="cell" wx:key="unique">
+          <view class="flex mr-5" style="color:{{main_color}}">●</view>
+          <view class="text-gray">{{cell.value}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="timeline-circle" style="background:{{main_color}}"></view>
+</view>

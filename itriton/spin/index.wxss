@@ -1,0 +1,79 @@
+.t-spin {
+  color: #2d8cf0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.t-spin-dot {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background-color: #2d8cf0;
+  width: 20px;
+  height: 20px;
+  animation: ani-spin-bounce 1s 0s ease-in-out infinite;
+}
+
+.t-spin-large .t-spin-dot {
+  width: 32px;
+  height: 32px;
+}
+
+.t-spin-small .t-spin-dot {
+  width: 12px;
+  height: 12px;
+}
+
+.t-spin-fix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.t-spin-fullscreen {
+  z-index: 2010;
+}
+
+.t-spin-fullscreen-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.t-spin-fix .t-spin-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.t-spin-fix .t-spin-dot {
+  display: inline-block;
+}
+
+.t-spin-show-text .t-spin-dot, .t-spin-text {
+  display: none;
+}
+
+.t-spin-show-text .t-spin-text {
+  display: block;
+  font-size: 14px;
+}
+
+@keyframes ani-spin-bounce {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

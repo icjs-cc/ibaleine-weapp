@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "t-cell": "/itriton/cell/index",
+    "t-search-bar": "/itriton/search-bar/index"
+  },
+  "navigationStyle": "custom"
+}

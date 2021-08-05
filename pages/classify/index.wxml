@@ -1,21 +1,21 @@
 <!--pages/classify/index.wxml-->
-<view class='wrap'>
-  <iw-tabs current="{{ current }}" direction='vertical' color='#7FB553' fixed bindchange="handleChangeTab">
-    <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
-    <view slot='content'>
-      <iw-title-bar title='{{title}}' color='#7FB553'></iw-title-bar>
-      <iw-card iw-class='iw-pl-5' full wx:for='{{goodsList}}' wx:key='unique'>
-          <iw-media thumb='{{item.thumb}}' title='{{item.title}}' lineClamp4Title='2' desc='{{item.title}}' border slot='content'> 
-            <view class="price-content" slot='footer'>
-              <view class="price">
-                <text class='unit'>¥</text>100
-              </view>
-              <view style='margin-right:18rpx;'>
-                <iw-input-number customColor='#7FB553' value="{{ inputNumber }}" min="0" max="100" disabled visible bindchange="handleInputNumber"></iw-input-number>
-              </view>
-            </view>
-          </iw-media>
-      </iw-card>
-    </view>
-  </iw-tabs>
+<view class="header">
+  <t-nav-bar title="分类" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
+  <t-search-bar placeholder="搜索商城内所有商品" is-border="{{false}}"></t-search-bar>
 </view>
+<t-tabs direction="vertical" offset="{{offset}}" current="{{current}}" color="{{main_color}}" bindchange="handleChange">
+  <t-tab key="{{item.key}}" wx:for="{{tabList}}" title="{{item.name}}" wx:key="unique"></t-tab>
+  <view class="p-10" slot="content">
+    <view class="bg-white p-20 border-radius">
+      <view>
+        <view class="classify-title">精品茶具</view>
+        <view class="flex justify-between flex-wrap">
+          <view class="mt-30" wx:for="{{list}}" wx:key="unique">
+            <t-image src="{{item.url}}" t-class="classify-image"></t-image>
+            <view class="classify-name">{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</t-tabs>

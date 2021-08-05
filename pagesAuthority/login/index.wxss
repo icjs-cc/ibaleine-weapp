@@ -1,0 +1,21 @@
+/* pages/login/index.wxss */
+page{
+  background: #FFF;
+}
+
+.login-wrap {
+  padding: 40rpx;
+}
+
+.login__title {
+  font-size: 48rpx;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+  opacity: 1;
+  margin-top: 40rpx;
+}
+
+.login__content{
+  margin-top: 100rpx;
+  margin-bottom: 100rpx;
+}

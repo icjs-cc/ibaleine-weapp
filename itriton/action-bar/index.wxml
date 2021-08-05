@@ -1,0 +1,17 @@
+<!--component/action-bar/index.wxml-->
+<view class='t-action-bar-height' style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+  <view class='t-class t-action-bar' style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+    <view class='t-class t-action-bar-mini-btn' style='width:{{miniBtnArray.length==1?"200rpx":""}};color:{{item.color}}' wx:for='{{miniBtnArray}}' wx:key='unique'>
+      <view class='t-class t-icon t-action-bar-mini-btn-icon' style='' data-index='{{index}}' data-item='{{item}}' catchtap="handleTap">
+        <image src='{{item.image}}'></image>
+        <view class='t-info' wx:if='{{item.num}}'>{{item.num}}</view>
+      </view>{{item.name}}
+    </view>
+    <!-- <view class='t-class t-button t-action-bar-big-btn' style='' >{{item.name}}</view> -->
+    <button class="t-class t-button t-action-bar-big-btn {{ item.loading ? 't-btn-loading' : '' }} {{ item.disabled ? 't-btn-disabled' : ''}}" style='background:{{item.bgcolor?item.bgcolor:colors[item.type]}};color:{{item.color?item.color:"#fff"}};border:1px solid {{item.bgcolor}}'
+      wx:for='{{bigBtnArray}}' wx:key='unique' data-index='{{index}}' data-item='{{item}}' bindtap="handleClick">
+      <view class="t-btn-loading-inner" wx:if="{{item.loading}}"></view>
+      <slot></slot>{{item.name}}
+    </button>
+  </view>
+</view>

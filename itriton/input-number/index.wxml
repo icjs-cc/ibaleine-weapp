@@ -1,0 +1,9 @@
+<view class="t-class t-input-number t-input-number-size-{{ size }}">
+  <view class="t-input-number-minus {{ value <= min ? 't-input-number-disabled' : '' }}" data-disabled="{{ value <= min }}" style='color:{{customColor?customColor:colors[type]}};border:1px solid {{customColor?customColor:colors[type]}}' bindtap="handleMinus" wx:if='{{visible}}'>
+    <view class='iconfont icon-minus'></view>
+  </view>
+  <input class="t-input-number-text {{ min >= max ? 't-input-number-disabled' : '' }}" type="{{inputType}}" value="{{ value }}" disabled="{{ min >= max||disabled }}" bindblur="handleBlur" wx:if='{{visible}}' />
+  <view class="t-input-number-plus {{ value >= max ? 't-input-number-disabled' : '' }}" style='background:{{customColor?customColor:colors[type]}};border:1px solid {{customColor?customColor:colors[type]}}' data-disabled="{{ value >= max }}" bindtap="handlePlus">
+    <view class='iconfont icon-plus'></view>
+  </view>
+</view>

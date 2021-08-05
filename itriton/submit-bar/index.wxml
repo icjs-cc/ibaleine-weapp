@@ -1,0 +1,24 @@
+<!--component/submit-bar/index.wxml-->
+<view class='t-submit-bar-height t-class' style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+  <view class='t-submit-bar' style='padding-bottom:{{safeAreaInset.bottom}}px;z-index:{{zIndex}};border-top:1rpx solid {{border?"#F0F0F0":"rgba(0,0,0,0)"}}'>
+    <view class='t-class t-submit-bar-content' wx:if='{{!self}}'>
+      <view class='t-submit-bar-content-checkbox' wx:if='{{!full}}'>
+        <view wx:if='{{left}}'>{{left}}</view>
+        <slot name='left'></slot>
+      </view>
+      <view class='t-submit-bar-content-text' wx:if='{{!full}}'>
+        <view wx:if='{{center}}'>{{center}}</view>
+        <slot name='center'></slot>
+      </view>
+      <button class="t-button {{ loading ? 't-btn-loading' : '' }} {{ disabled ? 't-btn-disabled' : ''}}" style='width:{{full?"100%":"230rpx"}};background:{{bgcolor?bgcolor:colors[type]}};color:{{color}};border:1px solid {{bgcolor?bgcolor:colors[type]}}'
+        disabled="{{loading}}"
+        bindtap='handleClick'>
+        <view class="t-btn-loading-inner" wx:if="{{loading}}"></view>
+        <slot></slot>{{text}}
+      </button>
+    </view>
+    <view class='t-class' wx:if='{{self}}'>
+      <slot></slot>
+    </view>
+  </view>
+</view>

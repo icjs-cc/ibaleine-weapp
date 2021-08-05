@@ -1,0 +1,12 @@
+<!--component/image/index.wxml-->
+<block wx:if="{{type === 'default'}}">
+  <image class="t-avatar-{{ shape }} t-class image {{shape=='square'?'default-square':'default'}}" src="{{src||defaultImage}}" mode="{{mode}}" lazy-load="{{lazyLoad}}" binderror="_onerror"></image>
+</block>
+
+<block wx:if="{{type === 'network'}}">
+  <image class="t-avatar-{{ shape }} t-class image" style="background-image: url('{{placeholder}}')" src="{{src||defaultImage}}" mode="{{mode}}" lazy-load="{{lazyLoad}}" binderror="_onerror"></image>
+</block>
+
+<block wx:if="{{type === 'native'}}">
+  <image class="t-avatar-{{ shape }} t-class image" style="background-image: url('{{placeholder}}')" src="{{src||defaultImage}}" mode="{{mode}}" lazy-load="{{lazyLoad}}" binderror="_onerror"></image>
+</block>

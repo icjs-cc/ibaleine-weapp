@@ -1,0 +1,8 @@
+<!--component/goods/index.wxml-->
+<view class="goods">
+  <t-image src="{{url}}" lazyLoad t-class="goods-image"></t-image>
+  <view class="goods-content">
+    <view class="goods-name ellipsis-l2">{{name}}</view>
+    <view class="goods-price">{{price}}</view>
+  </view>
+</view>

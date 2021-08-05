@@ -1,0 +1,26 @@
+<view class="t-class t-switch {{parse.setSize(size)}} {{parse.setCurrent(value,disabled)}}" style="border-color:{{disabled?'#f3f3f3':(value === true?color:'#ccc')}};background-color:{{disabled?'#f3f3f3':(value === true?color:'#ccc')}}" bindtap="toggle">
+  <input type="text" :name="name" wx:value="{{value}}" class="t-switch-hide-input"></input>
+  <view class="t-switch-inner" wx:if="{{value === true}}">
+    <slot name="open"></slot>
+  </view>
+  <view class="t-switch-inner" wx:else>
+    <slot name="close"></slot>
+  </view>
+</view>
+<wxs module="parse">
+  var sizes = ['large', 'default'];
+  var prefixCls = 't-switch';
+  module.exports = {
+    setSize: function(size) {
+      var index = sizes.indexOf(size);
+      return prefixCls + (index > -1 ? ('-' + size) : 'default')
+    },
+    setCurrent: function(value, disabled) {
+      var className = value && !disabled ? prefixCls + '-checked' : '';
+      if (disabled) {
+        className += ' ' + prefixCls + '-disabled';
+      }
+      return className;
+    }
+  }
+</wxs>

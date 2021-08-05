@@ -1,0 +1,14 @@
+<!--pages/login/index.wxml-->
+<view class="login-wrap">
+	<view>
+		<view class="login__title">
+			HELLO！
+		</view>
+		<view class="text-xl">欢迎登录{{project_cn}}</view>
+	</view>
+  <view class="login__content">
+    <t-input t-class="border-b" title="账号" placeholder="请输入账号" data-param="username" value="{{formData.username}}" bindblur="bindInputFormData" bindchange="bindInputFormData"/>
+    <t-input t-class="border-b" type="password" title="密码" placeholder="请输入密码" data-param="password" value="{{formData.password}}" bindblur="bindInputFormData" bindchange="bindInputFormData"/>
+  </view>
+  <t-button bgcolor="{{main_color}}" shape="circle" bind:click="login" loading="{{loading}}">{{loading?'登录中...':'立即登录'}}</t-button>
+</view>

@@ -1,0 +1,8 @@
+<!--component/t-menu/index.wxml-->
+<view class="t-menu" style="flex-wrap: {{scrollX?'nowrap':'wrap'}};">
+  <view class="t-menu-cell" style="width: {{100/column}}%;"
+        catch:tap='handleClickItem' data-item='{{item}}' wx:for="{{list}}" wx:key='unique'>
+    <image src="{{item.url}}" class="t-menu-img" mode="aspectFill"></image>
+    <view class='t-menu-name' style='color:{{color}}'>{{item.name}}</view>
+  </view>
+</view>

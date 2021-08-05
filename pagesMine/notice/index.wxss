@@ -1,0 +1,11 @@
+/* pages/mine/notice/index.wxss */
+.title {
+  width: 650rpx;
+}
+
+.cell-footer {
+  background: #fff;
+  padding: 20rpx 25rpx;
+  height: 68rpx;
+  line-height: 34rpx;
+}

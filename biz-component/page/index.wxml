@@ -1,0 +1,4 @@
+<!--biz-component/page/index.wxml-->
+<block>
+  <slot></slot>
+</block>

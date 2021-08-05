@@ -1,45 +1,43 @@
 // pages/classify/index.js
+const config = require('../../utils/config.js')
+import images from '../../utils/images.js'
 Page({
   data: {
-    tabs: [{
-      key: 0,
-      title: '最新'
-    }, {
-      key: 1,
-      title: '红茶'
-    }, {
-      key: 2,
-      title: '绿茶'
-    }, {
-      key: 3,
-      title: '岩茶'
-    }],
-    current: 0,
-    title: '最新',
-    goodsList:[
-      { title: '醉品朴茶·醇朴 2018年秋茶 安溪铁观音 经典口碑款 清香型 NGY0840-250g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods1.png', price: 89, primeCost: 100, tag: '新品', sales: 100 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales: 210 }
+    ...config,
+    tabList: [
+      {name: '礼品系列', key: '1'},
+      {name: '花茶系列', key: '2'},
+      {name: '办公用茶', key: '3'},
+      {name: '茶具茶生活', key: '4'},
+      {name: '存茶(收藏)', key: '5'},
+      {name: '预定款', key: '6'},
     ],
-    inputNumber: 0
+    current: '1',
+    offset: '0rpx',
+    list: [
+      {name: '茶盘', url: images.classify1},
+      {name: '茶荷', url: images.classify2},
+      {name: '烧水壶', url: images.classify3},
+      {name: '茶巾', url: images.classify4}
+    ]
   },
-  handleInputNumber(e) {
-    const value = e.detail.value
-    this.setData({
-      inputNumber: value
-    })
+  onReady () {
+    setTimeout(() => {
+      let query = wx.createSelectorQuery();
+      query.select('.header').boundingClientRect(rect=>{
+        let clientHeight = rect.height;
+        let clientWidth = rect.width;
+        let ratio = 750 / clientWidth;
+        let height = clientHeight * ratio;
+        this.setData({
+          offset: `${height}rpx`
+        })
+      }).exec();
+    }, 300)
   },
-  handleChangeTab({
-    detail
-  } = {}) {
+  handleChange({ detail }){
     this.setData({
-      current: detail.key,
-      title: this.data.tabs[detail.key].title
+      current: detail.key
     })
   }
 })

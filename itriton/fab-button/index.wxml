@@ -1,0 +1,14 @@
+<view class='fab-button-box'>
+  <view hidden='{{showMenus}}'>
+    <block wx:for='{{menus}}' wx:key='unique'>
+      <view class='fab-button-main' catchtap='handleItemClick' data-item='{{item}}'>
+        <image class='fab-button-img' src='{{item.url}}' />
+        <text class='fab-button-title' hidden='{{item.title.length > 0 ? flase:true}}'>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <view catchtap='handleShowClick' class='fab-button-main'>
+    <image class='fab-button-img' src='{{main.url}}' />
+    <text class='fab-button-title' hidden='{{main.title.length > 0 ? flase:true}}'>{{main.title}}</text>
+  </view>
+</view>

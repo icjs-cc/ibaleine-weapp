@@ -1,0 +1,63 @@
+.t-avatar {
+  display: inline-block;
+  text-align: center;
+  background: #ccc;
+  color: #fff;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 32rpx;
+  font-size: 32rpx;
+}
+
+.t-avatar .t-avatar-string {
+  line-height: 32px;
+}
+
+.t-avatar-large {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 48rpx;
+}
+
+.t-avatar-large .t-avatar-string {
+  line-height: 80rpx;
+}
+
+.t-avatar-small {
+  width: 48rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+}
+
+.t-avatar-small .t-avatar-string {
+  line-height: 48rpx;
+}
+
+.t-avatar-image {
+  background: 0 0;
+}
+
+.t-avatar-square {
+  border-radius: 10rrpx;
+}
+
+.t-avatar .t-avatar-image {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.t-avatar-string{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

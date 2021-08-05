@@ -1,92 +1,55 @@
 /* pages/mine/index.wxss */
-.personal {
-  width: 100%;
-  height: 140rpx;
-  background: #fff;
-  padding: 80rpx 0;
-  z-index: 2;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
+.mine__bg{
+  height: 280rpx;
 }
 
-.personal-avatar {
+.mine__info{
   position: absolute;
-  left: 50rpx;
-  width: 130rpx;
-  height: 130rpx;
-  float: left;
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+  display: flex;
+
 }
 
-.personal-avatar image {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 50%;
-  border:2px solid #fff;
-}
-
-.personal-auth{
+.mine__info--cell{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  padding-top: 20rpx;
-  padding-left: 220rpx;
-  font-size: 36rpx;
-  width: 350rpx;
-  min-height: 110rpx;
+  margin-left: 20rpx;
 }
 
-.personal-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 20rpx;
-  padding-left: 220rpx;
-  font-size: 36rpx;
-  width: 350rpx;
-  min-height: 110rpx;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.mine__info--name{
+  font-size: 35rpx;
+  color: #FFFFFF;
 }
 
-.personal-text .username {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 40rpx;
-  word-break: break-all;
-  white-space: pre-wrap;
-}
-
-.personal-text .slogan {
-  display: inline-block;
-  text-align: center;
-  color: #757575 !important;
+.mine__info--desc{
   font-size: 28rpx;
+  color: #FFFFFF;
+  margin-top: 10rpx;
 }
 
-.personal-right{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  font-size: 32rpx;
-  color: #515151;
-  right: 0rpx;
-  top: 130rpx;
-  line-height: 40rpx;
-  padding: 15rpx;
-  box-shadow: 0px 2rpx 10rpx rgba(0, 0, 0, .1);
-  background: linear-gradient(to right, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));
-  border-radius: 40rpx 0 0 40rpx;
+.mine__bg--avatar{
+  width: 110rpx;
+  height: 110rpx;
+  border: 5rpx solid #FFFFFF;
+  border-radius: 50%;
 }
 
-.personal-right image{
-  width: 40rpx;
-  height: 40rpx;
-  padding-right: 10rpx;
+.mine__cell-wrap{
+  padding: 0 25rpx;
+  margin-top: -50rpx;
 }
 
+.mine__cell{
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.09);
+  border-radius: 8rpx !important;
+}
+
+.official-account{
+  position: fixed;
+  bottom: 25rpx;
+  padding: 0 25rpx;
+  width: 705rpx;
+
+}

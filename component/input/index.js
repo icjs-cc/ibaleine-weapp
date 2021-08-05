@@ -1,83 +1,70 @@
+// biz-components/input/index.js
 Component({
-  behaviors: ['wx://form-field'],
-  externalClasses: ['iw-class'],
+  externalClasses: ['t-class'],
   properties: {
-    title: {
-      type: String
-    },
-    // text || textarea || password || number
     type: {
       type: String,
       value: 'text'
     },
-    disabled: {
+    password: {
       type: Boolean,
       value: false
     },
-    placeholder: {
+    value: {
       type: String,
       value: ''
     },
-    autofocus: {
-      type: Boolean,
-      value: false
-    },
-    mode: {
+    placeholder:{
       type: String,
-      value: 'normal'
+      value: ''
     },
-    right: {
+    disabled:{
       type: Boolean,
       value: false
     },
-    error: {
-      type: Boolean,
-      value: false
+    unit: {
+      type: String,
+      value: ''
     },
-    maxlength: {
+    width: {
       type: Number,
-      value: -1
+      value: 180
     },
-    //输入框头部图标
-    prefix: {
+    height: {
+      type: Number,
+      value: 35
+    },
+    textAlign:{
+      type: String,
+      value: 'left'
+    }, 
+    focusColor: {
+      type: String,
+      value: '#387dff'
+    },
+    required:{
       type: String,
       value: ''
-    },
-    //输入框尾部图标
-    suffix: {
-      type: String,
-      value: ''
-    },
-    captcha: {
-      type: String,
-      value: ''
-    },
-    fontWeight: {
-      type: Boolean,
-      value: false
     }
   },
+
+  data: {
+    isFocus: false
+  },
+
   methods: {
-    handleInputChange(event) {
-      const {
-        detail = {}
-      } = event
-      const {
-        value = ''
-      } = detail;
+    bindinput(e){
+      this.triggerEvent('input', e.detail);
+    },
+    bindfocus(){
       this.setData({
-        value
-      });
-      this.triggerEvent('change', event)
+        isFocus: true
+      })
     },
-    handleInputFocus(event) {
-      this.triggerEvent('focus', event)
-    },
-    handleInputBlur(event) {
-      this.triggerEvent('blur', event)
-    },
-    handleClickSuffix(event) {
-      this.triggerEvent('suffix', event)
+    bindblur(){
+      this.setData({
+        isFocus: false
+      })
     }
   }
 })

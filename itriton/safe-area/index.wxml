@@ -1,0 +1,4 @@
+<!--component/safe-area/index.wxml-->
+<view style='padding-bottom:{{safeAreaInset.bottom}}px;'>
+  <view class="safe-area"></view>
+</view>

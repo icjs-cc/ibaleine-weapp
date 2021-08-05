@@ -1,0 +1,29 @@
+/* pages/mine/switch-account/index.wxss */
+.switch-account__title{
+  display: flex;
+  justify-content: center;
+  line-height: 150rpx;
+  height: 150rpx;
+  font-size: 45rpx;
+  color: rgb(66, 66, 66);
+}
+
+.switch-account__line{
+  border-bottom: 1rpx solid rgb(206, 206, 206);
+  width: 200rpx;
+  margin-bottom: 60rpx;
+}
+
+.switch-account__icon{
+  height: 90rpx;
+  width: 90rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+}
+
+.switch-account__status{
+  width: 110rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  font-size: 24rpx;
+}

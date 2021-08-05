@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "t-input": "/itriton/input/index",
+    "t-button": "/itriton/button/index"
+  }
+}

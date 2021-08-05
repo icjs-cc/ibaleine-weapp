@@ -1,0 +1,21 @@
+<!--pages/mine/notice/index.wxml-->
+<t-nav-bar title="通知公告" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<t-search-bar bind:search="search"/>
+<biz-base-page page-count="{{noticeList.length}}">
+	<view class='p-20'>
+		<view class="border-b mb-10 box-shadow-radius"
+			wx:for="{{noticeList}}" wx:key="unique" data-item="{{item}}" bindtap="detail">
+			<t-cell t-class='border-radius-t border-b pt-10 pb-10'>
+				<view class="flex align-center" slot='content'>
+					<view class='flex align-center cell text-lg'>
+						<view class="rectangle" style="background:{{main_color}}"></view>
+						<view class="title text-lg ellipsis">{{item.noticeTitle}}</view>
+					</view>
+				</view>
+			</t-cell>
+			<view class="border-radius-b cell-footer text-df text-gray">
+				<view class="ellipsis-l2">{{item.noticeContent}}</view>
+			</view>
+		</view>
+	</view>
+</biz-base-page>

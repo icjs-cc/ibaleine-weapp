@@ -1,0 +1,64 @@
+/* component/dot/index.wxss */
+
+@keyframes processing {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+
+  to {
+    -webkit-transform: scale(2.8);
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+}
+
+.dot-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/* 保持大小不变的小圆点 */
+
+.dot-cell {
+  display: inline-block;
+  position: relative;
+  vertical-align: center;
+  text-align: center;
+  width: 10rpx;
+  height: 10rpx;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 产生动画（向外扩散变大）的圆圈 第一个圆 */
+
+.dot-processing {
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  -webkit-animation: processing 2s infinite ease-in-out;
+  animation: processing 2s infinite ease-in-out;
+}
+
+.dot-text {
+  margin-left: 30rpx;
+}

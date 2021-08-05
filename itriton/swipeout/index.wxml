@@ -1,0 +1,17 @@
+<view class="t-swipeout-wrap t-class">
+    <view class="t-swipeout-item" bindtouchstart="handlerTouchstart" bindtouchmove="handlerTouchmove" bindtouchend="handlerTouchend" style="{{parse.setPosition(position)}}">
+        <view class="t-swipeout-content">
+            <slot name="content"></slot>
+        </view>
+        <view class="t-swipeout-button-right-group" catchtouchend="loop" bind:tap="handlerParentButton" style="width:{{parseOperateWidth}}px;right:-{{parseOperateWidth}}px;">
+            <slot name="button"></slot>
+        </view>
+    </view>
+</view>
+<wxs module="parse">
+    module.exports = {
+        setPosition : function( position ){
+            return 'transform:translate(' + position.pageX + 'px,0);';
+        }
+    }
+</wxs>

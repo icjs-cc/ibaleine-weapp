@@ -1,0 +1,7 @@
+<!--pages/mine/notice/detail/index.wxml-->
+<t-nav-bar title="通知公告详情" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<view class="bg-white pt-20 pb-20 pl-15 pr-15">
+  <view class="text-black text-xl">{{notice.noticeTitle}}</view>
+  <view class="text-sm mt-10">{{notice.createTime}}</view>
+  <view class="text-black text-df mt-15">{{notice.noticeContent}}</view>
+</view>

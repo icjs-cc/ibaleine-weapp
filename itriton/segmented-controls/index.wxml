@@ -1,0 +1,14 @@
+<!--component/segmented-controls/index.wxml-->
+<view class="segmented-controls">
+  <view class="{{filter.checkActive(active,index)?'active':'normal'}}" wx:for="{{controls}}" data-index='{{index}}' data-item='{{item}}' style='border:1px solid {{filter.checkActive(active,index)?bgcolor:""}};background: {{filter.checkActive(active,index)?bgcolor:""}};color: {{filter.checkActive(active,index)?color:""}}' bindtap='changeControls' wx:key="unique">{{item.name}}</view>
+</view>
+<wxs module="filter">
+var checkActive = function(array,index) {
+  for (var i = 0; i < array.length; ++i) {
+   if(array[i]==index){
+    return true
+   }
+  }
+}
+module.exports.checkActive = checkActive;
+</wxs>

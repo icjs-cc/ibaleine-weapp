@@ -1,0 +1,12 @@
+<!--component/search-bar/index.wxml-->
+<view class='search-wrap'>
+  <view class="search-bar" style='position:{{fixed?"fixed":""}}; border-bottom: {{isBorder?"1rpx solid #f3f3f3;":"0"}} '>
+    <view class="search-bar-form">
+      <view class="search-bar-box">
+        <icon class="icon-search_in-box" type="search" size="{{size}}"></icon>
+        <input type="text" class="search-bar-input" placeholder="{{placeholder}}" value="{{inputVal}}" bindinput="handleInput" />
+        <icon class="icon-search-clear" type="clear" size="{{size}}" wx:if='{{inputVal}}' bindtap="handleClear"></icon>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--biz-component/mini-button/index.wxml-->
+<button class="mini-button" style="{{buttonStyle}}">
+  <slot></slot>
+</button>

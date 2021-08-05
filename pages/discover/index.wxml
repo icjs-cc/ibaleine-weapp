@@ -1,14 +1,30 @@
 <!--pages/discover/index.wxml-->
-<iw-tabs current="{{ current }}" color='#7FB553' fixed bindchange="handleChangeTab">
-    <iw-tab key="{{item.key}}" title="{{item.title}}" wx:for='{{tabs}}' wx:key='unique'></iw-tab>
-</iw-tabs>
-<iw-card iw-class='iw-mb-10' title='陈小术' thumb='/images/common/ibaleine-logo.png' circle full header footer wx:for='{{discoverList}}' wx:key='unique'>
-  <view slot='extra' class='signal'>
-    <iw-signal activeColor='#7FB553' activeIndex='2' size='60rpx'></iw-signal>
+<biz-page>
+  <t-nav-bar title="发现" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
+  <t-search-bar placeholder="搜索文章" is-border="{{false}}"></t-search-bar>
+  <t-tabs current="{{ current }}" color="{{main_color}}" bindchange="handleChange">
+    <t-tab key="{{item.key}}" wx:for="{{tabList}}" title="{{item.name}}" wx:key="unique"></t-tab>
+  </t-tabs>
+  <view class="p-20">
+    <view>
+      <t-cell t-class='border-radius-t pt-20 pb-20'>
+        <t-image class="discover-avatar" t-class="discover-avatar" slot="icon" src="/images/common/logo.png"></t-image>
+        <view class="flex align-center justify-between" slot='content'>
+          <view class='flex align-center'>
+            <view class="text-gray text-df ellipsis">
+              {{project_cn}}
+            </view>
+          </view>
+          <view class="text-sm text-gray">68 浏览</view>
+        </view>
+      </t-cell>
+      <view class="bg-white pl-20 pr-20 pt-10 pb-20 border-radius-b">
+        <view class="text-df text-black">品茶，品的是茶味还是人生</view>
+        <view class="discover-content">
+          <view class="discover-desc">茶，只是一杯茶，晨起日落，生命有它陪伴不曾离开，不可或缺。</view>
+          <t-image class="discover-image" src="http://www.icjs.ink/ibaleine/mall/goods_1.jpg"></t-image>
+        </view>
+      </view>
+    </view>
   </view>
-  <view slot='content'>
-    <iw-media thumb='{{item.thumb}}' title='{{item.title}}' desc='{{item.desc}}' lineClamp4Desc='3' position='right' thumbStyle='width:230rpx;160rpx;'>
-    </iw-media>
-  </view>
-</iw-card>
-<iw-divider text='没有更多数据了'></iw-divider>
+</biz-page>

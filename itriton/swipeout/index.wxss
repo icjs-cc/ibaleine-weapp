@@ -1,0 +1,34 @@
+.t-swipeout-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.t-swipeout-item {
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.t-swipeout-content {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.t-swipeout-button-right-group {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+}
+
+.t-swipeout-button-right-item {
+  height: 100%;
+  float: left;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

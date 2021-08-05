@@ -1,0 +1,22 @@
+/* biz-component/paging/index.wxss */
+.default {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #bfbfbf;
+  flex: 1;
+  font-size: 28rpx;
+  width: 100%;
+}
+
+.default .default-image {
+  height: 170rpx;
+  width: 250rpx;
+}
+
+.default .default-text{
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}

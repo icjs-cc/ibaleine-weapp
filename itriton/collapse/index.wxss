@@ -1,0 +1,42 @@
+/* biz-component/collapse/index.wxss */
+.collapse-title {
+  position: relative;
+  padding: 20rpx 25rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #495060;
+  line-height: 1.4;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-align: left;
+  border-radius: 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.collapse-text{
+  font-size: 28rpx;
+  width: 670rpx;
+}
+
+.collapse-access {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  position: absolute;
+  right: 25rpx;
+  margin-left: 20rpx;
+  margin-top: -5rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #dddee1;
+  border-style: solid;
+  transform: rotate(135deg);
+}
+
+.collapse-content{
+  padding: 20rpx 25rpx;
+  font-size: 26rpx;
+  background: #fff;
+  color: #75777c;
+  border-bottom: 1rpx solid #f0f0f0;
+}

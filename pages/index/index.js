@@ -1,28 +1,31 @@
-const util = require('../../utils/util.js')
-const app = getApp()
+const config = require('../../utils/config.js')
 Page({
   data: {
-    swipers: [
-      { url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-swiper.png' },
-      { url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-swiper.png' }
+    ...config,
+    swiperList: [
+      {url: '/images/resource/banner.png', name: '111'}
     ],
-    menus: [
-      { title: '丹红系列', linkType: 'navigateTo', url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-menu-tabs-1.png', path: '/pages/navbar/index' },
-      { title: '观音系列', linkType: 'switchTab', url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-menu-tabs-2.png', path: '/pages/discover/index' },
-      { title: '谦白系列', linkType: 'switchTab', url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-menu-tabs-3.png', path: '/pages/discover/index' },
-      { title: '岩韵系列', linkType: 'switchTab', url: 'http://ipratt.icjs.ink/resource/iwhale-ui/iw-menu-tabs-4.png', path: '/pages/shoppingcart/index' }
+    menuList: [
+      {url: '/images/resource/icon_classify_1.png', name: '礼品系列'},
+      {url: '/images/resource/icon_classify_2.png', name: '印记传承'},
+      {url: '/images/resource/icon_classify_3.png', name: '花茶系列'},
+      {url: '/images/resource/icon_classify_4.png', name: '办公系列'},
+      {url: '/images/resource/icon_classify_5.png', name: '品质茶具'},
+      {url: '/images/resource/icon_classify_6.png', name: '存茶收藏'},
+      {url: '/images/resource/icon_classify_7.png', name: '预定款'},
+      {url: '/images/resource/icon_classify_8.png', name: '更多商品'}
     ],
-    goods: [
-      { title: '醉品朴茶·醇朴 2018年秋茶 安溪铁观音 经典口碑款 清香型 NGY0840-250g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods1.png', price: 89, primeCost: 100, tag: '新品', sales:100 },
-      { title: '醉品朴茶 2018年安溪铁观音 口碑好茶 皇冠100g', thumb: 'http://ipratt.icjs.ink/resource/iwhale-ui/goods2.png', price: 100, primeCost: 110, tag: '推荐', sales:210 }
+    goodsList: [
+      {url: 'http://www.icjs.ink/ibaleine/mall/goods_1.jpg', name: '贴布日式圆盘特殊日本木质茶盘', price: '128.00'},
+      {url: 'http://www.icjs.ink/ibaleine/mall/goods_2.jpg', name: '商务办公用茶-水仙', price: '198.00'},
+      {url: 'http://www.icjs.ink/ibaleine/mall/goods_3.jpg', name: '商务办公用茶-肉桂', price: '200.00'},
+      {url: 'http://www.icjs.ink/ibaleine/mall/goods_4.jpg', name: '家用简约长方竹制茶盘方形干泡盘小号单人竹制整板', price: '218.00'},
     ]
   },
-  onLoad(){
-    // const userInfo = util.getStorageSync('userInfo')
-    // if(util.isEmpty(userInfo)){
-    //   wx.redirectTo({
-    //     url: '/pages/login/index'
-    //   })
-    // }
+  handleSwiperClick(e){
+    console.log(e)
+  },
+  handleMenuClick(e){
+    console.log(e)
   }
 })

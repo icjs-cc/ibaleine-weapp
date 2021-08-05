@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "t-nav-bar": "/itriton/nav-bar/index",
+    "t-cell-group": "/itriton/cell-group/index",
+    "t-cell": "/itriton/cell/index",
+    "t-input": "/itriton/input/index",
+    "t-submit-bar": "/itriton/submit-bar/index",
+    "t-iconfont": "/itriton/iconfont/index",
+    "backdrop": "/component/backdrop/index"
+  },
+  "navigationStyle": "custom"
+}

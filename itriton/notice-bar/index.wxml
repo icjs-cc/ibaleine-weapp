@@ -1,0 +1,11 @@
+<view wx:if="{{ show }}" class="t-class t-noticebar" style="color: {{ color }}; background-color: {{ backgroundcolor }}">
+  <view class="t-noticebar-icon">
+    <slot name='icon'></slot>
+  </view>
+  <view class="t-noticebar-content-wrap">
+    <view class="t-noticebar-content {{loop?'t-noticebar-content-loop':''}}" animation="{{ animationData }}">
+      <slot></slot>
+    </view>
+  </view>
+  <view wx:if="{{closable}}" class="t-noticebar-operation" type="close" color="{{color}}" catchtap="handleClose">×</view>
+</view>

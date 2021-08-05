@@ -1,0 +1,9 @@
+<view class="t-class t-load-more {{line?'t-load-more-line':''}}" style='width:{{width}}'>
+  <view class='t-load-more-cell'>
+    <view class="t-load-more-loading" style='border-color: #e9eaec #e9eaec #e9eaec {{loadingColor}};' wx:if="{{ loading }}"></view>
+    <view class="t-load-more-tip">
+      <view wx:if="{{ tip !== '' }}" style="color:{{color}}">{{ text }}</view>
+      <view class="t-load-more-empty" wx:else></view>
+    </view>
+  </view>
+</view>

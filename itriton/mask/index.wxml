@@ -1,0 +1,7 @@
+<!--component/modal/index.wxml-->
+<view catchtouchmove='_catchtap' wx:if='{{visible}}'>
+  <view class='mask' style=" opacity: {{opacity}};"/>
+  <view class='modal-box'>
+    <slot></slot>
+  </view>
+</view>

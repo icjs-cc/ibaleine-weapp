@@ -1,0 +1,54 @@
+/* component/datetime-picker/index.wxss */
+
+.datetime-picker {
+  position: relative;
+  width: calc(100% - 40rpx);
+  height: 60rpx;
+  padding: 20rpx;
+  background: #fff;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f3f3f3;
+  z-index: 999;
+}
+
+.datetime-picker-input {
+  width: 300rpx;
+  padding: 5rpx 20rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  width: auto;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 28rpx;
+  background: #f3f3f3;
+  flex: 1;
+}
+
+.icon-clear{
+  margin: 0 10rpx;
+}
+
+.icon-date{
+  display: flex;
+  align-items: center;
+}
+
+.datetime-picker image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.datetime-picker-fixed {
+  height:100rpx;
+}

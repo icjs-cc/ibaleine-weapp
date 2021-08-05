@@ -1,0 +1,52 @@
+.border-radius-t {
+  border-radius: 8rpx 8rpx 0 0 !important;
+}
+
+.border-radius-b {
+  border-radius: 0 0 8rpx 8rpx !important;
+}
+
+.border-radius-l {
+  border-radius: 8rpx 0 0 8rpx !important;
+}
+
+.border-radius-r {
+  border-radius: 0 8rpx 8rpx 0 !important;
+}
+
+.border-radius {
+  border-radius: 8rpx !important;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 8rpx 0px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-radius {
+  box-shadow: 0px 0px 4rpx 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8rpx !important;
+}
+
+.rectangle{
+  height: 25rpx;
+  width: 8rpx;
+  margin-left: -25rpx;
+  margin-right: 20rpx;
+}
+
+.backdrop-wrap {
+  margin-top: -80rpx;
+}
+
+.button-submit {
+  margin: 20rpx 20rpx !important;
+  height: 75rpx !important;
+  line-height: 75rpx !important;
+}
+
+.button-submit>button {
+  border-radius: 50rpx !important;
+  box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.09) !important;
+  height: 75rpx !important;
+  line-height: 75rpx !important;
+}

@@ -1,0 +1,17 @@
+<!--pages/mine/setting/index.wxml-->
+<t-nav-bar title="设置" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<t-cell-group>
+  <t-cell title='修改密码' url='/pagesAuthority/reset-pwd/index' isLink></t-cell>
+  <t-cell title='当前缓存' value='{{storageInfo.currentSize}}KB'></t-cell>
+  <t-cell title='推荐分享' open-type="share" isLink></t-cell>
+  <t-cell title='联系客服' open-type="contact" isLink></t-cell>
+  <t-cell title='意见反馈' open-type="feedback" isLink></t-cell>
+</t-cell-group>
+
+<t-cell t-class='mt-20' bindtap='switchAccount'>
+  <view class="text-center text-gray" slot='content'>切换帐号</view>
+</t-cell>
+
+<t-cell t-class='mt-20' bindtap='logout'>
+  <view class="text-center text-gray" slot='content'>退出登录</view>
+</t-cell>

@@ -1,0 +1,17 @@
+<view wx:if="{{direction === 'horizontal'}}">
+  <scroll-view wx:if="{{ scroll }}" scroll-x="true" class="t-class t-tabs t-tabs-scroll {{ fixed ? 't-tabs-fixed' : '' }}">
+    <slot></slot>
+  </scroll-view>
+  <view wx:else class="t-class t-tabs {{ fixed ? 't-tabs-fixed' : '' }}">
+    <slot></slot>
+  </view>
+  <view class="{{ fixed ? 't-tabs-fixed-height' : '' }}"></view>
+</view>
+<view class='' wx:if="{{direction === 'vertical'}}">
+  <scroll-view scroll-y="true" class="t-class t-tabs-scroll-vertical" style="height: calc(100% - {{offset}});">
+    <slot></slot>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="t-tabs-scroll-vertical-content" style="height: calc(100% - {{offset}});">
+    <slot name='content'></slot>
+  </scroll-view>
+</view>

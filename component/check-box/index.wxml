@@ -1,0 +1,9 @@
+<!--biz-component/check-box/index.wxml-->
+<view class='flex align-center justify-between'>
+  <view class='grid col-4 grid-full'>
+    <view class="check-box-wrap" wx:for='{{checkboxArray}}' wx:key='unique' data-item='{{item}}'  data-index='{{index}}' bindtap="bindtap">
+      <view class='check-box {{item.active?"check-box-active":""}}' style='{{item.active?activeStyle:""}}'>{{item.name}}</view>
+      <view class="active" style="border-bottom: 30rpx solid {{color}}" wx:if='{{item.active}}'></view>
+    </view>
+  </view>
+</view>

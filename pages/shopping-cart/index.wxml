@@ -1,0 +1,2 @@
+<!--pages/shopping-cart/index.wxml-->
+<t-nav-bar title="购物车" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />

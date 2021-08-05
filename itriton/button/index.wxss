@@ -1,0 +1,108 @@
+.t-btn {
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 28rpx;
+  border-radius: 5rpx;
+  position: relative;
+  text-decoration: none;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin: 20rpx;
+}
+
+.t-btn-long {
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.t-btn-large {
+  height: 100px;
+  line-height: 100px;
+}
+
+.t-btn-small {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.t-btn-primary {
+  color: #fff !important;
+  background: #118fff !important;
+}
+
+.t-btn-ghost {
+  color: #fff !important;
+  background: #fff !important;
+  color: #495060 !important;
+}
+
+.t-btn-success {
+  color: #fff !important;
+  background: #19be6b !important;
+}
+
+.t-btn-warning {
+  color: #fff !important;
+  background: #f90 !important;
+}
+
+.t-btn-error {
+  color: #fff !important;
+  background: #ed3f14 !important;
+}
+
+.t-btn-info {
+  color: #fff !important;
+  background: #2db7f5 !important;
+}
+
+.t-btn-circle {
+  border-radius: 90rpx;
+}
+
+.t-btn-large.t-btn-circle {
+  border-radius: 90rpx;
+}
+
+.t-btn-small.t-btn-circle {
+  border-radius: 80rpx;
+}
+
+.t-btn-loading {
+  opacity: 0.6;
+}
+
+.t-btn-loading-inner {
+  display: inline-block;
+  margin-right: 25rpx;
+  vertical-align: middle;
+  width: 30rpx;
+  height: 30rpx;
+  background: 0 0;
+  border-radius: 50%;
+  border: 5rpx solid #fff;
+  border-color: #fff #fff #fff transparent;
+  animation: btn-spin 0.6s linear;
+  animation-iteration-count: infinite;
+}
+
+.t-btn-disabled {
+  color: #bbbec4 !important;
+  background: #f7f7f7 !important;
+}
+
+@keyframes btn-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

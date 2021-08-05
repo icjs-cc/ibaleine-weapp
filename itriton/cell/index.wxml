@@ -1,0 +1,22 @@
+<!--component/cell/index.wxml-->
+<button open-type="{{ openType }}" bindtap="handleTap" class="t-class t-cell {{border?'t-border':'none'}} {{ isLastCell ? 't-cell-last' : '' }} {{ isLink ? 't-cell-access' : '' }}">
+  <view class="t-required" style="justify-content: flex-end" wx:if='{{required=="left"}}'>*</view>
+  <view class="t-required" wx:else></view>
+  <view class="t-cell-icon">
+    <image class="t-cell-icon-image" src='{{icon}}' wx:if='{{icon}}'></image>
+    <slot name="icon" wx:else></slot>
+  </view>
+  <view class="t-cell-bd">
+    <view wx:if="{{ title }}" class="t-cell-text">{{ title }}</view>
+    <view wx:if="{{ label }}" class="t-cell-desc">{{ label }}</view>
+    <slot name='content'></slot>
+  </view>
+  <view catchtap="{{onlyTapFooter?'navigateTo':''}}" class="t-cell-ft">
+    <block wx:if="{{value}}">{{ value }}</block>
+    <block wx:else>
+      <slot name="footer"></slot>
+    </block>
+  </view>
+  <view class="t-required" style="justify-content: flex-start" wx:if='{{required=="right"}}'>*</view>
+  <view class="t-required" wx:else></view>
+</button>

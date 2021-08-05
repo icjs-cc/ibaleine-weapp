@@ -1,7 +1,7 @@
 /**
  * 格式化时间 fmt=时间格式
  */
-const formatDate = (num, fmt) => {
+export const formatDate = (num, fmt) => {
   if (num == '') {
     return ''
   }
@@ -29,40 +29,148 @@ const formatDate = (num, fmt) => {
 /**
  * 补零
  */
-const formatZeroize = n => {
+export const fillZeroize = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
 
-const formatBoolean2Number = n => {
-  if (n) {
-    return 1
-  } else {
-    return 0
-  }
+/**
+ * 检查 value 是否为有效的类数组长度
+ * @param value
+ * @returns {boolean}
+ */
+export const isLength = (value) => {
+  return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= Number.MAX_SAFE_INTEGER;
 }
 
-const formatNumber2Boolean = n => {
-  if (n) {
-    return true
-  } else {
-    return false
-  }
+/**
+ * 检查 value 是否是类数组
+ * @param value
+ * @returns {boolean|*}
+ */
+export const isArrayLike = (value) => {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * 检测数据是不是除了symbol外的原始数据
+ * @param value
+ * @returns {boolean}
+ */
+export const isStatic = (value) => {
+  return (
+    typeof value === 'string' ||
+    typeof value === 'number' ||
+    typeof value === 'boolean' ||
+    typeof value === 'undefined' ||
+    value === null
+  )
+}
+
+/**
+ * 检测数据是不是原始数据
+ * @param value
+ * @returns {boolean|*}
+ */
+export const isPrimitive = (value) => {
+  return isStatic(value) || typeof value === 'symbol'
+}
+
+/**
+ * 判断数据是不是引用类型的数据 (例如： arrays, functions, objects, regexes, new Number(0),以及 new String(''))
+ * @param value
+ * @returns {boolean}
+ */
+export const isObject = (value) => {
+  let type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+/**
+ * 检查 value 是否是 类对象。 如果一个值是类对象，那么它不应该是 null，而且 typeof 后的结果是 "object"
+ * @param value
+ * @returns {boolean}
+ */
+export const isObjectLike = (value) => {
+  return value != null && typeof value == 'object';
+}
+
+/**
+ * 检查 value 是不是函数
+ * @param value
+ * @returns {boolean}
+ */
+export const isFunction = (value) => {
+  return Object.prototype.toString.call(value) === '[object Function]'
+}
+
+/**
+ * 获取数据类型，返回结果为 Number、String、Object、Array等
+ * @param value
+ * @returns {string}
+ */
+export const getRawType = (value) => {
+  return Object.prototype.toString.call(value).slice(8, -1)
+}
+
+/**
+ * 判断数据是不是Object类型的数据
+ * @param obj
+ * @returns {boolean}
+ */
+export const isPlainObject = (obj) => {
+  return Object.prototype.toString.call(obj) === '[object Object]'
+}
+
+/**
+ * 判断数据是不是数组类型的数据
+ * @param arr
+ * @returns {boolean}
+ */
+export const isArray = (arr) => {
+  return Object.prototype.toString.call(arr) === '[object Array]'
+}
+
+/**
+ * 判断数据是不是正则对象
+ * @param value
+ * @returns {boolean}
+ */
+export const isRegExp = (value) => {
+  return Object.prototype.toString.call(value) === '[object RegExp]'
+}
+
+/**
+ * 判断数据是不是时间对象
+ * @param value
+ * @returns {boolean}
+ */
+export const isDate = (value) => {
+  return Object.prototype.toString.call(value) === '[object Date]'
 }
 
 /**
  * 判断数据是否为空
  */
-const isEmpty = (val) => {
-  if (val == null || val == undefined || val == '') {
+export const isEmpty = (value) => {
+  if (value == null) {
     return true;
-  } else {
-    return false;
   }
+  if (isArrayLike(value)) {
+    return !value.length;
+  } else if (isPlainObject(value)) {
+    for (let key in value) {
+      if (hasOwnProperty.call(value, key)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
 }
 
 //获取某个对象在数组中的索引值
-const itemIndexInArray = (array, item, param) => {
+export const objectIndexInArray = (array, item, param) => {
   var index = -1
   for (var i in array) {
     if (array[i][param] === item[param]) {
@@ -76,7 +184,7 @@ const itemIndexInArray = (array, item, param) => {
 /**
  * 校验数值是否存在在数组中
  */
-const isInArray = (val, arr) => {
+export const isInArray = (val, arr) => {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] == val) {
       return true;
@@ -85,10 +193,34 @@ const isInArray = (val, arr) => {
   return false;
 }
 
+export const isJSON = (str) => {
+  if (typeof str == 'string') {
+    try {
+      var obj = JSON.parse(str);
+      if (typeof obj == 'object' && obj) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      console.log('error：' + str + ' ' + e)
+      return false;
+    }
+  }
+}
+
+export const zeroValue = (value) => {
+  if (value == 'null' || value == 'undefined' || value == "NaN" || value == NaN || value == undefined || value == null) {
+    return ''
+  } else {
+    return value
+  }
+}
+
 /**
  * 产生随机数 n=位数
  */
-const randNumber = (n) => {
+export const randNumber = (n) => {
   var result = '';
   for (var i = 0; i < n; i++) {
     result += Math.floor(Math.random() * 10);
@@ -96,84 +228,55 @@ const randNumber = (n) => {
   return result;
 }
 
-// 输出warn日志
-const logWarn = (msg, getValue) => {
-  console.warn(msg);
-  console.log('接受到的值为：', getValue);
-};
-
-const isFunction = (obj) => {
-  return typeof obj === 'function'
+/**
+ * 横线转驼峰命名
+ * @param str
+ * @returns {*}
+ */
+export const camelize = (str) => {
+  let camelizeRE = /-(\w)/g;
+  return str.replace(camelizeRE, function (_, c) {
+    return c ? c.toUpperCase() : '';
+  })
 }
 
-const showToast = (title, _callback) => {
-  wx.showToast({
-    title: title,
-    icon: 'none',
-    mask: true,
-    success: () => {
-      if (isFunction(_callback)) {
-        _callback()
-      }
+/**
+ * 驼峰命名转横线命名：拆分字符串，使用 - 相连，并且转换为小写
+ * @param str
+ * @returns {string}
+ */
+export const hyphenate = (str) => {
+  let hyphenateRE = /\B([A-Z])/g;
+  return str.replace(hyphenateRE, '-$1').toLowerCase()
+}
+
+/**
+ * 字符串首位大写
+ * @param str
+ * @returns {string}
+ */
+export const capitalize = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+/**
+ * 对象克隆
+ */
+export const clone = (obj) => {
+  return JSON.parse(JSON.stringify(obj))
+}
+
+/**
+ * 跳过空数据
+ * @param {*} obj 
+ */
+export const skipNulls = obj => {
+  var param = {};
+  if (obj === null || obj === undefined || obj === "") return param;
+  for (var key in obj) {
+    if (obj[key] !== null && obj[key] !== undefined && obj[key] !== "") {
+      param[key] = obj[key];
     }
-  })
+  }
+  return param;
 }
-
-const hideToast = () => {
-  wx.hideToast()
-}
-
-const showModal = (obj, _callback) => {
-  wx.showModal({
-    title: obj.title || '提示',
-    content: obj.content || '',
-    showCancel: obj.showCancel || true,
-    cancelText: obj.cancelText || '取消',
-    cancelColor: obj.cancelColor || '#000000',
-    confirmText: obj.confirmText || '确定',
-    confirmColor: obj.confirmColor || '#f9c646',
-    success(res) {
-      _callback(res)
-    }
-  })
-}
-
-const showLoading = (title) => {
-  wx.showLoading({
-    title: title ? title : '加载中...',
-    mask: true
-  })
-}
-
-const hideLoading = () => {
-  wx.hideLoading()
-}
-
-const setStorageSync = (key, val) => {
-  wx.setStorageSync(key, val)
-}
-
-const getStorageSync = (key) => {
-  return wx.getStorageSync(key)
-}
-
-
-module.exports = {
-  formatDate: formatDate,
-  formatZeroize: formatZeroize,
-  formatBoolean2Number: formatBoolean2Number,
-  formatNumber2Boolean: formatNumber2Boolean,
-  itemIndexInArray: itemIndexInArray,
-  randNumber: randNumber,
-  isInArray: isInArray,
-  isEmpty: isEmpty,
-  logWarn: logWarn,
-  // 基于小程序接口封装
-  showToast: showToast,
-  showModal: showModal,
-  showLoading: showLoading,
-  hideLoading: hideLoading,
-  setStorageSync: setStorageSync,
-  getStorageSync: getStorageSync
-}
-

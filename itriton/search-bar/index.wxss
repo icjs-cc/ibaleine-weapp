@@ -1,0 +1,96 @@
+/* component/search-bar/index.wxss */
+
+.search-wrap {
+  position: relative;
+  height: 100rpx;
+  background: #FFF;
+}
+
+.search-view {
+  position: fixed; /*悬停搜索框的关键样式*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  padding: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.search-bar-form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 5px;
+}
+
+.search-bar-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  background: #f3f3f3;
+  border-radius: 40rpx;
+}
+
+.icon-search_in-box {
+  position: absolute;
+  left: 20rpx;
+}
+
+.icon-search-clear {
+  position: absolute;
+  right: 20rpx;
+  margin-left: 10rpx;
+  top: 18rpx;
+}
+
+.icon-search {
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.search-bar-text {
+  display: inline-block;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+  vertical-align: middle;
+}
+
+.search-bar-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #ccc;
+  background: #fff;
+  line-height: 50rpx;
+}
+
+.search-bar-input {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  margin: 0 10rpx;
+  width: 100%;
+}

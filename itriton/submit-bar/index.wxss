@@ -1,0 +1,100 @@
+/* component/submit-bar/index.wxss */
+.t-submit-bar-height {
+  line-height: 100rpx;
+  height: 100rpx;
+}
+
+.t-submit-bar {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #fff;
+}
+
+.t-submit-bar-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 28rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.t-submit-bar-content-checkbox {
+  margin-left: 10rpx;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.t-submit-bar-content-text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-weight: 500;
+  text-align: right;
+  color: #323233;
+  padding-right: 25rpx;
+}
+
+.t-submit-bar .t-button {
+  width: 230rpx;
+}
+
+.t-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  border-radius: 0;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  color: #fff;
+}
+
+.t-button::after {
+  border: none;
+}
+
+.t-btn-loading {
+  opacity: 0.6;
+}
+
+.t-btn-loading-inner {
+  display: inline-block;
+  margin-right: 10rpx;
+  vertical-align: middle;
+  width: 30rpx;
+  height: 30rpx;
+  background: 0 0;
+  border-radius: 50%;
+  border: 5rpx solid #fff;
+  border-color: #fff #fff #fff transparent;
+  animation: btn-spin 0.6s linear;
+  animation-iteration-count: infinite;
+}
+
+.t-btn-disabled {
+  opacity: 0.6;
+}
+
+@keyframes btn-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

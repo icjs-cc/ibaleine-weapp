@@ -1,0 +1,4 @@
+<view class="t-class t-avatar t-avatar-{{ shape }} t-avatar-{{ size }} {{ src ? 't-avatar-image' : '' }}" style="background: {{bgcolor}}">
+    <image class="t-avatar-image" src="{{ src }}" wx:if="{{ src !== '' }}"></image>
+    <view class="t-avatar-string" wx:else><slot></slot></view>
+</view>

@@ -1,0 +1,19 @@
+<!--component/filter-search/index.wxml-->
+<view class='filter-search' style='position:{{fixed?"fixed":""}}'>
+  <view class="search-input">
+    <view class="icon-image">
+      <image src='./images/filter.png'></image>
+    </view>
+    <picker mode="selector" range="{{filterPickerData}}" range-key="{{filterKey}}" value="{{index}}" bindchange="bindFilterChange">
+      <input placeholder='{{filterPlaceholder}}' value="{{filterValue}}" disabled></input>
+    </picker>
+  </view>
+  <view class="search-input">
+    <view class="icon-image">
+      <image src='./images/search.png'></image>
+    </view>
+    <input placeholder='{{searchPlaceholder}}' value="{{inputValue}}" bindinput="handleInput"></input>
+    <icon class="icon-search-clear" type="clear" size="14" wx:if='{{inputValue}}' catchtap="handleClear"></icon>
+  </view>
+</view>
+<view class='filter-search-fixed' wx:if='{{fixed}}'></view>

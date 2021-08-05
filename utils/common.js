@@ -1,15 +1,74 @@
-const util = require('./util.js')
-const navigateTo = e => {
-  const url = e.currentTarget.dataset.url
-  if (!util.isEmpty(url)){
-    wx.navigateTo({
-      url: url
-    })
-  }else{
-    util.logWarn('暂无可调转路由',url)
-  }
+const config = require('./config')
+export const $showToast = (title) => {
+	return new Promise((resolve, reject) => {
+		wx.showToast({
+			title,
+			icon: 'none',
+			mask: true,
+			duration: 2000,
+			success: (res) => {
+				resolve(res)
+			},
+			fail: (error) => {
+				reject(error)
+			}
+		})
+	})
 }
 
-module.exports = {
-  navigateTo: navigateTo
+export const $hideToast = () => {
+	wx.hideToast()
+}
+
+export const $showModal = ({
+	title = '提示',
+	content = '',
+	showCancel = true,
+	cancelText = '取消',
+	cancelColor = '#000000',
+	confirmText = '确定',
+	confirmColor = config['main_color']
+}) => {
+	return new Promise((resolve, reject) => {
+		wx.showModal({
+			title,
+			content,
+			showCancel,
+			cancelText,
+			cancelColor,
+			confirmText,
+			confirmColor,
+			success: (res) => {
+				resolve(res)
+			},
+			fail: (error) => {
+				reject(error)
+			}
+		})
+	})
+}
+
+export const $showLoading = (title) => {
+	wx.showLoading({
+		title: title ? title : '加载中...',
+		mask: true
+	})
+}
+
+export const $hideLoading = () => {
+	wx.hideLoading()
+}
+
+export const $setClipboardData = (data) => {
+	return new Promise((resolve, reject)=>{
+		wx.setClipboardData({
+			data,
+			success: (res) => {
+				resolve(res)
+			},
+			fail: (error)=>{
+				reject(error)
+			}
+		})
+	})
 }

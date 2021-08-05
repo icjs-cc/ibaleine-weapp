@@ -1,0 +1,81 @@
+/* pages/mine/upgrade/index.wxss */
+page{
+  background: #FFF;
+  background-image: url("data:image/gif;base64,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")
+}
+
+.upgrade-wrap {
+  padding: 0 50rpx 150rpx 50rpx;
+}
+
+.timeline {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 20rpx 0 40rpx;
+}
+
+.timeline:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 6rpx;
+  left: 50%;
+  margin-left: -3rpx;
+  top: -20rpx;
+  bottom: -20rpx;
+  background-color: #d8d8d8;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.timeline-circle {
+  position: relative;
+  display: inline-block;
+  content: '';
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -9rpx;
+}
+
+.upgrade-card {
+  margin-top: 40rpx;
+}
+
+.upgrade-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.version-time {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  line-height: 36rpx !important;
+  color: #a6a6a6;
+  margin-bottom: 24rpx !important;
+}
+
+.version-badge {
+  display: inline-block;
+  padding: 0 20rpx;
+  border-radius: 22rpx;
+  font-size: 32rpx;
+  font-family: "Helvetica Neue";
+  line-height: 40rpx;
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db9e8', endColorstr='#2989d8', GradientType=1);
+}
+
+.upgrade-body {
+  padding: 32rpx 24rpx;
+  margin: 0 !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
+  font-size: 26rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}

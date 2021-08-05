@@ -1,0 +1,19 @@
+<button
+    class="t-class t-btn {{ long ? 't-btn-long' : '' }} {{ 't-btn-' + size }} {{ 't-btn-' + shape }} {{ loading ? 't-btn-loading' : '' }} {{ disabled ? 't-btn-disabled' : ''}}"
+    style='background:{{bgcolor?bgcolor:colors[type]}};color:{{color?color:"#fff"}};border:1rpx solid {{border}}'
+    bindtap="handleTap"
+    bindgetphonenumber="getphonenumber"
+    bindgetuserinfo = "getuserinfo"
+    open-type="{{ openType }}"
+    app-parameter="{{ appParameter }}"
+    hover-stop-propagation="{{ hoverStopPropagation }}"
+    hover-start-time="{{ hoverStartTime }}"
+    hover-stay-time="{{ hoverStayTime }}"
+    session-from="{{ sessionFrom }}"
+    send-message-title="{{ sendMessageTitle }}"
+    send-message-path="{{ sendMessagePath }}"
+    send-message-img="{{ sendMessageImg }}"
+    show-message-card="{{ showMessageCard }}"
+    lang= '{{lang}}'
+    plain="true"
+><view class="t-btn-loading-inner" wx:if="{{loading}}"></view><slot></slot></button>

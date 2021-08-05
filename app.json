@@ -1,53 +1,76 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/discover/index",
     "pages/classify/index",
-    "pages/cart/index",
-    "pages/mine/index",
-    "pages/login/index",
-
-    "pages/word-cloud/index",
-    "pages/navbar/index"
+    "pages/discover/index",
+    "pages/shopping-cart/index",
+    "pages/mine/index"
   ],
+  "subpackages": [
+    {
+      "root": "pagesAuthority",
+      "pages": [
+        "login/index",
+        "switch-account/index",
+        "reset-pwd/index"
+      ]
+    },
+    {
+      "root": "pagesMine",
+      "pages": [
+        "upgrade/index",
+        "notice/index",
+        "notice/detail/index",
+        "setting/index",
+        "about/index"
+      ]
+    }
+  ],
+  "usingComponents":{
+    "t-nav-bar": "./itriton/nav-bar/index",
+    "t-divider": "./itriton/divider/index",
+    "biz-page": "./biz-component/page/index",
+    "biz-paging": "./biz-component/paging/index"
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "ibaleine-weapp",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#eee"
+    "navigationBarBackgroundColor": "#DCAA6B",
+    "navigationBarTitleText": "智鲸云商城",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
+    "selectedColor": "#333333",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/tabs/home.png",
+        "iconPath": "images/tabs/home_unselected.png",
         "selectedIconPath": "images/tabs/home_selected.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/discover/index",
-        "iconPath": "images/tabs/discover.png",
-        "selectedIconPath": "images/tabs/discover_selected.png",
-        "text": "发现"
-      },
-      {
         "pagePath": "pages/classify/index",
-        "iconPath": "images/tabs/classify.png",
+        "iconPath": "images/tabs/classify_unselected.png",
         "selectedIconPath": "images/tabs/classify_selected.png",
         "text": "分类"
       },
       {
-        "pagePath": "pages/cart/index",
-        "iconPath": "images/tabs/cart.png",
-        "selectedIconPath": "images/tabs/cart_selected.png",
+        "pagePath": "pages/discover/index",
+        "iconPath": "images/tabs/discover_unselected.png",
+        "selectedIconPath": "images/tabs/discover_selected.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/shopping-cart/index",
+        "iconPath": "images/tabs/shoppingcart_unselected.png",
+        "selectedIconPath": "images/tabs/shoppingcart_selected.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/mine/index",
-        "iconPath": "images/tabs/mine.png",
+        "iconPath": "images/tabs/mine_unselected.png",
         "selectedIconPath": "images/tabs/mine_selected.png",
         "text": "我的"
       }

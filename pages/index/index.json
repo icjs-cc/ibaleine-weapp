@@ -1,7 +1,10 @@
 {
   "usingComponents": {
-    "iw-swiper": "/component/swiper/index",
-    "iw-menu-bar": "/component/menu-bar/index",
-    "iw-goods-cell": "/component/goods-cell/index"
-  }
+    "goods": "/component/goods/index",
+    "t-search-bar": "/itriton/search-bar/index",
+    "t-menu": "/itriton/menu/index",
+    "t-swiper": "/itriton/swiper/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

@@ -1,0 +1,9 @@
+<!--biz-component/notice/index.wxml-->
+<view class="notice-wrap">
+  <t-iconfont icon='icon-notice' color='{{color}}' size='45rpx' slot='icon'></t-iconfont>
+  <view class="notice-wrap-content">
+    <view animation="{{animationData}}" class="notice-wrap-text">
+      <view class="notice-wrap-text-cell" data-item="{{content}}" bindtap="bindClick">{{content.title}}</view>
+    </view>
+  </view>
+</view>

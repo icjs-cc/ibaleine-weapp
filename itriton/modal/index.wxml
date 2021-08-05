@@ -1,0 +1,15 @@
+<!--component/modal/index.wxml-->
+<view catchtouchmove='_catchtap' hidden='{{visible}}'>
+  <view class='mask'/>
+  <view class='modal-box'>
+    <view class="title">{{title}}</view>
+    <view class='content'>
+      {{content}}
+      <slot name='content'></slot>
+    </view>
+    <view class='btn'>
+      <view bindtap='handleCancel' style="color:{{cancelColor}}" class='cancel'>取消</view>
+      <view bindtap='handleConfirm' style="color:{{confirmColor}}" class='confirm'>确定</view>
+    </view>
+  </view>
+</view>

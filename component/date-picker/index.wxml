@@ -1,0 +1,32 @@
+<!--biz-component/date-picker/index.wxml-->
+<view class="t-class date-picker-wrap">
+  <view class="cell">
+    <view class="title">时间粒度</view>
+    <view>
+      <view class="item" style='border:1rpx solid {{index===granularity?color:"#d1d1d1"}};color:{{index===granularity?color:"#d1d1d1"}}' data-type="granularity" data-idx="{{index}}" bindtap="bindSelectChange" wx:for='{{granularityList}}' wx:key='unqiue'>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="cell">
+    <view class="title">时间范围</view>
+    <view>
+      <view class="item" style='border:1rpx solid {{index===scope?color:"#d1d1d1"}};color:{{index===scope?color:"#d1d1d1"}}' data-type="scope" data-idx="{{index}}" bindtap="bindSelectChange" wx:for='{{granularityList[granularity].value}}' wx:key='unqiue'>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="cell">
+    <picker mode="date" value="{{startDate}}" data-param='startDate' end="{{endDate}}" bindchange="bindDateChange">
+      <view class="picker">
+        <text class="picker-text">{{startDate}}</text>
+        <t-iconfont icon='icon-down' color='#d1d1d1'></t-iconfont>
+      </view>
+    </picker>
+    <view class="to">到</view>
+    <picker mode="date" value="{{endDate}}" data-param='endDate' start="{{startDate}}" end="2050-01-01" bindchange="bindDateChange">
+      <view class="picker">
+        <text class="picker-text">{{endDate}}</text>
+        <t-iconfont icon='icon-down' color='#d1d1d1'></t-iconfont>
+      </view>
+    </picker>
+  </view>
+</view>

@@ -1,11 +1,11 @@
 {
   "usingComponents": {
-    "iw-avatar": "/component/avatar/index",
-    "iw-card": "/component/card/index",
-    "iw-signal": "/component/signal/index",
-    "iw-divider": "/component/divider/index",
-    "iw-tabs": "/component/tabs/index",
-    "iw-tab": "/component/tab/index",
-    "iw-media": "/component/media/index"
-  }
+    "t-search-bar": "/itriton/search-bar/index",
+    "t-cell": "/itriton/cell/index",
+    "t-image": "/itriton/image/index",
+    "t-tabs": "/itriton/tabs/index",
+    "t-tab": "/itriton/tab/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom"
 }

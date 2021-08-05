@@ -1,0 +1,18 @@
+<!--biz-component/popup/index.wxml-->
+<view wx:if='{{visible}}'>
+  <view class='popup {{wrapAnimate}}' style='background:rgba(0,0,0,{{bgOpacity}});'></view>
+  <view catchtap='hide' catchtouchmove='_catchtap' class='popup-wrapper {{frameAnimate}}'>
+    <view catchtap='_catchtap' class='popup-content' style="padding-bottom:{{bottom}}">
+      <!-- 标题 -->
+      <view class='popup-title-wrap popup-flex' wx:if='{{title}}'>
+        <view>{{title}}</view>
+        <view class="popup-close" bindtap="hide">×</view>
+      </view>
+      <view class="popup-title-wrap popup-flex" wx:else>
+        <slot name='header'></slot>
+      </view>
+      <!-- 内容 -->
+      <slot></slot>
+    </view>
+  </view>
+</view>

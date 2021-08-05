@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALAAAsAAAAABqwAAAJzAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqBFIEbATYCJAMMCwgABCAFhG0HNhvhBREVlBNkH4npFou7xZNWjlTMRECt9X7Pztw9AFBBdAhggUkDChdN5aPiCD7a3P2f2kVf6ICyMM8T7/KM+2Pn/nWBQAELWAOuqR8b0EDygObWaVGNkYATHFA3rsk2ognxhrELXuB5Akp16iOMmzBtnmKJPS0gbNu8cbXigkeSWLxYkG9Ym4RLcoqz09k7XIy+H74bFIrJ5CJ77qwN49cZ9Ul8ao6HCocsCwheArg5h4g+SIQVjZFFosBYUakqdafnJUG2lL9QIBIZirzzh0cmEPLs3HLQA0UzPpV6okzdDCVPnRtBPsnqhQFsTX30kCCrrqjYW3nmcQiHn5RVnX0kHHq488aNkDt88+z1hnTt2kbXWVp55kZ+RFPV9euD/157oJwjwf3wslD2uvxP058gubTAB8t+lxfG/G76/fL1y99WsX8mLg8PIB6OmYBA2z8f762sGvZ/cVkC7/8euhiXJzFDMRwl8NPEA1uSIcXmmDSRJ7JsUevEqRlKlaLAdtT6MF3XcGOxoFhDhkyRDkTFupCJ2Qc5ZYYgr9hIlOpt4uYydfaIQipBL8cBgmovkKlEeYWo2pdMzB9yGv2RVx2OKLUg1O1ZplswYizhxLjC/AGzpChdK4s4/4zq4SfKSyP2HakYP7RVU46PGJGWWFCeqmOWICkFGMBl6H2CTMniwpVmzn1dy6Y3VUsKO2EsgiYMrcDsAxiLJJJBdyYqnz9DyoM3oY6KuuAdIoXpHbQqzQByVMVBFY9yTfGkdBiTgESSAAxgFPK8BOTmURZasIqeEMp6tdNJDlVV22vCDxSyGuz5MWQhhiS33cRHOe3yvnG3AwA=') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:before {
+  content: "\e618";
+}
+
+.icon-plus:before {
+  content: "\e60a";
+}
+
+.t-input-number {
+  display: inline-flex;
+  align-items: center;
+  color: #495060;
+}
+
+.t-input-number-minus,.t-input-number-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40rpx;
+  min-width: 40rpx;
+  font-size: 32rpx;
+}
+
+.t-input-number-minus {
+  border-right: none;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.t-input-number-plus {
+  border-left: none;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.t-icon {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t-input-number-text {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  height: 50rpx;
+  width: 100rpx !important;
+  min-height: auto;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  z-index: 0;
+}
+
+.t-input-number-disabled{
+  opacity:0.5
+}

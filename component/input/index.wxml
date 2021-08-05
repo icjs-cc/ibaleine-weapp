@@ -1,15 +1,9 @@
-<view class="iw-class iw-cell iw-input {{ error ? 'iw-input-error' : '' }} {{ mode === 'wrapped' ? 'iw-input-wrapped' : '' }}">
-  <view wx:if="{{ title }}" class="iw-cell-hd iw-input-title {{fontWeight?'fontWeight':''}}">{{ title }}</view>
-  <view wx:else class='iw-cell-hd iw-input-title' style='min-width:35px'>
-    <image class='iw-icon' src='{{prefix}}' bindtap='handleClickIcon'></image>
-  </view>
-  <textarea wx:if="{{ type === 'textarea' }}" auto-height disabled="{{ disabled }}" focus="{{ autofocus }}" value="{{ value }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}" class="iw-input-input iw-cell-bd {{ right ? 'iw-input-input-right' : '' }}"
-    placeholder-class="iw-input-placeholder" bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur"></textarea>
-  <input wx:else type="{{ type }}" disabled="{{ disabled }}" focus="{{ autofocus }}" value="{{ value }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}" class="iw-input-input iw-cell-bd {{ right ? 'iw-input-input-right' : '' }}" placeholder-class="iw-input-placeholder"
-    bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur" />
-  <image src='{{captcha}}' wx:if='{{captcha}}' class='captcha-code'></image>
-  <view>
-    <image wx:if="{{ suffix }}" class='iw-icon' src='{{suffix}}' bindtap='handleClickSuffix'></image>
-    <slot name='icon'></slot>
-  </view>
+ <!--biz-components/input/index.wxml-->
+<view class="input-wrap" style="width: {{width}}rpx;border-bottom: 1px solid {{isFocus?focusColor:'#f0f0f0'}};height:{{height}}rpx;">
+  <text class="required" wx:if='{{required=="left"}}'>*</text>
+  <text class="required" wx:else></text>
+  <text class="unit">{{unit}}</text>
+  <input class="t-class input" style="width: {{width}}rpx;text-align:{{textAlign}}" type="{{type}}" value='{{value}}' password='{{password}}' placeholder="{{placeholder}}" disabled='{{disabled}}' bindinput="bindinput" bindfocus="bindfocus" bindblur="bindblur"></input>
+  <text class="required" wx:if='{{required=="right"}}'>*</text>
+  <text class="required" wx:else></text>
 </view>

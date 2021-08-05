@@ -1,0 +1,10 @@
+<!--biz-component/paging/index.wxml-->
+<block wx:if='{{pageCount!=0}}'>
+  <slot></slot>
+</block>
+<block wx:else>
+  <view class='default' style="margin-top:{{top}}%">
+    <image class="default-image" src='/images/common/default.png'></image>
+    <text class="default-text">{{text}}</text>
+  </view>
+</block>

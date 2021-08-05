@@ -1,0 +1,15 @@
+<!--pages/mine/about/index.wxml-->
+<t-nav-bar title="关于我们" btn-color="rgba(0, 0, 0, .4)" background="{{main_color}}" text-color="#FFFFFF" bind:home="routeToHome"/>
+<view class="p-20">
+  <view class="about border-radius box-shadow">
+    <view class="about-header">
+      <image class="about-header__image" src="../../images/common/qrcode.jpg"></image>
+      <view class="about-header__text">微信号：{{wechatCode}}</view>
+    </view>
+    <view class="about-content">
+      <view>简单不先于复杂，而是在复杂之后，互联网世界的平凡码农一枚，热爱编程、喜欢美好的事物、强迫症~</view>
+    </view>
+  </view>
+  <button class="about-button" style="background:{{main_color}}" 
+    bindtap="copyWechatCode">复制微信号</button>
+</view>

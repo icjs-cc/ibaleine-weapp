@@ -1,15 +1,14 @@
-<!--index.wxml-->
-<view class="weapp-add-tip">
-  <view class="weapp-add-tip-text">
-    <text>添加到「我的小程序」使用更方便</text>
+<!--pages/index/index.wxml-->
+<biz-page>
+  <t-nav-bar title="首页" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
+  <t-search-bar placeholder="搜索商城内所有商品" is-border="{{false}}"></t-search-bar>
+  <view class="bg-white pl-20 pr-20">
+    <t-swiper list="{{swiperList}}" bind:click="handleSwiperClick" border-radius="10rpx" shape="square" height="230rpx" active-color="{{sub_color}}"></t-swiper>
+    <t-menu list="{{menuList}}" bind:click="handleMenuClick"></t-menu>
   </view>
-</view>
-<iw-swiper swipers='{{swipers}}' shape='oval' activeColor='#7FB553' isLink></iw-swiper>
-<iw-menu-bar menus='{{menus}}' isLink></iw-menu-bar>
-<view class='goods-list'>
-  <block wx:for='{{goods}}' wx:key="unique">
-    <iw-goods-cell thumb='{{item.thumb}}' title='{{item.title}}' price='{{item.price}}' primeCost='{{item.primeCost}}' sales='销量 {{item.sales}}' primeCostVisible footerVisible>
-    <view slot='tag' class='tag'>{{item.tag}}</view>
-    </iw-goods-cell>
-  </block>
-</view>
+  <view class="p-20">
+    <view class="flex justify-between flex-wrap">
+      <goods url="{{item.url}}" name="{{item.name}}" price="¥{{item.price}}" wx:for="{{goodsList}}" wx:key="unique"></goods>
+    </view>
+  </view>
+</biz-page>

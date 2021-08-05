@@ -1,0 +1,23 @@
+<view class="t-class t-cell t-input {{border?'t-border':'none'}} {{ error ? 't-input-error' : '' }} {{ mode === 'wrapped' ? 't-input-wrapped' : '' }}">
+  <view class="t-required" style="justify-content: flex-end" wx:if='{{required=="left"}}'>*</view>
+  <view class="t-required" wx:else></view>
+  <view wx:if="{{ prefix }}" class='t-cell-hd t-input-title' style='min-width:35px'>
+    <image class='t-icon' src='{{prefix}}' bindtap='handleClickIcon'></image>
+    <slot name='prefix'></slot>
+  </view>
+  <view wx:if="{{ title }}" class="t-cell-hd t-input-title {{fontWeight?'fontWeight':''}}">{{ title }}</view>
+  <view wx:else class="t-cell-hd t-input-title {{fontWeight?'fontWeight':''}}">
+    <slot name='title'></slot>
+  </view>
+  <textarea wx:if="{{ type === 'textarea' }}" auto-height disabled="{{ disabled }}" focus="{{ autofocus }}" value="{{ value }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}" class="t-input-input t-cell-bd {{ right ? 't-input-input-right' : '' }}"
+    placeholder-class="t-input-placeholder" bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur"></textarea>
+  <input wx:else type="{{ type }}" disabled="{{ disabled }}" focus="{{ autofocus }}" value="{{ value }}" placeholder="{{ placeholder }}" maxlength="{{ maxlength }}" class="t-input-input t-cell-bd {{ right ? 't-input-input-right' : '' }}" placeholder-class="t-input-placeholder"
+    bindinput="handleInputChange" bindfocus="handleInputFocus" bindblur="handleInputBlur" />
+  <image src='{{captcha}}' wx:if='{{captcha}}' class='captcha-code'></image>
+  <view class="t-icon-wrap">
+    <image wx:if="{{ suffix }}" class='t-icon' src='{{suffix}}' bindtap='handleClickSuffix'></image>
+    <slot name='icon'></slot>
+  </view>
+  <view class="t-required" style="justify-content: flex-start" wx:if='{{required=="right"}}'>*</view>
+  <view class="t-required" wx:else></view>
+</view>

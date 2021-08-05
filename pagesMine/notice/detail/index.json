@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "t-nav-bar": "/itriton/nav-bar/index"
+  },
+  "navigationStyle": "custom"
+}

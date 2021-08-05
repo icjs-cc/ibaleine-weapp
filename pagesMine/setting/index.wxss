@@ -1,0 +1,5 @@
+/* pages/mine/setting/index.wxss */
+.avatar{
+  height: 80rpx;
+  width: 80rpx;
+}

@@ -1,0 +1,31 @@
+<!--biz-component/date-modal/index.wxml-->
+<view catchtouchmove='_catchtap' wx:if='{{visible}}'>
+	<view class='mask' />
+	<view class='modal-box' style="top: {{top}};">
+		<view class="title">{{title}}</view>
+		<view class='content'>
+			<view class="date-picker">
+				<picker data-param='startDate' mode="multiSelector" value="{{startDate}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{startDateArray}}">
+					<view class="picker">
+						{{startDateArray[0][startDate[0]]}}/{{startDateArray[1][startDate[1]]}}/{{startDateArray[2][startDate[2]]}} {{startDateArray[3][startDate[3]]}}:{{startDateArray[4][startDate[4]]}}:{{startDateArray[5][startDate[5]]}}
+					</view>
+				</picker>
+				<view class="to">到</view>
+        <picker data-param='endDate' mode="multiSelector" value="{{endDate}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{endDateArray}}">
+					<view class="picker">
+						{{endDateArray[0][endDate[0]]}}/{{endDateArray[1][endDate[1]]}}/{{endDateArray[2][endDate[2]]}} {{endDateArray[3][endDate[3]]}}:{{endDateArray[4][endDate[4]]}}:{{endDateArray[5][endDate[5]]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class='btn'>
+			<view bindtap='cancel' style="{{cancelStyle}}" wx:if='{{showCancel}}' class='cancel'>{{cancelText}}</view>
+			<slot name='right' wx:if='{{right}}'></slot>
+			<block wx:else>
+				<view bindtap='confirm' style="{{confirmStyle}}" class='confirm {{loading?"btn-disabled":""}}'>
+					<view class="btn-loading-inner" wx:if="{{loading}}"></view>{{confirmText}}
+				</view>
+			</block>
+		</view>
+	</view>
+</view>

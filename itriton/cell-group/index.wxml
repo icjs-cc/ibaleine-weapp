@@ -1,0 +1,4 @@
+<!--component/list-group/index.wxml-->
+<view class="t-class t-cell-group">
+  <slot></slot>
+</view>

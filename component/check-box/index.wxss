@@ -1,0 +1,39 @@
+/* biz-component/check-box/index.wxss */
+.check-box-wrap{
+  display: flex;
+  position: relative;
+}
+
+.check-box {
+  margin: 10rpx;
+  padding: 10rpx 0;
+  color: #4e4e4e;
+  text-align: center;
+  border: 1rpx solid #e3e3e3;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.active {
+  position: absolute;
+  border-left: 40rpx solid transparent;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.check-box-active::after {
+  content: "";
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABs0lEQVRoQ+2XPUoEQRCFXwkbKBgYrCgYGBgYiWxgYGJgYGBg4E/gIfYiBgZ6B3E19gZeQNA7eIqSlhpohnWsmeqe6YHaaFm6a973XvVUL2HkHxq5fjjA0Al6Ap6A0QFvIaOB5u2egNlCYwFPwGigebsnYLbQWKDYBJh5C8AmEX00MRYJwMzXABYifE5ED39BFAdQEx90PxHR7SgAloj/AnBDRJ/FA3QRH6CKaKGu4osAsIgfHMAqflCAFOJVAMx8D+AQwB0RvRkH5+/2VOK1AN9hIobnyivt1QKRUrwW4B3AsYg2QaQWrwXYB/AM4MACkUO8CkB6dk8gZl0gmPkKwEvUev9OWG2bqgcZM+8KxFEbiJzi1QlUbjDzjkCozoSID7fKyqhkzlea1AlEENvhhgjgpCmJPsS3TiCCmArE6TKIvsR3BpCDvSEQZzGEfM/aNvEBb91C8WZmXheI8wgiNiZ5z9ffTiYASWJVIC5qxbOLN7VQLYmJQFzK772ITwYgSayECx+ANQCPTX8DtUNKs87cQpqH5FzjADnd1dT2BDQu5VzjCeR0V1PbE9C4lHPN6BP4Ae17vTGiGAwNAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-size: 20rpx 20rpx;
+  background-position: center center;
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  z-index: 999;
+  bottom: 10rpx;
+  right: 10rpx;
+}

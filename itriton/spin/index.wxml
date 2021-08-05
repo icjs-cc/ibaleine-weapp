@@ -1,0 +1,8 @@
+<view class="t-class t-spin t-spin-{{ size }} {{ fix ? 't-spin-fix' : '' }} {{ custom ? 't-spin-show-text' : '' }} {{ fullscreen ? 't-spin-fullscreen' : '' }}">
+  <div class="t-spin-main">
+    <view class="t-spin-dot"></view>
+    <div class="t-spin-text">
+      <slot></slot>
+    </div>
+  </div>
+</view>

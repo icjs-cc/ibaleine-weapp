@@ -1,0 +1,125 @@
+.nav-bar-wrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.nav-bar {
+  font-size: 34rpx;
+  letter-spacing: 2rpx;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 44px;
+}
+
+.nav-bar-img {
+  width: 18px;
+  height: 18px;
+  z-index: 999;
+}
+
+.nav-bar-back {
+  margin-left: 5px;
+}
+
+.nav-bar-back .nav-bar-img {
+  margin-left: 5px;
+}
+
+.nav-bar-title {
+  font-weight: 600;
+  text-align: center;
+  vertical-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 340rpx;
+}
+
+.nav-bar-title.absolute {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-bar_left{
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.nav-bar__img{
+  height: 25px;
+  width: 25px;
+  z-index: 999999;
+}
+
+.nav-bar-btn_icon_dark {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid rgba(255, 255, 255, .3);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-left: 10px;
+}
+
+.nav-bar-btn_icon_light {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-left: 10px;
+}
+
+.nav-bar-go_back {
+  flex: 1;
+  -webkit-flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-mid_line_dark {
+  background-color: rgba(255, 255, 255, .3);
+  width: 1rpx;
+  height: 32rpx;
+  z-index: 999;
+}
+
+.nav-bar-mid_line_light {
+  background-color: rgba(255, 255, 255, .3);
+  width: 1rpx;
+  height: 32rpx;
+  z-index: 999;
+}
+
+.nav-bar-go_home {
+  flex: 1;
+  -webkit-flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

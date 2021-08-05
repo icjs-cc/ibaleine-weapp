@@ -1,0 +1,11 @@
+/* component/safe-area/index.wxss */
+.safe-area{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  background-color: #fff;
+}

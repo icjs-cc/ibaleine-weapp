@@ -1,0 +1,81 @@
+.t-tabs {
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-box-align: center;
+  background: #fff;
+}
+
+.t-tabs::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #e9eaec;
+  border-bottom-width: 1px;
+}
+
+.t-tabs-scroll {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.t-tabs-fixed {
+  position: fixed;
+  z-index: 2;
+}
+
+.t-tabs-fixed-height {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.t-tabs-vertical {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #FFF;
+}
+
+.t-tabs-scroll-vertical {
+  position: absolute;
+  left: 0;
+  width: 210rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #FFF;
+}
+
+.t-tabs-scroll-vertical::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.t-tabs-scroll-vertical-content {
+  position: absolute;
+  display: flex;
+  margin-left: 210rpx;
+  overflow: hidden;
+  width: 540rpx;
+}
+
+.t-tabs-scroll-vertical-content::before {
+  content: "";
+  right: 0;
+  top: 0;
+}

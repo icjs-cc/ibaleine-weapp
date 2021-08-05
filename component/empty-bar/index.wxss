@@ -1,0 +1,19 @@
+/* biz-component/empty-bar/index.wxss */
+.empty-bar {
+  height: 80rpx;
+  position: relative;
+  width: 100%;
+}
+
+.empty-bar-content {
+  position: fixed;
+  display: flex;
+  background: #f5f5f5;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+  padding: 0 20rpx;
+  width: calc(100% - 40rpx);
+  z-index: 9;
+  font-size: 32rpx;
+}

@@ -1,0 +1,13 @@
+<view wx:if="{{direction === 'horizontal'}}" class="t-class t-tabs-tab {{ scroll ? 't-tabs-tab-scroll' : '' }} {{ current ? 't-tabs-tab-current' : '' }}" bindtap="handleClickItem">
+    <view class="t-tabs-tab-title {{ current ? 't-tabs-tab-title-current' : '' }}" wx:if="{{ current && currentColor }}" style="color: {{ currentColor }}">{{ title }}</view>
+    <view class="t-tabs-tab-title {{ current ? 't-tabs-tab-title-current' : '' }}" wx:else>{{ title }}</view>
+    <view>
+      <slot name='badge'></slot>
+    </view>
+  <view class="t-tabs-tab-bar" wx:if="{{ current }}" style="background: {{ currentColor }}"></view>
+</view>
+<view wx:if="{{direction === 'vertical'}}" class="t-class t-tabs-tab-vertical {{ scroll ? 't-tabs-tab-vertical-scroll' : '' }} {{ current ? 't-tabs-tab-vertical-current' : '' }}" bindtap="handleClickItem">
+  <view class="t-tabs-tab-vertical-cell" style='background-color: {{ current?currentColor:"" }}'>
+    {{title}}
+  </view>
+</view>

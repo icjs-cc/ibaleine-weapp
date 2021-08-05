@@ -1,0 +1,12 @@
+<!--pages/mine/update-password/index.wxml-->
+<t-nav-bar title="修改密码" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<backdrop bgColor='{{main_color}}'></backdrop>
+<view class="p-20 backdrop-wrap">
+  <t-cell-group t-class='box-shadow-radius'>
+    <t-input t-class="border-radius-t" type='password' title='旧密码' data-param="oldPassword" value="{{formData.oldPassword}}" bind:change="bindInputFormData" placeholder="请输入旧密码" required='left' border right></t-input>
+    <t-input title='新密码' type='password' data-param="newPassword" value="{{formData.newPassword}}" bind:change="bindInputFormData" required='left' placeholder="请输入新密码" border right></t-input>
+    <t-input t-class="border-radius-b" title='确认新密码' type='password' data-param="reEntPassword" value="{{formData.reEntPassword}}" bind:change="bindInputFormData" placeholder="再次输入新密码" required='left' right></t-input>
+  </t-cell-group>
+</view>
+
+<t-submit-bar t-class='button-submit' text='{{loading?"提交中...":"确认提交"}}' bgcolor='{{main_color}}' bind:submit='confirm' loading='{{loading}}' safeArea full></t-submit-bar>

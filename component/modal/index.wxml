@@ -1,0 +1,19 @@
+<!--biz-component/modal/index.wxml-->
+<view catchtouchmove='_catchtap' wx:if='{{visible}}'>
+  <view class='mask' />
+  <view class='modal-box' style="top: {{top}};">
+    <view class="title">{{title}}</view>
+    <view class='content'>
+      {{content}}
+      <slot name='content'></slot>
+    </view>
+    <view class='btn'>
+      <view bindtap='cancel' style="{{cancelStyle}}" wx:if='{{showCancel}}' class='cancel'>{{cancelText}}</view>
+      <slot name='right' wx:if='{{right}}'></slot>
+      <block wx:else>
+        <view bindtap='confirm' style="{{confirmStyle}}" class='confirm {{loading?"btn-disabled":""}}'>
+          <view class="btn-loading-inner" wx:if="{{loading}}"></view>{{confirmText}}</view>
+      </block>
+    </view>
+  </view>
+</view>

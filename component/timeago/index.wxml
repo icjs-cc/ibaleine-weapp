@@ -1,2 +1,0 @@
-<!--component/timeago/index.wxml-->
-<text class='iw-class'>{{timeago}}</text>

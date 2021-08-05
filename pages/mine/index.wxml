@@ -1,20 +1,34 @@
 <!--pages/mine/index.wxml-->
-<view class="personal" style='background-image:url("http://ipratt.icjs.ink/resource/iwhale-ui/pi.png")'>
-  <view class="personal-avatar">
-    <image src="{{userInfo.username?userInfo.avatar:'http://ipratt.icjs.ink/resource/iwhale-ui/avatar.png'}}"/>
-  </view>
-  <view class="personal-text" wx:if='{{userInfo.username}}'>
-    <view class='username'>ibaleine</view>
-    <view class='slogan'>微信小程序UI组件</view>
-  </view>
-  <view class="personal-auth" data-url='/pages/login/index' bindtap='navigateTo' wx:else>登录/注册</view>
-  <view class='personal-right'>
-    <image src='../../images/common/sign.png'></image>每日签到
-  </view>
-</view>
-<iw-cell-group>
-  <block wx:for='{{modules}}' wx:key='unique'>
-    <iw-cell icon='{{item.icon}}' title='{{item.title}}' isLink></iw-cell>
-  </block>
-</iw-cell-group>
-<iw-button iw-class='iw-mt-10' bind:click='handleLogout' bgcolor='#fff' long color='#F24A5D' size="small" wx:if='{{userInfo.username}}'>退出登录</iw-button>
+<biz-page>
+	<t-nav-bar title="我的" visible="{{false}}" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}"
+		text-color="{{nav_bar_text_color}}" />
+	<view class="mine-wrap">
+		<view class="mine__bg" style="background:{{main_color}}">
+			<view class="mine__info">
+				<image class="mine__bg--avatar" style="background: {{main_color}}" src="../../images/mine/avatar.png"></image>
+				<view class="mine__info--cell" bindtap="{{userInfo.userId?'':'routeToLogin'}}">
+					<view class="mine__info--name">{{userInfo.userId?userInfo.nickname:'立即登录'}}</view>
+					<view class="mine__info--desc">{{userInfo.userId?today:'登录体验完整功能'}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="mine__cell-wrap">
+			<view class="mine__cell">
+				<t-cell icon="../../images/mine/feedback.png" open-type="feedback" t-class="border-radius-t" title="意见反馈" border
+					isLink></t-cell>
+				<t-cell icon="../../images/mine/notice.png" url="/pagesMine/notice/index" title="通知公告" border isLink></t-cell>
+				<t-cell icon="../../images/mine/upgrade.png" url='/pagesMine/upgrade/index' t-class="border-radius-b"
+					title="升级日志" isLink />
+			</view>
+			<view class="mine__cell mt-20">
+				<t-cell icon="../../images/mine/customer.png" open-type="contact" title="联系客服" t-class="border-radius-t" border
+					isLink></t-cell>
+				<t-cell icon="../../images/mine/share.png" open-type="share" title="推荐分享" border isLink></t-cell>
+				<t-cell icon="../../images/mine/about.png" title="关于我们" url="/pagesMine/about/index"
+					t-class="{{userInfo.userId?'':'border-radius-b'}}" border isLink></t-cell>
+				<t-cell icon="../../images/mine/setup.png" url='/pagesMine/setting/index'
+					t-class="{{userInfo.userId?'border-radius-b':''}}" wx:if="{{userInfo.userId}}" title="帐号设置" isLink></t-cell>
+			</view>
+		</view>
+	</view>
+</biz-page>

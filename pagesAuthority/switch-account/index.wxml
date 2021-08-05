@@ -1,0 +1,33 @@
+<!--pages/mine/switch-account/index.wxml-->
+<t-nav-bar title="切换账号" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+<view class="p-20">
+	<view class="flex flex-direction align-center">
+		<view class="switch-account__title">
+			轻触头像以切换帐号
+		</view>
+		<view class="switch-account__line"></view>
+	</view>
+	<t-cell t-class="border-radius box-shadow pt-20 pb-20 mb-20" 
+		wx:for="{{loginAccount}}" wx:key="unique" data-item="{{item}}"
+		bindlongpress="handleDelete"  data-index="{{index}}"
+		bindtap="{{userInfo.userId==item.userId?'':'switchAccount'}}">
+    <image class="switch-account__icon" style="background: {{main_color}};" slot="icon" src="/images/mine/avatar.png"></image>
+		<view slot="content">
+			<view class="text-lg">
+				<text>{{item.nickname}}</text>
+        <text class="text-sm ml-5">{{item.username}}</text>
+			</view>
+			<view>
+				<view wx:if="{{userInfo.userId==item.userId}}" class="switch-account__status text-white" style="background:{{main_color}}">当前使用</view>
+			</view>
+		</view>
+	</t-cell>
+  <t-cell t-class="border-radius box-shadow pt-20 pb-20 mb-20" bindtap="routeToLogin">
+    <image class="switch-account__icon" slot="icon" src="/images/common/add_square.png"></image>
+		<view slot="content">
+			<view class="text-lg">
+				添加帐号
+			</view>
+		</view>
+	</t-cell>
+</view>

@@ -1,0 +1,23 @@
+<!--component/media-card/index.wxml-->
+<view class="t-class t-card {{ full ? 't-card-full' : '' }}" style="{{shadow?'box-shadow: 0 10rpx 20rpx '+shadow:''}}">
+  <view class="t-class t-card-header" wx:if='{{header}}'>
+    <view class="t-card-header-content">
+      <image class="{{circle?'t-card-header-thumb-circle':'t-card-header-thumb'}}" src="{{ thumb }}" mode="aspectFit" wx:if="{{ thumb }}" lazy-load='true' />
+      <slot name="thumb" wx:else></slot>
+      <text class='t-card-header-title' style='color:{{color}};'>{{ title }}</text>
+    </view>
+    <view class="t-card-header-extra" wx:if="{{ extra }}">{{ extra }}</view>
+    <view class="t-card-header-extra" wx:else>
+      <slot name='extra'></slot>
+    </view>
+  </view>
+  <view class="t-class t-card-header" wx:else>
+    <slot name='header'></slot>
+  </view>
+  <view class="t-class t-card-body {{border?'t-card-body-border':'t-padded-t-0'}}">
+    <slot name="content"></slot>
+  </view>
+  <view class="t-class t-card-footer" wx:if='{{footer}}'>
+    <slot name="footer"></slot>
+  </view>
+</view>

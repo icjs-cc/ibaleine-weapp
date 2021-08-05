@@ -1,0 +1,13 @@
+<!--component/title-bar/index.wxml-->
+<view class='bar' style='background:{{bgColor}};height:{{height}}'>
+  <view class='t-class title-bar'>
+    <view class="title">
+      <view class='{{"icon-"+shape}}' style='background:{{color?color:colors[type]}}'></view>
+      {{title}}
+    </view>
+    <view class="extra" bindtap="handleClick" wx:if='{{extra}}'>{{extra}}</view>
+    <view class="extra" wx:else>
+      <slot name='extra'></slot>
+    </view>
+  </view>
+</view>

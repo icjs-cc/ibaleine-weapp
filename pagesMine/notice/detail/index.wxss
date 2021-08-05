@@ -1,0 +1,4 @@
+/* pages/mine/notice/detail/index.wxss */
+page{
+  background: #FFFFFF;
+}

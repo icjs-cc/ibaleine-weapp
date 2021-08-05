@@ -1,0 +1,20 @@
+<view style='height:{{navHeight + status}}px;'>
+  <cover-view class='nav-bar-wrap' style='padding-top:{{ status }}px;{{containerStyle}}'>
+    <cover-view class='nav-bar' style='height:{{navHeight}}px;{{containerStyle}};'>
+      <cover-view class='{{"nav-bar-btn_icon_"+type}}' style='height:32px;width:81px;background:{{btnColor}}'
+        wx:if='{{visible}}'>
+        <cover-view class='nav-bar-go_back' catchtap='bindToBack'>
+          <cover-image src='{{"./icons/back-"+type+".png"}}' class='nav-bar-img'></cover-image>
+        </cover-view>
+        <cover-view class='{{"nav-bar-mid_line_"+type}}'></cover-view>
+        <cover-view class='nav-bar-go_home' catchtap='bindToHome'>
+          <cover-image src='{{"./icons/home-"+type+".png"}}' class='nav-bar-img'></cover-image>
+        </cover-view>
+      </cover-view>
+      <cover-view class="nav-bar_left" style="height:32px;width:81px;" wx:if="{{left}}">
+        <cover-image class="nav-bar__img" src="{{left}}" bindtap="leftClick"></cover-image>
+      </cover-view>
+      <cover-view class='nav-bar-title absolute' style='line-height:{{navHeight}}px;{{textStyle}}'>{{title}}</cover-view>
+    </cover-view>
+  </cover-view>
+</view>

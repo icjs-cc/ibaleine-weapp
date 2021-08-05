@@ -1,0 +1,17 @@
+/* biz-component/mini-button/index.wxss */
+
+.mini-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  min-width: 100rpx;
+  min-height: 48rpx;
+  line-height: 48rpx;
+}
+
+.mini-button::after {
+  border: none;
+}

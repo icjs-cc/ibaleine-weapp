@@ -1,0 +1,22 @@
+<!--component/datetime-picker/index.wxml-->
+<view class='datetime-picker' style='position:{{fixed?"fixed":""}}'>
+  <view class="datetime-picker-input">
+    <picker mode="date" value="{{startDate}}" data-param='startDate' bindchange="bindDateChange">
+      <input placeholder='开始日期' value="{{startDate}}" disabled></input>
+    </picker>
+    <icon class="icon-clear" type="clear" size="14" data-param='startDate' bindtap="handleClear" wx:if='{{startDate}}'></icon>
+    <view class="icon-date">
+      <image src='{{image}}'></image>
+    </view>
+  </view>
+  <view class="datetime-picker-input">
+    <picker mode="date" value="{{endDate}}" start='{{startDate}}' data-param='endDate' bindchange="bindDateChange">
+      <input placeholder='结束日期' value="{{endDate}}" disabled></input>
+    </picker>
+    <icon class="icon-clear" type="clear" size="14" data-param='endDate' bindtap="handleClear" wx:if='{{endDate}}'></icon>
+    <view class="icon-date">
+      <image src='{{image}}'></image>
+    </view>
+  </view>
+</view>
+<view class='datetime-picker-fixed' wx:if='{{fixed}}'></view>

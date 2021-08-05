@@ -1,0 +1,8 @@
+<!--component/dot/index.wxml-->
+<view class="dot">
+  <view class='dot-wrap'>
+    <view class="dot-cell" style="{{statusDotStyle}}"></view>
+    <view class="dot-processing" style="{{statusDotProcessingStyle}}" wx:if='{{processing}}'></view>
+  </view>
+  <view class="dot-text" wx:if='{{text}}'>{{text}}</view>
+</view>

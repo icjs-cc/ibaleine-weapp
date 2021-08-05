@@ -1,0 +1,90 @@
+.t-switch {
+  display: inline-block;
+  width: 96rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 48rpx;
+  vertical-align: middle;
+  border: 2rpx solid #ccc;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.t-switch-hide-input {
+  display: none;
+  opacity: 0;
+}
+
+.t-switch-inner {
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  left: 50rpx;
+  vertical-align: middle;
+}
+
+.t-switch-inner .t-icon {
+  width: 24rpx;
+  height: 24rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.t-switch:after {
+  content: '';
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 44rpx;
+  background-color: #fff;
+  position: absolute;
+  left: 2rpx;
+  top: 2rpx;
+  cursor: pointer;
+  transition: left 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+.t-switch-checked:after {
+  left: 16rpx;
+}
+
+.t-switch-large {
+  width: 120rpx;
+}
+
+.t-switch-large.t-switch-checked:after {
+  left: 70rpx;
+}
+
+.t-switch-checked:after {
+  left: 50rpx;
+}
+
+.t-switch-checked {
+  border-color: #2d8cf0;
+  background-color: #2d8cf0;
+}
+
+.t-switch-checked .t-switch-inner {
+  left: 16rpx;
+}
+
+.t-switch-checked:after {
+  left: 50rpx;
+}
+
+.t-switch-disabled {
+  background: #f3f3f3;
+  border-color: #f3f3f3;
+}
+
+.t-switch-disabled:after {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.t-switch-disabled .t-switch-inner {
+  color: #ccc;
+}

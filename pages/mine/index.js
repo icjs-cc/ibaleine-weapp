@@ -1,32 +1,28 @@
 // pages/mine/index.js
-const util = require('../../utils/util.js')
-const common = require('../../utils/common.js')
+const config = require('../../utils/config.js')
+const collection = require('../../utils/collection.js')
 Page({
-  ...util,
-  ...common,
   data: {
-    modules:[
-      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/address.png', title:'我的地址'},
-      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/order.png', title: '我的订单'},
-      { icon: 'http://ipratt.icjs.ink/resource/iwhale-ui/about-us.png', title: '关于我们'}
-    ],
-    userInfo: {}
+    ...config,
+    userInfo: {},
+    today: null
   },
-  handleLogout(){
+  ...collection,
+  onShow() {
+    const today = this.formatDate(new Date(), 'yyyy-MM-dd')
     this.setData({
-      userInfo: {}
-    })
-    this.setStorageSync('userInfo', {})
-    wx.navigateTo({
-      url: '/pages/login/index'
+      userInfo: this.getStore('userInfo'),
+      today
     })
   },
-  onLoad(options) {
-    
-  },
-  onShow(){
-    this.setData({
-      userInfo: this.getStorageSync('userInfo')
-    })
+  onShareAppMessage(res) {
+    if (res.from === 'button') {
+      return {
+        title: `您的好友邀您使用【${config.project_cn}】`,
+        imageUrl: '/images/common/share.jpg',
+        path: "/pages/index/index",
+        success: (res) => { }
+      }
+    }
   }
 })
