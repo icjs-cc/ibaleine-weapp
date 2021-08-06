@@ -30,8 +30,6 @@
   width: 320rpx;
   height: 30rpx;
   font-size: 28rpx;
-  font-weight: 600;
   line-height: 40rpx;
-  color: #EE4D52;
   margin-top: 20rpx;
 }

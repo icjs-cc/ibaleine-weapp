@@ -1,1 +1,24 @@
 /* pages/shopping-cart/index.wxss */
+.shopping-cart-image {
+  width: 156rpx;
+  height: 156rpx;
+  background: rgba(0, 0, 0, 0);
+  border: 1rpx solid #E5E9E8;
+  opacity: 1;
+  border-radius: 16rpx;
+}
+
+.shopping-cart-price {
+  margin-left: -10rpx
+}
+
+.shopping-cart-content{
+  height: 152rpx;
+}
+
+.button-submit>button {
+  border-radius: 50rpx !important;
+  box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.09) !important;
+  height: 75rpx !important;
+  line-height: 75rpx !important;
+}

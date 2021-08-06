@@ -1,4 +1,5 @@
 const config = require('../../utils/config.js')
+import images from '../../utils/images.js'
 Page({
   data: {
     ...config,
@@ -16,10 +17,10 @@ Page({
       {url: '/images/resource/icon_classify_8.png', name: '更多商品'}
     ],
     goodsList: [
-      {url: 'http://www.icjs.ink/ibaleine/mall/goods_1.jpg', name: '贴布日式圆盘特殊日本木质茶盘', price: '128.00'},
-      {url: 'http://www.icjs.ink/ibaleine/mall/goods_2.jpg', name: '商务办公用茶-水仙', price: '198.00'},
-      {url: 'http://www.icjs.ink/ibaleine/mall/goods_3.jpg', name: '商务办公用茶-肉桂', price: '200.00'},
-      {url: 'http://www.icjs.ink/ibaleine/mall/goods_4.jpg', name: '家用简约长方竹制茶盘方形干泡盘小号单人竹制整板', price: '218.00'},
+      {url: images.goods1, name: '贴布日式圆盘特殊日本木质茶盘', price: '128.00'},
+      {url: images.goods2, name: '商务办公用茶-水仙', price: '198.00'},
+      {url: images.goods3, name: '商务办公用茶-肉桂', price: '200.00'},
+      {url: images.goods4, name: '家用简约长方竹制茶盘方形干泡盘小号单人竹制整板', price: '218.00'},
     ]
   },
   handleSwiperClick(e){

@@ -12,6 +12,7 @@
 ![首页](./screenshot/home.jpeg) 
 ![分类](./screenshot/classify.jpeg) 
 ![发现](./screenshot/discover.jpeg) 
+![购物车](./screenshot/shopping-cart.jpeg) 
 ![我的](./screenshot/mine.jpeg) 
 
 ## 开发者信息

@@ -1,5 +1,6 @@
 // pages/discover/index.js
 const config = require('../../utils/config.js')
+import images from '../../utils/images.js'
 Page({
   data: {
     ...config,
@@ -7,7 +8,8 @@ Page({
       {name: '最新', key: 'new'},
       {name: '全部', key: 'all'}
     ],
-    current: 'new'
+    current: 'new',
+    images
   },
   handleChange({ detail }){
     this.setData({

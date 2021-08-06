@@ -1,5 +1,10 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "t-cell": "/itriton/cell/index",
+    "t-image": "/itriton/image/index",
+    "t-submit-bar": "/itriton/submit-bar/index",
+    "t-input-number": "/itriton/input-number/index"
+  },
   "navigationBarTextStyle": "black",
   "navigationStyle": "custom"
 }

@@ -22,7 +22,7 @@
         <view class="text-df text-black">品茶，品的是茶味还是人生</view>
         <view class="discover-content">
           <view class="discover-desc">茶，只是一杯茶，晨起日落，生命有它陪伴不曾离开，不可或缺。</view>
-          <t-image class="discover-image" src="http://www.icjs.ink/ibaleine/mall/goods_1.jpg"></t-image>
+          <t-image class="discover-image" src="{{images.goods1}}"></t-image>
         </view>
       </view>
     </view>

@@ -1,2 +1,36 @@
 <!--pages/shopping-cart/index.wxml-->
-<t-nav-bar title="购物车" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
+<biz-page>
+  <t-nav-bar title="购物车" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
+  <view class="mt-20">
+    <t-cell wx:for="{{shoppingCartList}}" wx:key="unique">
+      <view slot='icon' class="flex align-center">
+        <view class="pl-5 pr-5">
+          <radio color="{{main_color}}" checked='{{item.checked}}' data-index="{{index}}" catchtap="radioChange"></radio>
+        </view>
+        <t-image class="shopping-cart-image" src="{{item.url}}"></t-image>
+      </view>
+      <view class="shopping-cart-content flex flex-direction justify-between ml-10" slot='content'>
+        <view>
+          <view class='flex align-center cell text-lg ellipsis-l2'>{{item.name}}</view>
+          <view class='flex align-center cell text-sm'>{{item.spec}}</view>
+        </view>
+        <view class='shopping-cart-price flex justify-between text-lg'>
+          <text class="text-red">￥{{item.price}}</text>
+          <view>
+            <t-input-number visible custom-color='{{main_color}}' data-index="{{index}}" value='{{item.num}}' min="0" max="1000" bindchange="bindInputNumber" inputType='number'></t-input-number>
+          </view>
+        </view>
+      </view>
+    </t-cell>
+  </view>
+  <t-submit-bar t-class='button-submit' text='去结算(1)' bgcolor='{{main_color}}' z-index='9999' border bind:submit='confirm'>
+    <view slot='left' class="flex align-center text-df">
+      <radio color="{{main_color}}" checked='{{item.checked}}'  catchtap="checkAll"></radio>
+      <view class="ml-20 mr-20">全选</view>
+      <view class="flex align-center">
+        <text>合计：</text>
+        <text class="text-red text-lg">¥198.00</text>
+      </view>
+    </view>
+  </t-submit-bar>
+</biz-page>
