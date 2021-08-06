@@ -70,7 +70,6 @@ Component({
     }
   },
   attached() {
-    console.log(this.properties.safeArea)
     if (this.properties.safeArea) {
       this.setData({
         isIphoneX: checkIPhoneX(),
