@@ -1,0 +1,2 @@
+<!--biz-component/iconfont/index.wxml-->
+<icon class="iconfont {{icon}}" style="{{iconStyle}}"></icon>

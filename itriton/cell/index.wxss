@@ -60,7 +60,7 @@
 
 .t-cell-text {
   line-height: 48rpx;
-  font-size: 28rpx;
+  font-size: 30rpx;
   min-width: 150rpx;
 }
 
@@ -86,6 +86,7 @@
 
 .t-cell-access .t-cell-ft {
   padding-right: 26rpx;
+  color: #888888;
 }
 
 .t-cell-access .t-cell-ft::after {

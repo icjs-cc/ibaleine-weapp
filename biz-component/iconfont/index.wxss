@@ -1,0 +1,10 @@
+/* biz-component/iconfont/index.wxss */
+.iconfont{
+  display: inline-flex;
+  font-style: normal;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,23 +1,29 @@
 // biz-component/page/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-
+    defaultLoading: {
+      type: Boolean,
+      value: true
+    },
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+    loading: true
   },
-
-  /**
-   * 组件的方法列表
-   */
+  attached(){
+    this.setData({
+      loading: this.properties.defaultLoading
+    })
+  },
   methods: {
-
+    showLoading(){
+      this.setData({
+        loading: true
+      })
+    },
+    hideLoading(){
+      this.setData({
+        loading: false
+      })
+    },
   }
 })

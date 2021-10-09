@@ -1,8 +1,8 @@
 const {
-	setStore,
-	getStore,
-	removeStore,
-	clearStore
+	setStorage,
+	getStorage,
+	removeStorage,
+	clearStorage
 } = require('./storage.js')
 const config  = require('./config')
 
@@ -14,14 +14,14 @@ let dtime = '_deadtime'
  */
 export const setCache = (k, v, t) => {
 	const key = getCacheKey(k)
-	setStore(key, v)
+	setStorage(key, v)
 	var seconds = parseInt(t)
 	if (seconds > 0) {
 		var timestamp = Date.parse(new Date())
 		timestamp = timestamp / 1000 + seconds
-		setStore(`${key}${dtime}`.toUpperCase(), `${timestamp}`)
+		setStorage(`${key}${dtime}`.toUpperCase(), `${timestamp}`)
 	} else {
-		removeStore(`${key}${dtime}`.toUpperCase())
+		removeStorage(`${key}${dtime}`.toUpperCase())
 	}
 }
 
@@ -31,7 +31,7 @@ export const setCache = (k, v, t) => {
  */
 export const getCache = (k, def) => {
 	const key = getCacheKey(k)
-	var deadtime = parseInt(getStore(`${key}${dtime}`.toUpperCase()))
+	var deadtime = parseInt(getStorage(`${key}${dtime}`.toUpperCase()))
 	if (deadtime) {
 		if (parseInt(deadtime) < Date.parse(new Date()) / 1000) {
 			if (def) {
@@ -41,7 +41,7 @@ export const getCache = (k, def) => {
 			}
 		}
 	}
-	var res = getStore(key);
+	var res = getStorage(key);
 	if (res) {
 		return res
 	} else {
@@ -54,13 +54,13 @@ export const getCache = (k, def) => {
  */
 export const removeCache = (k) => {
 	const key = getCacheKey(k)
-	removeStore(key)
-	removeStore(`${key}dtime`.toUpperCase())
+	removeStorage(key)
+	removeStorage(`${key}dtime`.toUpperCase())
 }
 
 // 清除cache
 export const clearCache = () => {
-	clearStore()
+	clearStorage()
 }
 
 const getCacheKey = (k) => {

@@ -1,10 +1,9 @@
-const config = require('../../utils/config.js')
-import {routeToHome} from '../../utils/router'
 import { getAllVersionList } from '../../utils/api/modules/version'
+const app = getApp()
 Page({
-  routeToHome,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     versionList:[]
   },
   setVersionBadge() {

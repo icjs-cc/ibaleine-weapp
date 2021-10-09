@@ -1,16 +1,16 @@
 import {
-  getStore
+  getStorage
 } from "./storage"
 import {
   isEmpty
 } from "./util"
-import { routeToLogin } from "./router"
+import { routeToLogin, router } from "./router"
 
 /**
  * 是否登录
  */
 export const isLogin = () => {
-  const userInfo = getStore('userInfo')
+  const userInfo = getStorage('userInfo')
   if (isEmpty(userInfo)) {
     return false
   }
@@ -21,10 +21,16 @@ export const isLogin = () => {
  * 未登录拦截到登录页
  */
 export const noLoginIntercept = () => {
-  const userInfo = getStore('userInfo')
+  const userInfo = getStorage('userInfo')
   if (isEmpty(userInfo)) {
     routeToLogin()
   }
+}
+
+export const routeToNext = (e) => {
+  const url = e.currentTarget.dataset.url
+  const type = e.currentTarget.dataset.type
+  router(url, type)
 }
 
 /**

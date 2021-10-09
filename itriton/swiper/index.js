@@ -17,6 +17,10 @@ const default_properties = {
     type: String,
     value: config.colors.primary
   },
+  inactiveColor: {
+    type: String,
+    value: "#FFF"
+  },
   //点的形状 可选值为 圆形：circle，正方形：square
   shape: {
     type: String,

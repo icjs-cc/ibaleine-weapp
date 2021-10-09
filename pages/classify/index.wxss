@@ -5,6 +5,14 @@
   font-weight: bolder;
 }
 
+.classify-cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+}
+
 .classify-image{
   width: 130rpx!important;
   height: 130rpx!important;
@@ -12,6 +20,13 @@
 
 .classify-name{
   font-size: 24rpx;
+  width: 150rpx;
+  height: 64rpx;
   color: #666666;
   text-align: center;
+  overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 }

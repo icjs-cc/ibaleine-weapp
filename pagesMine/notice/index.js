@@ -1,11 +1,10 @@
 // pages/mine/notice/index.js
-const config = require('../../utils/config.js')
 import {getAllNoticeList} from '../../utils/api/modules/notice'
-const collection = require('../../utils/collection.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     noticeList: [],
     searchForm:{
       noticeTitle: null
@@ -28,7 +27,7 @@ Page({
   },
   detail(e){
     const item = e.currentTarget.dataset.item
-    this.setStore('notice', item)
+    this.setStorage('notice', item)
     this.router('/pagesMine/notice/detail/index')
   },
   onLoad(){

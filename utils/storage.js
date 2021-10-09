@@ -1,28 +1,28 @@
 const config  = require('./config')
 
-export const getStoreInfo = () => {
+export const getStorageInfo = () => {
   return wx.getStorageInfoSync()
 }
 
-export const setStore = (k, v) => {
-	const key = getStoreKey(k)
+export const setStorage = (k, v) => {
+	const key = getStorageKey(k)
   wx.setStorageSync(key, v)
 }
 
-export const getStore = (k) => {
-	const key = getStoreKey(k)
+export const getStorage = (k) => {
+	const key = getStorageKey(k)
   return wx.getStorageSync(key)
 }
 
-export const removeStore = (k) => {
-  const key = getStoreKey(k)
+export const removeStorage = (k) => {
+  const key = getStorageKey(k)
   return wx.removeStorageSync(key)
 }
 
-export const clearStore = () => {
+export const clearStorage = () => {
   return wx.clearStorageSync()
 }
 
-const getStoreKey = (k) => {
+const getStorageKey = (k) => {
 	return `${config['project_en']}_${k}`.toUpperCase()
 }

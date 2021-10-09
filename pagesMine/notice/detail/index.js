@@ -1,14 +1,13 @@
 // pages/mine/notice/detail/index.js
-const config = require('../../../utils/config.js')
-const collection = require('../../../utils/collection.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config
+    ...app.globalData.config
   },
   onLoad(){
     this.setData({
-      notice: this.getStore('notice')
+      notice: this.getStorage('notice')
     })
   }
 })

@@ -1,9 +1,9 @@
 // pages/classify/index.js
-const config = require('../../utils/config.js')
 import images from '../../utils/images.js'
+const app = getApp()
 Page({
   data: {
-    ...config,
+    ...app.globalData.config,
     tabList: [
       {name: '礼品系列', key: '1'},
       {name: '花茶系列', key: '2'},
@@ -14,15 +14,21 @@ Page({
     ],
     current: '1',
     offset: '0rpx',
+    offsetTimeout: null,
     list: [
       {name: '茶盘', url: images.classify1},
       {name: '茶荷', url: images.classify2},
       {name: '烧水壶', url: images.classify3},
-      {name: '茶巾', url: images.classify4}
+      {name: '茶巾', url: images.classify4},
+      {name: '茶盘', url: images.classify1},
+      {name: '茶荷', url: images.classify2},
+      {name: '烧水壶', url: images.classify3},
+      {name: '茶巾', url: images.classify4},
+
     ]
   },
-  onReady () {
-    setTimeout(() => {
+  getOffset(){
+    const offsetTimeout = setTimeout(() => {
       let query = wx.createSelectorQuery();
       query.select('.header').boundingClientRect(rect=>{
         let clientHeight = rect.height;
@@ -34,10 +40,20 @@ Page({
         })
       }).exec();
     }, 300)
+    this.setData({offsetTimeout})
   },
   handleChange({ detail }){
     this.setData({
       current: detail.key
     })
+  },
+  onLoad(){
+    setTimeout(()=>{
+      this.selectComponent("#page").hideLoading()
+      this.getOffset() // 计算头部高度
+    },2000)
+  },
+  onUnload(){
+    if(this.data.offsetTimeout) clearTimeout(this.data.offsetTimeout)
   }
 })

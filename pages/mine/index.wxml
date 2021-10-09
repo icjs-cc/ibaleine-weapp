@@ -1,7 +1,6 @@
 <!--pages/mine/index.wxml-->
-<biz-page>
-	<t-nav-bar title="我的" visible="{{false}}" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}"
-		text-color="{{nav_bar_text_color}}" />
+<biz-page id="page">
+	<t-nav-bar title="我的" visible="{{false}}" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" />
 	<view class="mine-wrap">
 		<view class="mine__bg" style="background:{{main_color}}">
 			<view class="mine__info">
@@ -14,20 +13,15 @@
 		</view>
 		<view class="mine__cell-wrap">
 			<view class="mine__cell">
-				<t-cell icon="../../images/mine/feedback.png" open-type="feedback" t-class="border-radius-t" title="意见反馈" border
-					isLink></t-cell>
+				<t-cell icon="../../images/mine/feedback.png" open-type="feedback" t-class="border-radius-t" title="意见反馈" border isLink></t-cell>
 				<t-cell icon="../../images/mine/notice.png" url="/pagesMine/notice/index" title="通知公告" border isLink></t-cell>
-				<t-cell icon="../../images/mine/upgrade.png" url='/pagesMine/upgrade/index' t-class="border-radius-b"
-					title="升级日志" isLink />
+				<t-cell icon="../../images/mine/upgrade.png" url='/pagesMine/upgrade/index' t-class="border-radius-b" title="升级日志" isLink />
 			</view>
 			<view class="mine__cell mt-20">
-				<t-cell icon="../../images/mine/customer.png" open-type="contact" title="联系客服" t-class="border-radius-t" border
-					isLink></t-cell>
+				<t-cell icon="../../images/mine/customer.png" open-type="contact" title="联系客服" t-class="border-radius-t" border isLink></t-cell>
 				<t-cell icon="../../images/mine/share.png" open-type="share" title="推荐分享" border isLink></t-cell>
-				<t-cell icon="../../images/mine/about.png" title="关于我们" url="/pagesMine/about/index"
-					t-class="{{userInfo.userId?'':'border-radius-b'}}" border isLink></t-cell>
-				<t-cell icon="../../images/mine/setup.png" url='/pagesMine/setting/index'
-					t-class="{{userInfo.userId?'border-radius-b':''}}" wx:if="{{userInfo.userId}}" title="帐号设置" isLink></t-cell>
+				<t-cell icon="../../images/mine/about.png" title="关于我们" url="/pagesMine/about/index" t-class="{{userInfo.userId?'':'border-radius-b'}}" border isLink></t-cell>
+				<t-cell icon="../../images/mine/setup.png" url='/pagesMine/setting/index' t-class="{{userInfo.userId?'border-radius-b':''}}" wx:if="{{userInfo.userId}}" title="帐号设置" isLink></t-cell>
 			</view>
 		</view>
 	</view>

@@ -21,7 +21,7 @@ import { skipNulls } from '../util.js';
  */
 const config = require('../config.js')
 const {
-	getStore
+	getStorage
 } = require('../storage.js')
 const {
 	routeToLogin
@@ -61,7 +61,7 @@ const request = ({
 			method: method,
 			header: {
 				'content-type': contentType || 'application/json',
-				'token': getStore('token')
+				'token': getStorage('token')
 			},
 			success: (res) => {
 				// 返回成功提示信息

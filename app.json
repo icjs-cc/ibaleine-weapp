@@ -16,6 +16,12 @@
       ]
     },
     {
+      "root": "pagesGoods",
+      "pages": [
+        "detail/index"
+      ]
+    },
+    {
       "root": "pagesMine",
       "pages": [
         "upgrade/index",

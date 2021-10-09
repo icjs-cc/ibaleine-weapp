@@ -1,12 +1,12 @@
 // pages/mine/update-password/index.js
 import WxValidate from '../../utils/wx-validate.js'
 import { updatePassword } from '../../utils/api/modules/security.js'
-const collection = require('../../utils/collection.js')
 const config = require('../../utils/config.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     formData: {
       oldPassword: '',
       newPassword: '',
@@ -59,7 +59,7 @@ Page({
     })
     updatePassword({
       ...formData,
-      username: this.getStore('userInfo').username
+      username: this.getStorage('userInfo').username
     }).then(res => {
       if (res.success) {
         this.$showToast('修改密码成功')

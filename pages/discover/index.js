@@ -1,9 +1,9 @@
 // pages/discover/index.js
-const config = require('../../utils/config.js')
 import images from '../../utils/images.js'
+const app = getApp()
 Page({
   data: {
-    ...config,
+    ...app.globalData.config,
     tabList: [
       {name: '最新', key: 'new'},
       {name: '全部', key: 'all'}
@@ -15,5 +15,10 @@ Page({
     this.setData({
       current: detail.key
     })
-  }
+  },
+  onLoad(){
+    setTimeout(()=>{
+      this.selectComponent("#page").hideLoading()
+    },2000)
+  },
 })

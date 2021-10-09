@@ -1,24 +1,28 @@
 // pages/mine/index.js
-const config = require('../../utils/config.js')
-const collection = require('../../utils/collection.js')
+const app = getApp()
 Page({
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     userInfo: {},
     today: null
   },
-  ...collection,
   onShow() {
     const today = this.formatDate(new Date(), 'yyyy-MM-dd')
     this.setData({
-      userInfo: this.getStore('userInfo'),
+      userInfo: this.getStorage('userInfo'),
       today
     })
+  },
+  onLoad(){
+    setTimeout(()=>{
+      this.selectComponent("#page").hideLoading()
+    },2000)
   },
   onShareAppMessage(res) {
     if (res.from === 'button') {
       return {
-        title: `您的好友邀您使用【${config.project_cn}】`,
+        title: `您的好友邀您使用【${this.data.project_cn}】`,
         imageUrl: '/images/common/share.jpg',
         path: "/pages/index/index",
         success: (res) => { }

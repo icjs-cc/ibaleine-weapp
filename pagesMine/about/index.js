@@ -1,10 +1,9 @@
 // pages/mine/gzh/index.js
-const config = require('../../utils/config.js')
-const collection = require('../../utils/collection.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     wechatCode: "wxid_3s6q6ffh7z8k21"
   },
   copyWechatCode(){

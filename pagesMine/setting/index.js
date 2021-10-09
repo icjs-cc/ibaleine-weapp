@@ -1,14 +1,13 @@
 // pages/mine/setting/index.js
-const config = require('../../utils/config.js')
-const collection = require('../../utils/collection.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     storageInfo: {}
   },
   logout(){
-    this.setStore('userInfo', null)
+    this.setStorage('userInfo', null)
     this.back()
   },
   switchAccount(){
@@ -16,13 +15,13 @@ Page({
   },
   onShow() {
     this.setData({
-      storageInfo: this.getStoreInfo()
+      storageInfo: this.getStorageInfo()
     })
   },
   onShareAppMessage(res) {
     if (res.from === 'button') {
       return {
-        title: `您的好友邀您使用【${config.project_cn}】哦~`,
+        title: `您的好友邀您使用【${this.data.project_cn}】哦~`,
         imageUrl: '/images/common/share.jpg',
         path: "/pages/index/index",
         success: (res) => { }

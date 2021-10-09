@@ -1,8 +1,9 @@
-const config = require('../../utils/config.js')
 import images from '../../utils/images.js'
+const app = getApp()
 Page({
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     swiperList: [
       {url: '/images/resource/banner.png', name: '111'}
     ],
@@ -28,5 +29,10 @@ Page({
   },
   handleMenuClick(e){
     console.log(e)
-  }
+  },
+  onLoad(){
+    setTimeout(()=>{
+      this.selectComponent("#page").hideLoading()
+    },2000)
+  },
 })

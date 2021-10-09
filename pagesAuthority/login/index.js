@@ -1,12 +1,11 @@
 // pages/login/index.js
-const config = require('../../utils/config.js')
 import WxValidate from '../../utils/wx-validate'
 import { login, getUserInfo } from '../../utils/api/modules/security'
-const collection = require('../../utils/collection.js')
+const app = getApp()
 Page({
-  ...collection,
+  ...app.globalData.function,
   data: {
-    ...config,
+    ...app.globalData.config,
     formData:{
       username: null,
       password: null
@@ -24,12 +23,12 @@ Page({
     login(formData).then(res=>{
       if(res.success){
         const token = res.data.authorization
-        this.setStore("token", token)
+        this.setStorage("token", token)
         getUserInfo({userId: res.data.userId}).then(res=>{
           if(res.success){
             const userInfo = res.data.user
-            this.setStore("userInfo", userInfo)
-            let loginAccount = this.getStore('loginAccount')||[]
+            this.setStorage("userInfo", userInfo)
+            let loginAccount = this.getStorage('loginAccount')||[]
             const existIndex = this.objectIndexInArray(loginAccount, userInfo, 'userId')
             if(existIndex===-1){
               loginAccount.push({
@@ -42,7 +41,7 @@ Page({
                 ...userInfo
               })
             }
-            this.setStore("loginAccount", loginAccount)
+            this.setStorage("loginAccount", loginAccount)
             this.routeToHome()
           }
         })

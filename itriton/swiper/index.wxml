@@ -9,7 +9,7 @@
   <view class="{{'swiper-dots-'+shape}}" wx:if="{{list.length>1}}">
     <block wx:for="{{list}}" wx:key="unique">
       <view class="swiper-dot {{index == swiperCurrentDot ? ' active' : ''}}"
-      style="background: {{index == swiperCurrent?activeColor : ''}}"></view>
+      style="background: {{index == swiperCurrent?activeColor : inactiveColor}}"></view>
     </block>
   </view>
 </view>
