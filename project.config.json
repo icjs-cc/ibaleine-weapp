@@ -42,7 +42,7 @@
     "useSummerCompiler": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.20.0",
+  "libVersion": "2.19.6",
   "appid": "wxacb415af350e06b7",
   "projectname": "ibaleine-weapp",
   "debugOptions": {

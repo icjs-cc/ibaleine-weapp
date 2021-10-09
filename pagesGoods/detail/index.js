@@ -21,7 +21,7 @@ Page({
     this.selectComponent("#popup").hide()
   },
   onLoad(){
-    this.showSpecs()
+    // this.showSpecs()
   },
   onShareAppMessage(res) {
     if (res.from === 'button') {
