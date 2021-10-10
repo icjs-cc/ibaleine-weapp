@@ -1,7 +1,7 @@
 <!--pages/index/index.wxml-->
 <page id="page">
   <t-nav-bar title="首页" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
-  <t-search-bar placeholder="搜索商城内所有商品" is-border="{{false}}"></t-search-bar>
+  <t-search-bar placeholder="搜索商城内所有商品" is-border="{{false}}" fixed></t-search-bar>
   <view class="bg-white pl-20 pr-20">
     <t-swiper list="{{swiperList}}" bind:click="handleSwiperClick" border-radius="10rpx" shape="square" height="230rpx" active-color="{{sub_color}}"></t-swiper>
     <t-menu list="{{menuList}}" bind:click="handleMenuClick"></t-menu>

@@ -37,13 +37,12 @@
 				</view>
 			</view>
 			<view class="mine__cell mt-20">
-				<t-cell open-type="{{item.openType}}" title="{{item.name}}" bindtap="routeToNext"
-					t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleList}}" wx:key="unique">
+				<t-cell open-type="{{item.openType}}" title="{{item.name}}" data-isauth="{{item.isauth}}" data-url="{{item.url}}" bindtap="routeToNext"	t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleList}}" wx:key="unique">
 					<iconfont slot="icon" icon="{{item.icon}}" color="{{main_color}}" size="40rpx" />
 				</t-cell>
 			</view>
 			<view class="mine__cell mt-20">
-				<t-cell open-type="{{item.openType}}" title="{{item.name}}"  data-isauth="{{item.isauth}}" data-url="{{item.url}}" bindtap="routeToNext" t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleExtraList}}" wx:key="unique">
+				<t-cell open-type="{{item.openType}}" title="{{item.name}}" data-isauth="{{item.isauth}}" data-url="{{item.url}}" bindtap="routeToNext" t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleExtraList}}" wx:key="unique">
 					<iconfont slot="icon" icon="{{item.icon}}" color="{{main_color}}" size="40rpx" />
 				</t-cell>
 			</view>
