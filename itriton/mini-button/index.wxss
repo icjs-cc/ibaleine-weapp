@@ -1,4 +1,4 @@
-/* biz-component/mini-button/index.wxss */
+/* component/mini-button/index.wxss */
 
 .mini-button {
   display: flex;

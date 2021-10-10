@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 1170715 */
-  src: url('//at.alicdn.com/t/font_1170715_bgyk75e11er.woff2?t=1633785989410') format('woff2'),
-       url('//at.alicdn.com/t/font_1170715_bgyk75e11er.woff?t=1633785989410') format('woff'),
-       url('//at.alicdn.com/t/font_1170715_bgyk75e11er.ttf?t=1633785989410') format('truetype');
+  src: url('//at.alicdn.com/t/font_1170715_8d6arqyyi9d.woff2?t=1633855644555') format('woff2'),
+       url('//at.alicdn.com/t/font_1170715_8d6arqyyi9d.woff?t=1633855644555') format('woff'),
+       url('//at.alicdn.com/t/font_1170715_8d6arqyyi9d.ttf?t=1633855644555') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,38 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-feedback:before {
+  content: "\e62e";
+}
+
+.icon-customer:before {
+  content: "\e68b";
+}
+
+.icon-setup:before {
+  content: "\e8b8";
+}
+
+.icon-share-full:before {
+  content: "\e6d5";
+}
+
+.icon-about:before {
+  content: "\e6aa";
+}
+
+.icon-address:before {
+  content: "\e646";
+}
+
+.icon-notice:before {
+  content: "\e640";
+}
+
+.icon-upgrade:before {
+  content: "\e79a";
 }
 
 .icon-shopping-cart:before {

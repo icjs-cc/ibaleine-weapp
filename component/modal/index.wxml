@@ -1,4 +1,4 @@
-<!--biz-component/modal/index.wxml-->
+<!--component/modal/index.wxml-->
 <view catchtouchmove='_catchtap' wx:if='{{visible}}'>
   <view class='mask' />
   <view class='modal-box' style="top: {{top}};">

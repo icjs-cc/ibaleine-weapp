@@ -1,4 +1,4 @@
-// biz-component/page/index.js
+// component/page/index.js
 Component({
   properties: {
     defaultLoading: {

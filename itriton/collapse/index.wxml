@@ -1,4 +1,4 @@
-<!--biz-component/collapse/index.wxml-->
+<!--component/collapse/index.wxml-->
 <view class="collapse-wrap">
   <view class="collapse-title" bindtap="toggle">
     <view class="collapse-text">{{title}}<slot name='title'></slot></view>

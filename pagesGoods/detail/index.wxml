@@ -3,13 +3,13 @@
 <view class="goods-banner">
   <t-swiper list="{{swiperList}}" height="700rpx" active-color="{{main_color}}" inactive-color="rgba(0,0,0,.2)"></t-swiper>
 </view>
-<view class="goods-info p-20 mt-20">
+<view class="goods-info p-20">
   <view class="goods-info-name">家用简约长方竹制茶盘方形干泡盘小号单人竹制整板托盘</view>
   <view class="goods-info-desc">轻质储水茶盘方便随意搬动在家里院子随时随地想泡就泡</view>
   <view class="goods-info-footer">
-    <view class="goods-info-price">￥45.00 ~ ￥48.00</view>
+    <view class="goods-info-price">￥45.00</view>
     <button class="custom-btn" open-type="share">
-      <biz-iconfont class="custom-btn-icon" icon="icon-share" color="{{main_color}}" size="50rpx" />
+      <iconfont class="custom-btn-icon" icon="icon-share" color="{{main_color}}" size="50rpx" />
       <text class="custom-btn-text">分享</text>
     </button>
   </view>
@@ -19,8 +19,11 @@
 </view>
 <view class="mt-20 p-20 goods-desc">
   <view class="flex justify-center align-center">
-    <biz-iconfont class="mt-5" icon="icon-img" color="#333333" size="40rpx" />
+    <iconfont class="mt-5" icon="icon-img" color="#333333" size="40rpx" />
     <text class="ml-10">图文详情</text>
+  </view>
+  <view>
+    <rich-text html="{{html}}"></rich-text>
   </view>
 </view>
 
@@ -28,11 +31,11 @@
   <view class="flex justify-between align-center">
     <view class="flex-sub flex justify-around pr-20">
       <button class="custom-btn">
-        <biz-iconfont class="mt-5 custom-btn-icon" icon="icon-shopping-cart" color="#333333" size="50rpx" />
+        <iconfont class="mt-5 custom-btn-icon" icon="icon-shopping-cart" color="#333333" size="50rpx" />
         <text class="custom-btn-text">购物车</text>
       </button>
       <button class="custom-btn" open-type="contact">
-        <biz-iconfont class="mt-5 custom-btn-icon" icon="icon-service" color="#333333" size="50rpx" />
+        <iconfont class="mt-5 custom-btn-icon" icon="icon-service" color="#333333" size="50rpx" />
         <text class="custom-btn-text">客服</text>
       </button>
     </view>
@@ -43,39 +46,4 @@
   </view>
 </t-submit-bar>
 
-<popup id="popup">
-  <view class="pl-20 pr-20">
-    <view class="flex justify-between">
-      <t-image t-class="specs-image" shape src="{{images}}"></t-image>
-      <view class="flex flex-direction justify-between pl-20 pr-20">
-        <view class="goods-info-name">家用简约长方竹制茶盘方形干泡盘小号单人竹制整板托盘</view>
-        <view class="goods-info-price">￥45.00</view>
-      </view>
-      <view class="flex">
-        <biz-iconfont icon="icon-del" color="#333333" size="40rpx" bindtap="hideSpecs" />
-      </view>
-    </view>
-    <view class="mt-20">
-      <view class="specs-title">颜色</view>
-      <view class="flex flex-wrap">
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-        <view class="specs-name">浅蓝色</view>
-      </view>
-    </view>
-  </view>
-  <view>
-    <t-submit-bar t-class='button-submit' text='立即购买' bgcolor='{{main_color}}' z-index='9999' border self safeArea>
-      <view class="flex justify-between align-center">
-        <view class="submit-btn-left" style="background: {{sub_color}};">加入购物车</view>
-        <view class="submit-btn-right" style="background: {{main_color}};">立即购买</view>
-      </view>
-    </t-submit-bar>
-  </view>
-</popup>
+<biz-specs id="bizSpecs" main-color="{{main_color}}" sub-color="{{sub_color}}"></biz-specs>

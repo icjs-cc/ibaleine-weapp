@@ -1,4 +1,4 @@
-// biz-component/modal/index.js
+// component/modal/index.js
 Component({
   options: {
     multipleSlots: true

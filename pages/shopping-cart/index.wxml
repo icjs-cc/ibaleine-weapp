@@ -1,5 +1,5 @@
 <!--pages/shopping-cart/index.wxml-->
-<biz-page id="page">
+<page id="page">
   <t-nav-bar title="购物车" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
   <view class="mt-20">
     <t-cell wx:for="{{shoppingCartList}}" wx:key="unique">
@@ -33,4 +33,4 @@
       </view>
     </view>
   </t-submit-bar>
-</biz-page>
+</page>

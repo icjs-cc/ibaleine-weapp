@@ -1,4 +1,4 @@
-<!--biz-component/popup/index.wxml-->
+<!--component/popup/index.wxml-->
 <view wx:if='{{visible}}'>
   <view class='popup {{wrapAnimate}}' style='background:rgba(0,0,0,{{bgOpacity}});'></view>
   <view catchtap='hide' catchtouchmove='_catchtap' class='popup-wrapper {{frameAnimate}}'>

@@ -1,4 +1,4 @@
-// biz-component/empty-bar/index.js
+// component/empty-bar/index.js
 Component({
   properties: {
 

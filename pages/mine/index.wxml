@@ -1,8 +1,8 @@
 <!--pages/mine/index.wxml-->
-<biz-page id="page">
+<page id="page">
 	<t-nav-bar title="我的" visible="{{false}}" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" />
 	<view class="mine-wrap">
-		<view class="mine__bg" style="background:{{main_color}}">
+		<view class="mine__bg" style="background-color:{{main_color}};background-image: url('/images/mine/header.png');">
 			<view class="mine__info">
 				<image class="mine__bg--avatar" style="background: {{main_color}}" src="../../images/mine/avatar.png"></image>
 				<view class="mine__info--cell" bindtap="{{userInfo.userId?'':'routeToLogin'}}">
@@ -12,17 +12,41 @@
 			</view>
 		</view>
 		<view class="mine__cell-wrap">
-			<view class="mine__cell">
-				<t-cell icon="../../images/mine/feedback.png" open-type="feedback" t-class="border-radius-t" title="意见反馈" border isLink></t-cell>
-				<t-cell icon="../../images/mine/notice.png" url="/pagesMine/notice/index" title="通知公告" border isLink></t-cell>
-				<t-cell icon="../../images/mine/upgrade.png" url='/pagesMine/upgrade/index' t-class="border-radius-b" title="升级日志" isLink />
+			<view class="mine__order mine__cell border-radius">
+				<view class="flex justify-between align-center pl-30 pr-30 pt-20 pb-20 border-b">
+					<view class="text-lg">我的订单</view>
+					<view class="text-sm text-gray border border-radius pl-10 pr-10 pt-5 pb-5">查看全部</view>
+				</view>
+				<view class="flex justify-around pt-30 pb-30">
+					<view class="flex flex-direction align-center">
+						<view class="text-xl mb-5">100</view>
+						<view class="text-sm text-gray">待付款</view>
+					</view>
+					<view class="flex flex-direction align-center">
+						<view class="text-xl mb-5">0</view>
+						<view class="text-sm text-gray">待发货</view>
+					</view>
+					<view class="flex flex-direction align-center">
+						<view class="text-xl mb-5">0</view>
+						<view class="text-sm text-gray">待收货</view>
+					</view>
+					<view class="flex flex-direction align-center">
+						<view class="text-xl mb-5">0</view>
+						<view class="text-sm text-gray">已完成</view>
+					</view>
+				</view>
 			</view>
 			<view class="mine__cell mt-20">
-				<t-cell icon="../../images/mine/customer.png" open-type="contact" title="联系客服" t-class="border-radius-t" border isLink></t-cell>
-				<t-cell icon="../../images/mine/share.png" open-type="share" title="推荐分享" border isLink></t-cell>
-				<t-cell icon="../../images/mine/about.png" title="关于我们" url="/pagesMine/about/index" t-class="{{userInfo.userId?'':'border-radius-b'}}" border isLink></t-cell>
-				<t-cell icon="../../images/mine/setup.png" url='/pagesMine/setting/index' t-class="{{userInfo.userId?'border-radius-b':''}}" wx:if="{{userInfo.userId}}" title="帐号设置" isLink></t-cell>
+				<t-cell open-type="{{item.openType}}" title="{{item.name}}" bindtap="routeToNext"
+					t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleList}}" wx:key="unique">
+					<iconfont slot="icon" icon="{{item.icon}}" color="{{main_color}}" size="40rpx" />
+				</t-cell>
+			</view>
+			<view class="mine__cell mt-20">
+				<t-cell open-type="{{item.openType}}" title="{{item.name}}"  data-isauth="{{item.isauth}}" data-url="{{item.url}}" bindtap="routeToNext" t-class="{{index===0?'border-radius-t':(index+1===moduleList.length?'border-radius-b':'')}}" border isLink wx:for="{{moduleExtraList}}" wx:key="unique">
+					<iconfont slot="icon" icon="{{item.icon}}" color="{{main_color}}" size="40rpx" />
+				</t-cell>
 			</view>
 		</view>
 	</view>
-</biz-page>
+</page>

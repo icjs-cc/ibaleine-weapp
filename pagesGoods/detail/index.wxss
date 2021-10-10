@@ -34,20 +34,11 @@ page {
   font-size: 38rpx;
   color: #EE4D52;
   margin-left: -5rpx;
-
 }
 
 .goods-desc {
   background: #FFFFFF;
   color: #333333;
-}
-
-.specs-image {
-  width: 152rpx !important;
-  height: 152rpx !important;
-  background: rgba(0, 0, 0, 0);
-  border: 1rpx solid #E5E9E8;
-  border-radius: 16rpx;
 }
 
 .custom-btn {
@@ -119,21 +110,4 @@ page {
   height: 76rpx;
   opacity: 1;
   border-radius: 0 38rpx 38rpx 0;
-}
-
-.specs-title {
-  font-size: 30rpx;
-  color: #333333;
-  opacity: 1;
-  margin: 30rpx 0 20rpx 0;
-}
-
-.specs-name {
-  color: #888888;
-  border: 1rpx solid #888888;
-  border-radius: 10rpx;
-  padding: 15rpx 20rpx;
-  font-size: 28rpx;
-  margin-right: 15rpx;
-  margin-bottom: 20rpx;
 }

@@ -1,4 +1,4 @@
-<!--biz-component/notice/index.wxml-->
+<!--component/notice/index.wxml-->
 <view class="notice-wrap">
   <t-iconfont icon='icon-notice' color='{{color}}' size='45rpx' slot='icon'></t-iconfont>
   <view class="notice-wrap-content">

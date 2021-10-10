@@ -1,4 +1,4 @@
-/* biz-component/notice/index.wxss */
+/* component/notice/index.wxss */
 
 .notice-wrap {
   display: flex;

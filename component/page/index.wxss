@@ -1,4 +1,4 @@
-/* biz-component/page/index.wxss */
+/* component/page/index.wxss */
 .page{
   height: 100%;
 }

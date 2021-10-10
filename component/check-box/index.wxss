@@ -1,4 +1,4 @@
-/* biz-component/check-box/index.wxss */
+/* component/check-box/index.wxss */
 .check-box-wrap{
   display: flex;
   position: relative;

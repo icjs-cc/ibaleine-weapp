@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "iconfont": "/component/iconfont/index",
     "t-cell": "/itriton/cell/index"
   },
   "navigationStyle": "custom"

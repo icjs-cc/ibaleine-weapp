@@ -1,4 +1,4 @@
- <!--biz-components/input/index.wxml-->
+ <!--components/input/index.wxml-->
 <view class="input-wrap" style="width: {{width}}rpx;border-bottom: 1px solid {{isFocus?focusColor:'#f0f0f0'}};height:{{height}}rpx;">
   <text class="required" wx:if='{{required=="left"}}'>*</text>
   <text class="required" wx:else></text>

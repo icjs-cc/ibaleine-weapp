@@ -1,4 +1,4 @@
-<!--biz-component/date-picker/index.wxml-->
+<!--component/date-picker/index.wxml-->
 <view class="t-class date-picker-wrap">
   <view class="cell">
     <view class="title">时间粒度</view>

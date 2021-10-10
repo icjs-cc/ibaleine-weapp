@@ -1,6 +1,7 @@
 /* pages/mine/index.wxss */
 .mine__bg{
   height: 280rpx;
+  background-size: 100% 100%;
 }
 
 .mine__info{
@@ -8,7 +9,6 @@
   margin-top: 40rpx;
   margin-left: 50rpx;
   display: flex;
-
 }
 
 .mine__info--cell{
@@ -36,13 +36,17 @@
   border-radius: 50%;
 }
 
+.mine__order{
+  background: #FFF;
+}
+
 .mine__cell-wrap{
   padding: 0 25rpx;
-  margin-top: -50rpx;
+  margin-top: -60rpx;
 }
 
 .mine__cell{
-  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.01);
   border-radius: 8rpx !important;
 }
 

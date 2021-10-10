@@ -1,5 +1,4 @@
-// biz-component/check-box/index.js
-
+// component/check-box/index.js
 Component({
   externalClasses: ['t-class'],
   options: {

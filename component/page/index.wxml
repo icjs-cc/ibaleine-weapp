@@ -1,4 +1,4 @@
-<!--biz-component/page/index.wxml-->
+<!--component/page/index.wxml-->
 <block>
   <view class="page-loading-wrap" hidden="{{!loading}}">
     <image class="page-loading" src="/images/common/loading.gif"></image>

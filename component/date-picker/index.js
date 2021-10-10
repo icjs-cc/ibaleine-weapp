@@ -1,4 +1,4 @@
-// biz-component/date-picker/index.js
+// component/date-picker/index.js
 const Period = require("../../utils/period.js");//时间获取工具类
 Component({
   externalClasses: ['t-class'],

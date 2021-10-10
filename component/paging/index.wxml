@@ -1,4 +1,4 @@
-<!--biz-component/paging/index.wxml-->
+<!--component/paging/index.wxml-->
 <block wx:if='{{pageCount!=0}}'>
   <slot></slot>
 </block>

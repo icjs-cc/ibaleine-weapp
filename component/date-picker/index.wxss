@@ -1,4 +1,4 @@
-/* biz-component/date-picker/index.wxss */
+/* component/date-picker/index.wxss */
 
 .date-picker-wrap {
   background: #fff;

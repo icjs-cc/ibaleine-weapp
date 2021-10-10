@@ -1,5 +1,5 @@
 <!--pages/classify/index.wxml-->
-<biz-page id="page">
+<page id="page">
   <view class="header">
     <t-nav-bar title="分类" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
     <t-search-bar placeholder="搜索商城内所有商品" is-border="{{false}}"></t-search-bar>
@@ -20,4 +20,4 @@
       </view>
     </view>
   </t-tabs>
-</biz-page>
+</page>

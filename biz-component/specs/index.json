@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "popup": "/component/popup/index",
+    "t-image": "/itriton/image/index",
+    "t-submit-bar": "/itriton/submit-bar/index",
+    "iconfont": "/component/iconfont/index"
+  }
+}

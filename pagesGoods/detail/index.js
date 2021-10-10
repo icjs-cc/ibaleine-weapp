@@ -1,5 +1,6 @@
 // pagesGoods/detail/index.js
 const app = getApp()
+let WxParse = require('../../component/wx-parse/wxParse.js');
 import images from '../../utils/images.js'
 Page({
   ...app.globalData.function,
@@ -13,15 +14,15 @@ Page({
       {url: '/images/resource/1.png', name: '办公系列'},
       {url: '/images/resource/1.png', name: '品质茶具'},
     ],
+    html: "<html><h1>123</h1></html>"
   },
   showSpecs(){
-    this.selectComponent("#popup").show()
-  },
-  hideSpecs(){
-    this.selectComponent("#popup").hide()
+    this.selectComponent("#bizSpecs").showSpecs()
   },
   onLoad(){
-    // this.showSpecs()
+    this.setData({
+      html: "<html><body>商品图文详情</body></html>"
+    })
   },
   onShareAppMessage(res) {
     if (res.from === 'button') {

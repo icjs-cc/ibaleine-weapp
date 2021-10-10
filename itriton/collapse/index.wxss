@@ -1,4 +1,4 @@
-/* biz-component/collapse/index.wxss */
+/* component/collapse/index.wxss */
 .collapse-title {
   position: relative;
   padding: 20rpx 25rpx;

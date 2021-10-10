@@ -1,4 +1,4 @@
-/* biz-component/paging/index.wxss */
+/* component/paging/index.wxss */
 .default {
   position: absolute;
   display: flex;

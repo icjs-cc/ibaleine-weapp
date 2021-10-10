@@ -1,4 +1,4 @@
-/* biz-components/input/index.wxss */
+/* components/input/index.wxss */
 
 .input-wrap {
   display: flex;

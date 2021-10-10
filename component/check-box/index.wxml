@@ -1,4 +1,4 @@
-<!--biz-component/check-box/index.wxml-->
+<!--component/check-box/index.wxml-->
 <view class='flex align-center justify-between'>
   <view class='grid col-4 grid-full'>
     <view class="check-box-wrap" wx:for='{{checkboxArray}}' wx:key='unique' data-item='{{item}}'  data-index='{{index}}' bindtap="bindtap">

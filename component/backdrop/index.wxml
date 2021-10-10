@@ -1,4 +1,4 @@
-<!--biz-component/backdrop/index.wxml-->
+<!--component/backdrop/index.wxml-->
 <view style="{{backdropWrapStyle}}">
   <view style="{{backdropStyle}}"><slot></slot></view>
 </view>

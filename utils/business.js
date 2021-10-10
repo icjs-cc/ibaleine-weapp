@@ -27,10 +27,23 @@ export const noLoginIntercept = () => {
   }
 }
 
+/**
+ * 跳转到下一页
+ * @param {*} e 
+ */
 export const routeToNext = (e) => {
+  const isauth = e.currentTarget.dataset.isauth
   const url = e.currentTarget.dataset.url
   const type = e.currentTarget.dataset.type
-  router(url, type)
+  if(url){
+    if(isauth){
+      console.info("处理需要权限的路由")
+    }else{
+      router(url, type)
+    }
+  }else{
+    console.warn("ERROR:[routeToNext] url is empty")
+  }
 }
 
 /**

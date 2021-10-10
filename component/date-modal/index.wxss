@@ -1,4 +1,4 @@
-/* biz-component/date-modal/index.wxss */
+/* component/date-modal/index.wxss */
 .mask {
   position:absolute;
   width: 100%;

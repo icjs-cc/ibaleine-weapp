@@ -1,4 +1,4 @@
-// biz-component/collapse/index.js
+// component/collapse/index.js
 Component({
   options: {
     multipleSlots: true

@@ -1,4 +1,4 @@
-// biz-component/backdrop/index.js
+// component/backdrop/index.js
 Component({
   properties: {
     height: {

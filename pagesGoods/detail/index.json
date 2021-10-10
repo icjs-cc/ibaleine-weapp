@@ -1,11 +1,12 @@
 {
   "usingComponents": {
-    "popup": "/component/popup/index",
     "t-cell": "/itriton/cell/index",
     "t-image": "/itriton/image/index",
     "t-swiper": "/itriton/swiper/index",
     "t-submit-bar": "/itriton/submit-bar/index",
-    "biz-iconfont": "/biz-component/iconfont/index"
+    "rich-text": "/component/rich-text/index",
+    "biz-specs": "/biz-component/specs/index",
+    "iconfont": "/component/iconfont/index"
   },
   "navigationStyle": "custom"
 }

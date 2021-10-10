@@ -1,4 +1,4 @@
-// biz-component/mini-button/index.js
+// component/mini-button/index.js
 Component({
   properties: {
     fontSize:{

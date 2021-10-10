@@ -1,4 +1,4 @@
-// biz-component/notice/index.js
+// component/notice/index.js
 Component({
   properties: {
     color: {

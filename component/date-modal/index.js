@@ -1,4 +1,4 @@
-// biz-component/date-modal/index.js
+// component/date-modal/index.js
 const dateTimePicker = require('./dateTimePicker.js');
 Component({
   options: {

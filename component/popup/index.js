@@ -1,4 +1,4 @@
-// biz-component/popup/index.js
+// component/popup/index.js
 Component({
   options: {
     multipleSlots: true

@@ -1,4 +1,4 @@
-// biz-component/paging/index.js
+// component/paging/index.js
 Component({
   properties: {
     pageCount: {

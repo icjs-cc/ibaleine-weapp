@@ -1,4 +1,4 @@
-/* biz-component/iconfont/index.wxss */
+/* component/iconfont/index.wxss */
 .iconfont{
   display: inline-flex;
   font-style: normal;

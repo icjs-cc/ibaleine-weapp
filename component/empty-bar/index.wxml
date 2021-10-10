@@ -1,4 +1,4 @@
-<!--biz-component/empty-bar/index.wxml-->
+<!--component/empty-bar/index.wxml-->
 <view class="empty-bar">
   <view class="empty-bar-content">
     <slot></slot>

@@ -1,4 +1,4 @@
-// biz-components/input/index.js
+// components/input/index.js
 Component({
   externalClasses: ['t-class'],
   properties: {

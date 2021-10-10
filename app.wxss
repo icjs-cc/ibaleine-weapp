@@ -897,15 +897,15 @@ page {
 /*边框样式*/
 
 .border-l {
-	border-left: 1rpx solid #f0f0f0 !important;
+	border-left: 1rpx solid #f3f3f3 !important;
 }
 
 .border-r {
-	border-right: 1rpx solid #f0f0f0 !important;
+	border-right: 1rpx solid #f3f3f3 !important;
 }
 
 .border-t {
-	border-top: 1rpx solid #f0f0f0 !important;
+	border-top: 1rpx solid #f3f3f3 !important;
 }
 
 .border-t-0 {
@@ -913,7 +913,7 @@ page {
 }
 
 .border-b {
-	border-bottom: 1rpx solid #f0f0f0 !important;
+	border-bottom: 1rpx solid #f3f3f3 !important;
 }
 
 .border-b-0 {
@@ -921,7 +921,7 @@ page {
 }
 
 .border {
-	border: 1rpx solid #f0f0f0 !important;
+	border: 1rpx solid #f3f3f3 !important;
 }
 
 .border-0 {
@@ -929,23 +929,23 @@ page {
 }
 
 .dashed-l {
-	border-left: 2rpx dashed #f0f0f0 !important;
+	border-left: 2rpx dashed #f3f3f3 !important;
 }
 
 .dashed-r {
-	border-right: 2rpx dashed #f0f0f0 !important;
+	border-right: 2rpx dashed #f3f3f3 !important;
 }
 
 .dashed-t {
-	border-top: 2rpx dashed #f0f0f0 !important;
+	border-top: 2rpx dashed #f3f3f3 !important;
 }
 
 .dashed-b {
-	border-bottom: 2rpx dashed #f0f0f0 !important;
+	border-bottom: 2rpx dashed #f3f3f3 !important;
 }
 
 .dashed {
-	border: 2rpx dashed #f0f0f0 !important;
+	border: 2rpx dashed #f3f3f3 !important;
 }
 
 .text-xxs {

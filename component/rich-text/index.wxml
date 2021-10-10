@@ -1,0 +1,3 @@
+<!--component/rick-text/index.wxml-->
+<import src="../../component/wx-parse/wxParse.wxml" />
+<template is="wxParse" data="{{wxParseData:content.nodes}}" />

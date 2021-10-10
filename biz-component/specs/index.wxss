@@ -1,0 +1,74 @@
+/* component/specs/index.wxss */
+.specs{
+  padding: 0 20rpx;
+}
+
+.specs-image {
+  width: 152rpx !important;
+  height: 152rpx !important;
+  background: rgba(0, 0, 0, 0);
+  border: 1rpx solid #E5E9E8;
+  border-radius: 16rpx;
+}
+
+.specs-title {
+  font-size: 30rpx;
+  color: #333333;
+  opacity: 1;
+  margin: 30rpx 0 20rpx 0;
+}
+
+.specs-cell{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.specs-name {
+  color: #888888;
+  border: 1rpx solid #888888;
+  border-radius: 10rpx;
+  padding: 15rpx 20rpx;
+  font-size: 28rpx;
+  margin-right: 15rpx;
+  margin-bottom: 20rpx;
+}
+
+.specs-goods-name {
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+
+.specs-price {
+  font-size: 38rpx;
+  color: #EE4D52;
+  margin-left: -5rpx;
+}
+
+.specs-num {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.submit-btn-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  min-width: 240rpx;
+  width: 100%;
+  height: 76rpx;
+  opacity: 1;
+  border-radius: 38rpx 0 0 38rpx;
+}
+
+.submit-btn-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  min-width: 240rpx;
+  width: 100%;
+  height: 76rpx;
+  opacity: 1;
+  border-radius: 0 38rpx 38rpx 0;
+}

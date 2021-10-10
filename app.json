@@ -33,10 +33,10 @@
     }
   ],
   "usingComponents":{
+    "page": "./component/page/index",
+    "paging": "./component/paging/index",
     "t-nav-bar": "./itriton/nav-bar/index",
-    "t-divider": "./itriton/divider/index",
-    "biz-page": "./biz-component/page/index",
-    "biz-paging": "./biz-component/paging/index"
+    "t-divider": "./itriton/divider/index"
   },
   "window": {
     "backgroundTextStyle": "light",

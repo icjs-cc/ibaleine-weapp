@@ -1,4 +1,4 @@
-// biz-component/iconfont/index.js
+// component/iconfont/index.js
 Component({
   options: {
     addGlobalClass: true

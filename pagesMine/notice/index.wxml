@@ -1,7 +1,7 @@
 <!--pages/mine/notice/index.wxml-->
 <t-nav-bar title="通知公告" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
 <t-search-bar bind:search="search"/>
-<biz-base-page page-count="{{noticeList.length}}">
+<base-page page-count="{{noticeList.length}}">
 	<view class='p-20'>
 		<view class="border-b mb-10 box-shadow-radius"
 			wx:for="{{noticeList}}" wx:key="unique" data-item="{{item}}" bindtap="detail">
@@ -18,4 +18,4 @@
 			</view>
 		</view>
 	</view>
-</biz-base-page>
+</base-page>

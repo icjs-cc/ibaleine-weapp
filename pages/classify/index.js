@@ -24,23 +24,27 @@ Page({
       {name: '茶荷', url: images.classify2},
       {name: '烧水壶', url: images.classify3},
       {name: '茶巾', url: images.classify4},
-
     ]
   },
   getOffset(){
-    const offsetTimeout = setTimeout(() => {
-      let query = wx.createSelectorQuery();
-      query.select('.header').boundingClientRect(rect=>{
-        let clientHeight = rect.height;
-        let clientWidth = rect.width;
-        let ratio = 750 / clientWidth;
-        let height = clientHeight * ratio;
-        this.setData({
-          offset: `${height}rpx`
-        })
-      }).exec();
-    }, 300)
-    this.setData({offsetTimeout})
+      const offsetTimeout = setTimeout(() => {
+        let query = wx.createSelectorQuery();
+        query.select('.header').boundingClientRect(rect=>{
+          try{
+            let clientHeight = rect.height;
+            let clientWidth = rect.width;
+            let ratio = 750 / clientWidth;
+            let height = clientHeight * ratio;
+            this.setData({
+              offset: `${height||0}rpx`
+            })
+          }catch(e){
+            console.log("ERROR:获取分类页头部高度失败")
+          }
+        }).exec();
+      }, 300)
+      this.setData({offsetTimeout})
+    
   },
   handleChange({ detail }){
     this.setData({
@@ -52,6 +56,9 @@ Page({
       this.selectComponent("#page").hideLoading()
       this.getOffset() // 计算头部高度
     },2000)
+  },
+  onShow(){
+    this.getOffset() // 计算头部高度
   },
   onUnload(){
     if(this.data.offsetTimeout) clearTimeout(this.data.offsetTimeout)
