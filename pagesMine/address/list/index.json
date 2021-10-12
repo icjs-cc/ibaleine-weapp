@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "iconfont": "/component/iconfont/index",
+    "t-submit-bar": "/itriton/submit-bar/index",
+    "t-cell": "/itriton/cell/index"
+  },
+  "navigationStyle": "custom"
+}

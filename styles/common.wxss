@@ -50,3 +50,7 @@
   height: 75rpx !important;
   line-height: 75rpx !important;
 }
+
+radio{
+  transform: scale(0.8);
+}

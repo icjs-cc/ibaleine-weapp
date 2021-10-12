@@ -60,7 +60,8 @@
 
 .t-cell-text {
   line-height: 48rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
+  color: #495060;
   min-width: 150rpx;
 }
 

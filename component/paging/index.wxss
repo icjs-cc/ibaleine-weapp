@@ -12,11 +12,11 @@
 }
 
 .default .default-image {
-  height: 170rpx;
-  width: 250rpx;
+  width: 200rpx;
 }
 
 .default .default-text{
   font-size: 28rpx;
   margin-left: 10rpx;
+  margin-top: 10rpx;
 }

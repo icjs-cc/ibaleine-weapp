@@ -48,6 +48,22 @@ export const $showModal = ({
 	})
 }
 
+export const $showActionSheet = (itemList) => {
+	return new Promise((resolve, reject)=>{
+		wx.showActionSheet({
+			itemList: itemList,
+			success: (res) => {
+				resolve(res)
+			},
+			fail: (error) => {
+				if(error.errMsg!=="showActionSheet:fail cancel"){
+					reject(error)
+				}
+			}
+		})
+	})
+}
+
 export const $showLoading = (title) => {
 	wx.showLoading({
 		title: title ? title : '加载中...',

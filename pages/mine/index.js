@@ -7,7 +7,7 @@ Page({
     userInfo: {},
     today: null,
     moduleList: [
-      {icon: 'icon-address', name: '我的地址', openType: '', isauth: false, url: ''},
+      {icon: 'icon-address', name: '我的地址', openType: '', isauth: false, url: '/pagesMine/address/list/index'},
       {icon: 'icon-customer', name: '联系客服', openType: 'contact', isauth: false, url: ''},
       {icon: 'icon-share-full', name: '推荐分享', openType: 'share', isauth: false, url: ''},
       {icon: 'icon-notice', name: '通知公告', openType: '', isauth: false, url: '/pagesMine/notice/index'},

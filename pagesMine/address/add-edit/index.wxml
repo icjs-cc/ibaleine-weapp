@@ -1,0 +1,21 @@
+<!--pagesMine/address/add-edit/index.wxml-->
+<t-nav-bar title="{{type==='c'?'新增':'编辑'}}地址" background="{{main_color}}" btn-color="{{nav_bar_btn_color}}" text-color="{{nav_bar_text_color}}" bind:home="routeToHome" />
+
+<t-cell-group>
+  <view class="bg-white border-b">
+    <t-input type='password' title='收货人' value="{{formData.oldPassword}}" bind:change="bindInputFormData" placeholder="请输入收货人姓名" required='left'></t-input>
+    <view class="flex justify-center p-20">
+      <radio class="mr-30" color="{{main_color}}" checked='{{item.checked}}' data-index="{{index}}" catchtap="radioChange">先生</radio>
+      <radio class="ml-30" color="{{main_color}}" checked='{{item.checked}}' data-index="{{index}}" catchtap="radioChange">女士</radio>
+    </view>
+  </view>
+  <t-input border title='联系方式' value="{{formData.oldPassword}}" bind:change="bindInputFormData" placeholder="请输入手机号码" required='left'></t-input>
+  <t-input border title='联系方式' value="{{formData.oldPassword}}" bind:change="bindInputFormData" placeholder="请输入手机号码" required='left'></t-input>
+  <t-cell title="所在地区" value="xxxx" required='left' border isLink></t-cell>
+  <t-input border title='详细地址' value="{{formData.oldPassword}}" bind:change="bindInputFormData" placeholder="请输入详细地址" required='left'></t-input>
+  <view class="bg-white p-20 flex justify-end">
+    <radio color="{{main_color}}" checked='{{item.checked}}' data-index="{{index}}" catchtap="radioChange">设为默认地址</radio>
+  </view>
+</t-cell-group>
+
+<t-submit-bar t-class='button-submit' text='{{loading?"提交中...":"保存"}}' bgcolor='{{main_color}}' bind:submit='confirm' loading='{{loading}}' safeArea full></t-submit-bar>

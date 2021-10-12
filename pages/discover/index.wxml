@@ -6,25 +6,27 @@
     <t-tab key="{{item.key}}" wx:for="{{tabList}}" title="{{item.name}}" wx:key="unique"></t-tab>
   </t-tabs>
   <view class="p-20">
-    <view>
-      <t-cell t-class='border-radius-t pt-20 pb-20'>
-        <t-image class="discover-avatar" t-class="discover-avatar" slot="icon" src="/images/common/logo.png"></t-image>
-        <view class="flex align-center justify-between" slot='content'>
-          <view class='flex align-center'>
-            <view class="text-gray text-df ellipsis">
-              {{project_cn}}
+    <paging page-count="{{1}}" emptyText="暂无找到相关文章" emptyImage="/images/common/empty_discover.png">
+      <view>
+        <t-cell t-class='border-radius-t pt-20 pb-20'>
+          <t-image class="discover-avatar" t-class="discover-avatar" slot="icon" src="/images/common/logo.png"></t-image>
+          <view class="flex align-center justify-between" slot='content'>
+            <view class='flex align-center'>
+              <view class="text-gray text-df ellipsis">
+                {{project_cn}}
+              </view>
             </view>
+            <view class="text-sm text-gray">68 浏览</view>
           </view>
-          <view class="text-sm text-gray">68 浏览</view>
-        </view>
-      </t-cell>
-      <view class="bg-white pl-20 pr-20 pt-10 pb-20 border-radius-b">
-        <view class="text-df text-black">品茶，品的是茶味还是人生</view>
-        <view class="discover-content">
-          <view class="discover-desc">茶，只是一杯茶，晨起日落，生命有它陪伴不曾离开，不可或缺。</view>
-          <t-image class="discover-image" src="{{images.goods1}}"></t-image>
+        </t-cell>
+        <view class="bg-white pl-20 pr-20 pt-10 pb-20 border-radius-b">
+          <view class="text-df text-black">品茶，品的是茶味还是人生</view>
+          <view class="discover-content">
+            <view class="discover-desc">茶，只是一杯茶，晨起日落，生命有它陪伴不曾离开，不可或缺。</view>
+            <t-image class="discover-image" src="{{images.goods1}}"></t-image>
+          </view>
         </view>
       </view>
-    </view>
+    </paging>
   </view>
 </page>

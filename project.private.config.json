@@ -35,6 +35,24 @@
           "pathName": "pages/mine/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesMine/address/list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesMine/address/add-edit/index",
+          "query": "type=c",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/shopping-cart/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
