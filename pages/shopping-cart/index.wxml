@@ -1,7 +1,7 @@
 <!--pages/shopping-cart/index.wxml-->
 <page id="page">
   <t-nav-bar title="购物车" visible="{{false}}" background="#FFF" btn-color="{{nav_bar_btn_color}}" text-color="#333" />
-  <paging page-count="{{1}}" emptyText="购物车还是空的" emptyImage="/images/common/empty_shopping_cart.png">
+  <paging page-count="{{3}}" top="{{0}}" emptyText="购物车还是空的" emptyImage="/images/common/empty_shopping_cart.png">
     <view class="mt-20">
       <t-cell wx:for="{{shoppingCartList}}" wx:key="unique">
         <view slot='icon' class="flex align-center">
