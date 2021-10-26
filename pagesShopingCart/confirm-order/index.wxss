@@ -1,0 +1,4 @@
+/* pagesShopingCart/confirm-order/index.wxss */
+.configm-wrap{
+  background-color: #fff;
+}

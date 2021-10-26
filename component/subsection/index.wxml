@@ -1,0 +1,4 @@
+<!--component/subsection/index.wxml-->
+<view class="subsection-wrap flex" style="{{subsectionStyle}}">
+  <view style="{{activeKey == item.key ? activeStyle : ''}}" wx:for="{{subsectionList}}" wx:key="unique" key="{{item.key}}" class="subsection-item flex-sub" data-key="{{item.key}}" bindtap="handleClickItem">{{item.name}}</view>
+</view>
