@@ -3,6 +3,7 @@ import images from '../../utils/images.js'
 const app = getApp()
 Page({
   ...getApp(),
+  ...app.globalData.function,
   data: {
     ...app.globalData.config,
     shoppingCartList: [
@@ -30,6 +31,7 @@ Page({
   },
   confirm(){
     console.log('去结算')
+    this.router("/pagesShopingCart/confirm-order/index")
   },
   onLoad(){
     setTimeout(()=>{

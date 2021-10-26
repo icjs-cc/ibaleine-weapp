@@ -32,6 +32,13 @@
         "address/list/index",
         "address/add-edit/index"
       ]
+    },
+    {
+      "root": "pagesShopingCart",
+      "pages": [
+        "confirm-order/index",
+        "discount-coupon/index "
+      ]
     }
   ],
   "usingComponents": {

@@ -53,6 +53,18 @@
           "pathName": "pages/shopping-cart/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesShopingCart/confirm-order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pagesShopingCart/confirm-order/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
