@@ -6,7 +6,8 @@ Page({
     ...app.globalData.config,
     subsectionList:[
       {name: '自提', key: 1},
-      {name: '配送', key: 2}
+      {name: '配送', key: 2},
+      {name: '随机', key: 3}
     ],
     current: 1
   },
@@ -21,6 +22,5 @@ Page({
    },3000)
   },
   subsectionChange(current){
-    console.log(current)
   }
 })
