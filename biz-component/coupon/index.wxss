@@ -1,0 +1,19 @@
+/* biz-component/coupon/index.wxss */
+.coupon{
+  background-color: #ffffff;
+  border-radius: 16rpx;
+}
+.coupon-left{
+  height: 200rpx;
+  width: 198rpx;
+  border-right: 1px solid#D6D6D6;
+  font-size: 60rpx;
+  font-weight: 600;
+}
+.coupon-right{
+  height: 200rpx;
+  margin-left: 38rpx;
+}
+.coupon-right-title{
+  height: 60rpx;
+}

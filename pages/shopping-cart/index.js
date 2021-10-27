@@ -31,7 +31,7 @@ Page({
   },
   confirm(){
     console.log('去结算')
-    this.router("/pagesShopingCart/confirm-order/index")
+    this.router("/pagesOrder/confirm/index")
   },
   onLoad(){
     setTimeout(()=>{

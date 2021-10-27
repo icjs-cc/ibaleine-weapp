@@ -4,7 +4,8 @@
     "pages/classify/index",
     "pages/discover/index",
     "pages/shopping-cart/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "biz-component/coupon/index"
   ],
   "subpackages": [
     {
@@ -34,10 +35,10 @@
       ]
     },
     {
-      "root": "pagesShopingCart",
+      "root": "pagesOrder",
       "pages": [
-        "confirm-order/index",
-        "discount-coupon/index "
+        "confirm/index",
+        "discount-coupon/index"
       ]
     }
   ],

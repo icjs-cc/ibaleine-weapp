@@ -1,0 +1,67 @@
+<!--pagesOrder/confirm/index.wxml-->
+<view class="confirm-wrap">
+  <view class="p-20">
+    <subsection subsectionList="{{subsectionList}}" current="{{current}}" color="{{main_color}}" bindchange="subsectionChange" />
+  </view>
+  <view class="pt-10">
+    <view wx:if="{{current === 2 && !info[current].name}}" class="flex justify-center align-center confirm-address-add" data-url="/pagesMine/address/add-edit/index" bindtap="routeToNext">
+      <iconfont class="mr-10" icon="icon-plus" color="{{main_color}}" size="40rpx" />
+      <text class="text-df" style="color:{{main_color}}">添加收货地址</text>
+    </view>
+    <t-cell wx:else="" isLink="{{current === 2 ? true : false}}">
+      <view slot="icon" class="flex flex-direction justify-start confirm-address-icon">
+        <iconfont icon="icon-address" color="{{main_color}}" size="40rpx" />
+      </view>
+      <view slot="content" class="confirm-address-wrap ml-15">
+        <text class="text-df">{{info[current].name}}</text>
+        <text wx:if="{{current === 2}}" class="ml-20 text-sm">{{info[current].phone}}</text>
+        <view class="confirm-address-wrap-detail mt-10 text-sm text-gray">{{info[current].address}}</view>
+      </view>
+    </t-cell>
+  </view>
+  <view class="confirm-address-line" style="background:url('../../images/order/order_border.png')"></view>
+</view>
+<view class="confirm-wrap mt-20">
+  <t-cell wx:for="{{shoppingCartList}}" wx:key="unique">
+    <view slot='icon' class="flex align-center">
+      <t-image class="confirm-wrap-image" src="{{item.url}}"></t-image>
+    </view>
+    <view class="confirm-wrap-content flex flex-direction justify-between ml-10" slot='content'>
+      <view>
+        <view class='flex align-center cell text-lg ellipsis-l2'>{{item.name}}</view>
+        <view class='flex align-center cell text-sm text-gray'>{{item.spec}}</view>
+      </view>
+      <view class='confirm-wrap-price flex justify-between text-lg'>
+        <text class="text-red">￥{{item.price}}</text>
+        <view>
+          <t-input-number visible custom-color='{{main_color}}' data-index="{{index}}" value='{{item.num}}' min="0" max="1000" bindchange="bindInputNumber" inputType='number'></t-input-number>
+        </view>
+      </view>
+    </view>
+  </t-cell>
+  <view class="flex justify-between p-30">
+    <text class="text-sm">运费</text>
+    <text class="text-sm">￥0</text>
+  </view>
+  <view class="flex justify-end align-center p-30">
+    <text class="mr-10 text-grey text-sm">共{{totalNum}}件</text>
+    <text class="text-sm">小计：</text>
+    <text class="text-df text-red">￥{{totalPrice}}</text>
+  </view>
+</view>
+<view class="mt-10">
+  <t-cell isLink data-url="/pagesOrder/discount-coupon/index" bindtap="routeToNext">
+    <view class="flex justify-between" slot="content">
+      <text>优惠券</text>
+      <text class="text-red">-￥{{coupon}}</text>
+    </view>
+  </t-cell>
+</view>
+<t-submit-bar safeArea t-class='button-submit' text='去支付' bgcolor='{{main_color}}' z-index='9999' border bind:submit='confirm'>
+  <view slot='left' class="flex align-center text-df">
+    <view class="flex align-center">
+      <text>合计：</text>
+      <text class="text-red text-lg">¥{{confirmPrice}}</text>
+    </view>
+  </view>
+</t-submit-bar>

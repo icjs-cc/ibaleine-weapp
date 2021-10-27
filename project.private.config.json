@@ -56,13 +56,13 @@
         },
         {
           "name": "",
-          "pathName": "pagesShopingCart/confirm-order/index",
+          "pathName": "pagesOrder/confirm/index",
           "query": "",
           "scene": null
         },
         {
-          "name": "",
-          "pathName": "pagesShopingCart/confirm-order/index",
+          "name": "pagesOrder/discount-coupon/index",
+          "pathName": "pagesOrder/discount-coupon/index",
           "query": "",
           "scene": null
         }
