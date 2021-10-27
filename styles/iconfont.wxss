@@ -68,3 +68,7 @@
 .icon-share:before {
   content: "\e64d";
 }
+
+.icon-plus:before {
+  content: "\e60a";
+}

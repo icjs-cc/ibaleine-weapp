@@ -1,6 +1,0 @@
-<!--pagesShopingCart/confirm-order/index.wxml-->
-<view class="configm-wrap">
-  <view class="p-20">
-    <subsection subsectionList="{{subsectionList}}" current="{{current}}" color="{{main_color}}" bindchange="subsectionChange" />
-  </view>
-</view>

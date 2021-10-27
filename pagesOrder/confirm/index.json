@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "subsection": "/component/subsection/index",
+    "iconfont": "/component/iconfont/index",
+    "t-cell": "/itriton/cell/index",
+    "t-image": "/itriton/image/index",
+    "t-submit-bar": "/itriton/submit-bar/index",
+    "t-input-number": "/itriton/input-number/index"
+  },
+  "navigationBarTitleText": "确认订单",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black"
+}
