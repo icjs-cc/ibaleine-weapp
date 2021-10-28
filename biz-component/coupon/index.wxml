@@ -1,19 +1,19 @@
 <!--biz-component/coupon/index.wxml-->
 <view class="coupon flex">
-  <view class="coupon-left flex justify-center align-center text-red">
-    <view class="flex align-end">
-      <text class="text-sm">￥</text><text>{{price}}</text>
+  <view class="coupon-left flex justify-center align-center text-red {{overTime ? 'unacitve' : ''}}">
+    <view class="flex align-center">
+      <text class="text-sm mt-20 {{overTime ? 'unacitve' : ''}}">￥</text><text>{{price}}</text>
     </view>
   </view>
   <view class="coupon-right flex align-center justify-between">
     <view class="coupon-right-content flex flex-direction justify-between">
-      <view class="coupon-right-title text-df">{{title}}</view>
+      <view class="coupon-right-title text-df {{overTime ? 'unacitve' : ''}}">{{title}}</view>
       <view class="flex flex-direction">
-      <text class="text-sm text-gray">{{desc}}</text>
-      <text class="text-sm text-gray mt-5">{{date}}</text>
+      <text class="text-sm text-gray {{overTime ? 'unacitve' : ''}}">{{desc}}</text>
+      <text class="text-sm text-gray mt-5 {{overTime ? 'unacitve' : ''}}">{{date}}</text>
       </view>
     </view>
-    <slot name="right">
-    </slot>
+    <slot name="right"></slot>
+    <slot name="tag"></slot>
   </view>
 </view>

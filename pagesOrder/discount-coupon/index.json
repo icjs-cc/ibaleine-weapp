@@ -8,7 +8,7 @@
     "t-submit-bar": "/itriton/submit-bar/index",
     "t-input-number": "/itriton/input-number/index"
   },
-  "navigationBarTitleText": "优惠券",
+  "navigationBarTitleText": "礼券中心",
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black"
 }

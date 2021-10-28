@@ -50,10 +50,10 @@
   </view>
 </view>
 <view class="mt-10">
-  <t-cell isLink data-url="/pagesOrder/discount-coupon/index" bindtap="routeToNext">
+  <t-cell isLink data-url="/pagesOrder/discount-coupon/index?flag=1&discountId={{discountId}}" bindtap="routeToNext">
     <view class="flex justify-between" slot="content">
       <text>优惠券</text>
-      <text class="text-red">-￥{{coupon}}</text>
+      <text class="text-red">-￥{{discountPrice}}</text>
     </view>
   </t-cell>
 </view>

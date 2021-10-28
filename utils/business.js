@@ -74,3 +74,9 @@ export const cloneFormData = () => {
     }
   })
 }
+
+export const $page = (delta) => {
+ const pages = getCurrentPages();
+ const len = pages.length;
+ return pages[len - 1 + delta]
+}

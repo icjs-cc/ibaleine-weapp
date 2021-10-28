@@ -1,60 +1,29 @@
 Component({
   options:{
-    addGlobalClass:true
+    addGlobalClass: true,
+    multipleSlots: true
   },
   properties: {
-    price:{
+    price:{//优惠券值
       type:String,
       value:''
     },
-    title:{
+    title:{//优惠券title
       type:String,
       value:''
     },
-    desc:{
+    desc:{// 优惠券描述
       type:String,
       value:''
     },
-    date:{
+    date:{// 过期时间
       type:String,
       value:''
     },
-    overTime:{
+    overTime:{// 是否过期
       type:Boolean,
       value: false
     }
    
   },
-  lifetimes:{
-    attached() {
-      this.setSubsectionStyle()
-    }
-  },
-  data: {
-    activeKey: null
-  },
-  methods: {
-    handleClickItem(e){
-      if(this.data.activeKey !== e.target.dataset.key){
-        this.setData({activeKey: e.target.dataset.key});
-        this.triggerEvent('change', e.target.dataset.key);
-      }
-    },
-    setSubsectionStyle(){
-      const subsectionStyle = [
-        `width: ${this.properties.width}rpx`,
-        `height: ${this.properties.height}rpx`,
-        `border-color: ${this.properties.color}`,
-        `color: ${this.properties.color}`
-      ].join(';');
-      const activeStyle = [
-        `color: ${this.properties.textColor}`,
-        `background-color: ${this.properties.color}`
-      ].join(';');
-      this.setData({
-        subsectionStyle:subsectionStyle,
-        activeStyle:activeStyle
-      })
-    },
-  }
 })

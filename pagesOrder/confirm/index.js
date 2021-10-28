@@ -20,13 +20,15 @@ Page({
       },
     },
     current: 1,
-    coupon: 12,
     totalNum:0,
     totalPrice:0,
     confirmPrice:0,
-    discount:10
+    discountPrice:0,
+    discountId:0,
   },
-  onLoad(){
+  onLoad(options){
+    let discountPrice = options.discountPrice || 0;
+    this.setData({discountPrice})
    setTimeout(()=>{
       this.computedData();
       this.setData({
@@ -43,7 +45,7 @@ Page({
       totalNum += ele.num;
       totalPrice += ele.num * ele.price;
     });
-    confirmPrice = totalPrice - this.data.coupon;
+    confirmPrice = totalPrice - this.data.discountPrice;
     this.setData({
       totalNum,
       totalPrice,

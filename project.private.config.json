@@ -1,72 +1,78 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/discover/index",
-          "pathName": "pages/discover/index",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/classify/index",
-          "pathName": "pages/classify/index",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pagesGoods/detail/index",
-          "pathName": "pagesGoods/detail/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "",
-          "pathName": "pages/mine/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pagesMine/address/list/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pagesMine/address/add-edit/index",
-          "query": "type=c",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/shopping-cart/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pagesOrder/confirm/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pagesOrder/discount-coupon/index",
-          "pathName": "pagesOrder/discount-coupon/index",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/discover/index",
+                    "pathName": "pages/discover/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/classify/index",
+                    "pathName": "pages/classify/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pagesGoods/detail/index",
+                    "pathName": "pagesGoods/detail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/mine/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pagesMine/address/list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pagesMine/address/add-edit/index",
+                    "query": "type=c",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/shopping-cart/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pagesOrder/confirm/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pagesOrder/discount-coupon/index",
+                    "pathName": "pagesOrder/discount-coupon/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pagesOrder/discount-coupon/index",
+                    "pathName": "pagesOrder/discount-coupon/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }
