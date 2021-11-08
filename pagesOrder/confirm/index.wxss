@@ -1,0 +1,36 @@
+/* pagesOrder/confirm/index.wxss */
+.confirm-wrap{
+  background-color: #fff;
+}
+
+.confirm-address-add{
+  height: 174rpx;
+}
+
+.confirm-address-icon{
+  height: 134rpx;
+}
+
+.confirm-address-wrap{
+  width: 602rpx;
+  height: 134rpx;
+}
+
+.confirm-address-line{
+  width: 750rpx;
+  height: 4rpx;
+  background-color: gray;
+}
+
+.confirm-wrap-content{
+  height: 152rpx;
+}
+
+.confirm-wrap-image{
+  width: 152rpx;
+  height: 152rpx;
+  background: rgba(0, 0, 0, 0);
+  border: 1rpx solid #E5E9E8;
+  opacity: 1;
+  border-radius: 16rpx;
+}

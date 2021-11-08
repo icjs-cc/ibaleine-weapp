@@ -1,0 +1,8 @@
+/* pagesOrder/discount-coupon/index.wxss */
+.over-time-image{
+    position: absolute;
+    width: 108rpx;
+    height: 84rpx;
+    right: 20rpx;
+    top: 0rpx
+}
