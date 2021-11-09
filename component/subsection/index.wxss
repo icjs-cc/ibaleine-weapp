@@ -1,7 +1,5 @@
 /* component/subsection/index.wxss */
 .subsection-wrap {
-  width: 718rpx;
-  height: 88rpx;
   border: 2rpx solid;
   border-radius: 16rpx;
   display: flex;

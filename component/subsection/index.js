@@ -10,11 +10,11 @@ Component({
     },
     width:{
       type:String,
-      value:'712'
+      value:'710'
     },
     height:{
       type:String,
-      value:'88'
+      value:'80'
     },
     color:{
       type:String,

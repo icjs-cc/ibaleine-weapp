@@ -1,6 +1,6 @@
 <paging page-count="{{couponList.length}}" top="{{30}}" emptyText="暂无优惠券哟" emptyImage="/images/common/empty_coupon.png">
-  <view class="p-10">
-    <view class="mt-20" wx:for="{{couponList}}" wx:key="unique" key="{{item.id}}">
+  <view class="p-20">
+    <view class="mb-20" wx:for="{{couponList}}" wx:key="unique" key="{{item.id}}">
       <coupon price="{{item.price}}" title="{{item.title}}" desc="{{item.desc}}" date="有效期：{{item.date}}" overTime="{{item.overTime}}" wx:key="unique">
         <radio slot="right" wx:if="{{!item.overTime && flag == 1}}"  color="{{main_color}}" checked='{{item.checked}}' data-index="{{index}}" data-item="{{item}}" catchtap="checkChange"></radio>
         <t-image wx:if="{{item.overTime}}" slot="tag" class="over-time-image" src="/images/common/coupon_overdue.png"></t-image>

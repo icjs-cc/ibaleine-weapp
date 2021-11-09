@@ -61,6 +61,8 @@ Page({
         if(res.confirm){
           console.log("确认删除")
         }else{
+          shoppingCartList[index].num = 1
+          this.setData({shoppingCartList})
           console.log("取消删除")
         }
       })
@@ -78,9 +80,9 @@ Page({
   confirm(){
     this.$showModal({content: '确定支付'}).then(res=>{
       if(res.confirm){
-        console.log("确认删除")
+        console.log("确定支付")
       }else{
-        console.log("取消删除")
+        console.log("取消支付")
       }
     })
   }
