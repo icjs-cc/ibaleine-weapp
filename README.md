@@ -33,7 +33,7 @@
 ![我的](./screenshot/mine.jpeg) 
 
 ## 开发者信息
-![微信](./images/common/qrcode.jpg) 
+![微信](./images/common/qrcode.jpeg) 
 
-## 其他项目
-![天天干饭无忧](./images/common/ttgfwy_weapp.jpg)
+## 其他线上项目
+![天天干饭无忧](./images/common/ttgfwy_weapp.jpeg)
