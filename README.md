@@ -3,7 +3,8 @@
 [![star](https://gitee.com/ibaleine-open-source/ibaleine-weapp/badge/star.svg?theme=dark)](https://gitee.com/ibaleine-open-source/ibaleine-weapp/stargazers)
 [![fork](https://gitee.com/ibaleine-open-source/ibaleine-weapp/badge/fork.svg?theme=dark)](https://gitee.com/ibaleine-open-source/ibaleine-weapp/members)
 
-[![ibaleine-weapp](https://img.shields.io/static/v1?label=Github&message=ibaleine-weapp&color=orange)](https://github.com/icjs-cc/ibaleine-weapp.git)
+[![GitHub stars](https://img.shields.io/github/stars/icjs-cc/ibaleine-weapp?logo=GitHub&style=flat-square)](https://github.com/icjs-cc/ibaleine-weapp/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/icjs-cc/ibaleine-weapp?logo=GitHub&style=flat-square)](https://github.com/icjs-cc/ibaleine-weapp/network)
 
 ## 介绍
 基于原生小程序框架的商城项目
